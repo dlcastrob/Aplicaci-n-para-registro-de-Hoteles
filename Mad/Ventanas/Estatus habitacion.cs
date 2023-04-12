@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Mad.Ventanas
 {
-    public partial class Nueva_Cuenta : Form
+    public partial class Estatus_habitacion : Form
     {
-        public Nueva_Cuenta()
+        public Estatus_habitacion()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
