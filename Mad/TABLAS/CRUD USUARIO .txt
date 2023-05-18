@@ -1,0 +1,26 @@
+-- Creación de la tabla Usuario
+CREATE TABLE Usuario (
+    tipoUs VARCHAR(50),
+    correoElectronico VARCHAR(100) PRIMARY KEY,
+    contrasena VARCHAR(50),
+    nombreCompleto VARCHAR(100),
+    numeroNomina VARCHAR(20),
+    fechaNacimiento DATE,
+    domicilio VARCHAR(200),
+    telefonoCasa VARCHAR(20),
+    telefonoCelular VARCHAR(20),
+    estado VARCHAR(50)
+);
+
+-- Inserción de datos en la tabla Usuario (ejemplo)
+INSERT INTO Usuario (tipoUs, correoElectronico, contrasena, nombreCompleto, numeroNomina, fechaNacimiento, domicilio, telefonoCasa, telefonoCelular, estado)
+VALUES ('Administrador', 'admin@example.com', '123456', 'Juan Perez', '1234567890', '1990-01-01', 'Calle Principal 123', '555-1234567', '555-9876543', 'Activo');
+
+-- Selección de todos los registros en la tabla Usuario
+SELECT * FROM Usuario;
+
+-- Actualización de un registro en la tabla Usuario
+UPDATE Usuario SET nombreCompleto = 'Pedro Ramirez' WHERE correoElectronico = 'admin@example.com';
+
+-- Eliminación de un registro en la tabla Usuario
+DELETE FROM Usuario WHERE correoElectronico = 'admin@example.com';
