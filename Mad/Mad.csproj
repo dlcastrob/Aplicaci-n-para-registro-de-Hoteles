@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Ventanas\Registro Cliente.resx">
       <DependentUpon>Registro Cliente.cs</DependentUpon>
@@ -163,6 +164,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\historial.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\icons8-menu-25.png" />
+    <None Include="Resources\registrar_usuario.png" />
+    <None Include="Resources\registrarcliente.png" />
+    <None Include="Resources\registrarhotel.png" />
+    <None Include="Resources\RepHotel.png" />
+    <None Include="Resources\reserv.png" />
+    <None Include="Resources\status.png" />
+    <None Include="Resources\ventas.png" />
     <Content Include="TABLAS\CRUD CLIENTE.txt" />
     <Content Include="TABLAS\CRUD USUARIO .txt" />
   </ItemGroup>
