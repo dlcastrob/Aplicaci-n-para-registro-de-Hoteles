@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mad.Ventanas
 {
-    public partial class Nueva_Cuenta : Form
+    public partial class nuevoUs : Form
     {
-        public Nueva_Cuenta()
+        public nuevoUs()
         {
             InitializeComponent();
         }
@@ -38,6 +38,16 @@ namespace Mad.Ventanas
         }
 
         private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
