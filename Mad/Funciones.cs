@@ -31,6 +31,21 @@ namespace Mad
                 MessageBox.Show("La contraseña debe contener al menos un carácter especial: " + SpecialCharacters);
                 return false;
             }
+
+
+            // Verificar la inclusión de al menos una letra mayúscula
+            if (!password.Any(c => char.IsUpper(c)))
+            {
+                MessageBox.Show("La contraseña debe contener al menos una letra mayúscula.");
+                return false;
+            }
+
+            // Verificar la inclusión de al menos una letra minúscula
+            if (!password.Any(c => char.IsLower(c)))
+            {
+                MessageBox.Show("La contraseña debe contener al menos una letra minúscula.");
+                return false;
+            }
             return true;
 
         }

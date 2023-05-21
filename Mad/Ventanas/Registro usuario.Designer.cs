@@ -1,6 +1,6 @@
 ﻿namespace Mad.Ventanas
 {
-    partial class nuevoUs
+    partial class correoRU
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.correoRU = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.nomRU = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.telCelRU = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.correoRU1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button2
@@ -104,6 +104,7 @@
             this.contraRU.Size = new System.Drawing.Size(151, 20);
             this.contraRU.TabIndex = 12;
             this.contraRU.UseSystemPasswordChar = true;
+            this.contraRU.TextChanged += new System.EventHandler(this.contraRU_TextChanged);
             // 
             // label1
             // 
@@ -130,11 +131,15 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Enabled = false;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Menu;
             this.label4.Location = new System.Drawing.Point(115, 381);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 13);
+            this.label4.Size = new System.Drawing.Size(128, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "•Minimo 8 caracteres";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -142,11 +147,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Enabled = false;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Menu;
             this.label5.Location = new System.Drawing.Point(115, 409);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 13);
+            this.label5.Size = new System.Drawing.Size(127, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "•Minimo 1 mayuscula";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -154,11 +163,15 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Enabled = false;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Menu;
             this.label6.Location = new System.Drawing.Point(118, 433);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 13);
+            this.label6.Size = new System.Drawing.Size(124, 13);
             this.label6.TabIndex = 18;
             this.label6.Text = "•Minimo 1 minuscula";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -166,11 +179,15 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.Enabled = false;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Menu;
             this.label7.Location = new System.Drawing.Point(118, 456);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 13);
+            this.label7.Size = new System.Drawing.Size(166, 13);
             this.label7.TabIndex = 19;
             this.label7.Text = "•Minimo 1 caracter especial";
             // 
@@ -183,16 +200,6 @@
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Correo";
-            // 
-            // correoRU
-            // 
-            this.correoRU.Location = new System.Drawing.Point(117, 298);
-            this.correoRU.Margin = new System.Windows.Forms.Padding(2);
-            this.correoRU.Name = "correoRU";
-            this.correoRU.ShortcutsEnabled = false;
-            this.correoRU.Size = new System.Drawing.Size(151, 20);
-            this.correoRU.TabIndex = 11;
-            this.correoRU.UseSystemPasswordChar = true;
             // 
             // label9
             // 
@@ -284,13 +291,15 @@
             // 
             // fechaNacRU
             // 
+            this.fechaNacRU.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaNacRU.Location = new System.Drawing.Point(414, 158);
             this.fechaNacRU.Margin = new System.Windows.Forms.Padding(2);
-            this.fechaNacRU.MaxDate = new System.DateTime(1920, 12, 31, 0, 0, 0, 0);
+            this.fechaNacRU.MaxDate = new System.DateTime(2023, 5, 21, 16, 52, 52, 0);
             this.fechaNacRU.Name = "fechaNacRU";
             this.fechaNacRU.Size = new System.Drawing.Size(151, 20);
             this.fechaNacRU.TabIndex = 5;
-            this.fechaNacRU.Value = new System.DateTime(1920, 12, 31, 0, 0, 0, 0);
+            this.fechaNacRU.Value = new System.DateTime(2023, 5, 21, 0, 0, 0, 0);
+            this.fechaNacRU.ValueChanged += new System.EventHandler(this.fechaNacRU_ValueChanged);
             // 
             // notifyIcon1
             // 
@@ -394,11 +403,21 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Telefono celular";
             // 
-            // nuevoUs
+            // correoRU1
+            // 
+            this.correoRU1.Location = new System.Drawing.Point(117, 298);
+            this.correoRU1.Margin = new System.Windows.Forms.Padding(2);
+            this.correoRU1.Name = "correoRU1";
+            this.correoRU1.Size = new System.Drawing.Size(152, 20);
+            this.correoRU1.TabIndex = 11;
+            this.correoRU1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // correoRU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 609);
+            this.Controls.Add(this.correoRU1);
             this.Controls.Add(this.telCelRU);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.telCasaRU);
@@ -420,7 +439,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.nomRU);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.correoRU);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -432,7 +450,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tipoUsRUCB);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "nuevoUs";
+            this.Name = "correoRU";
             this.Text = "Registro de usuario";
             this.Load += new System.EventHandler(this.Nueva_Cuenta_Load);
             this.ResumeLayout(false);
@@ -453,7 +471,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox correoRU;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox nomRU;
         private System.Windows.Forms.Label label10;
@@ -475,5 +492,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox telCelRU;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox correoRU1;
     }
 }

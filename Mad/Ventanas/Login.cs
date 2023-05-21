@@ -92,7 +92,7 @@ namespace Mad
       
         private void button2_Click(object sender, EventArgs e)
         {
-            Ventanas.nuevoUs nuevoUsuario = new Ventanas.nuevoUs();
+            Ventanas.correoRU nuevoUsuario = new Ventanas.correoRU();
 
             nuevoUsuario.ShowDialog();
         }
