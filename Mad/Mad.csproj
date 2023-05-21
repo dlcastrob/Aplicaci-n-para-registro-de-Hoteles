@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Funciones.cs" />
     <Compile Include="EnlaceDB.cs" />
+    <Compile Include="Listas.cs" />
     <Compile Include="Ventanas\Cancelacion.cs">
       <SubType>Form</SubType>
     </Compile>
