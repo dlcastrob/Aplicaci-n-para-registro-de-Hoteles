@@ -16,7 +16,7 @@ namespace Mad
             public string contrasena { get; set; }
             public string nombreCompleto { get; set; }
             public string numeroNomina { get; set; }
-            public DateTime fechaNacimiento { get; set; }
+            public string fechaNacimiento { get; set; }
             public string domicilio { get; set; }
             public string telefonoCasa { get; set; }
             public string telefonoCelular { get; set; }
