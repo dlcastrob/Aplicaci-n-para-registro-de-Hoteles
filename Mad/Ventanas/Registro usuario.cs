@@ -173,9 +173,65 @@ namespace Mad.Ventanas
 
             string texto = contraRU.Text;
             string texto2 = contraRU.Text;
+            string texto3 = contraRU.Text;
+
 
             bool contieneMinuscula = texto.Any(char.IsLower);
             bool contieneMayuscula = texto2.Any(char.IsUpper);
+            bool numCaracteres = false;
+            bool contieneCaracterEspecial = false;
+
+            // Verificar si el texto contiene un carácter especial
+            foreach (char caracter in texto)
+            {
+                if (!char.IsLetterOrDigit(caracter))
+                {
+                    contieneCaracterEspecial = true;
+                    break;
+                }
+            }
+
+
+            if (contieneCaracterEspecial)
+            {
+                label7.BackColor = Color.Green;
+            }
+            else
+            {
+                label7.BackColor = Color.Red;
+            }
+
+            if (contraRU.Text.Length >= 8)
+            {
+         
+                numCaracteres= true;
+            }
+
+            if (numCaracteres)
+            {
+                label4.BackColor = Color.Green;
+            }
+            else
+            {
+                label4.BackColor = Color.Red;
+            }
+
+            if (contieneMayuscula)
+            {
+                label5.BackColor = Color.Green;
+            }
+            else
+            {
+                label5.BackColor = Color.Red;
+            }
+            if (contieneMinuscula)
+            {
+                label6.BackColor = Color.Green;
+            }
+            else
+            {
+                label6.BackColor = Color.Red;
+            }
             if (contieneMayuscula)
             {
                 label5.BackColor = Color.Green;
@@ -193,7 +249,6 @@ namespace Mad.Ventanas
                 label6.BackColor = Color.Red;
             }
 
-         
         }
 
         private void colRU_TextChanged(object sender, EventArgs e)
