@@ -108,6 +108,7 @@ namespace Mad.Ventanas
 
                 if (validar == false)
                 {
+
                     MessageBox.Show("Todos los datos son correctos.");
 
                 }

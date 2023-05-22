@@ -110,6 +110,22 @@ namespace Mad.Ventanas
                 }
 
                 if (validar == false) {
+
+                    List<tUser> usuarios = new List<tUser>();
+
+                    tUser usuario = new tUser();
+
+                    usuario.tipoUs = tipoUsRUCB.SelectedItem.ToString();
+                    usuario.correoElectronico = correoRU1.Text;
+                    usuario.contrasena = contraRU.Text;
+                    usuario.nombreCompleto = nomRU.Text+ " " + matRU.Text+" "+patRU;
+                    usuario.numeroNomina = numNomRU.Text;
+                    usuario.fechaNacimiento = fechaNacRU.Value.ToString();
+                    usuario.domicilio = calleRU.Text+" "+ numExtRU+ " "+ colRU;
+                    usuario.telefonoCasa = telCasaRU.Text;
+                    usuario.telefonoCelular = telCelRU.Text;
+
+                    usuarios.Add(usuario);
                     MessageBox.Show("Todos los datos son correctos.");
 
                 }
