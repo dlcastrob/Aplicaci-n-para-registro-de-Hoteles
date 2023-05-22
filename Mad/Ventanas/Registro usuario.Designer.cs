@@ -323,6 +323,7 @@
             this.calleRU.Name = "calleRU";
             this.calleRU.Size = new System.Drawing.Size(152, 20);
             this.calleRU.TabIndex = 6;
+            this.calleRU.TextChanged += new System.EventHandler(this.calleRU_TextChanged);
             // 
             // label15
             // 
@@ -361,6 +362,7 @@
             this.colRU.Name = "colRU";
             this.colRU.Size = new System.Drawing.Size(124, 20);
             this.colRU.TabIndex = 8;
+            this.colRU.TextChanged += new System.EventHandler(this.colRU_TextChanged);
             // 
             // telCasaRU
             // 

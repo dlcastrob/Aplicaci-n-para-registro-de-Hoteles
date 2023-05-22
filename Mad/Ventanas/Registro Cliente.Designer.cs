@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.telCelRC = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.telCasaRC = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.colRC = new System.Windows.Forms.TextBox();
+            this.numExtRC = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.calleRC = new System.Windows.Forms.TextBox();
+            this.fechaNacRc = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.matRC = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.patRC = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nonRC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.correoRC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comoRC = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.rfcRC = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.estadoCivRC = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // maskedTextBox4
+            // telCelRC
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(370, 236);
-            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox4.Mask = "000-000-0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(151, 20);
-            this.maskedTextBox4.TabIndex = 75;
+            this.telCelRC.Location = new System.Drawing.Point(370, 236);
+            this.telCelRC.Margin = new System.Windows.Forms.Padding(2);
+            this.telCelRC.Mask = "000-000-0000";
+            this.telCelRC.Name = "telCelRC";
+            this.telCelRC.Size = new System.Drawing.Size(151, 20);
+            this.telCelRC.TabIndex = 12;
             // 
             // label17
             // 
@@ -77,14 +78,14 @@
             this.label17.TabIndex = 74;
             this.label17.Text = "Telefono celular";
             // 
-            // maskedTextBox3
+            // telCasaRC
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(115, 234);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox3.Mask = "(999)000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(124, 20);
-            this.maskedTextBox3.TabIndex = 73;
+            this.telCasaRC.Location = new System.Drawing.Point(115, 234);
+            this.telCasaRC.Margin = new System.Windows.Forms.Padding(2);
+            this.telCasaRC.Mask = "(999)000-0000";
+            this.telCasaRC.Name = "telCasaRC";
+            this.telCasaRC.Size = new System.Drawing.Size(124, 20);
+            this.telCasaRC.TabIndex = 11;
             // 
             // label2
             // 
@@ -106,23 +107,24 @@
             this.label16.TabIndex = 70;
             this.label16.Text = "Colonia";
             // 
-            // textBox8
+            // colRC
             // 
-            this.textBox8.Location = new System.Drawing.Point(693, 194);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(124, 20);
-            this.textBox8.TabIndex = 71;
+            this.colRC.Location = new System.Drawing.Point(693, 194);
+            this.colRC.Margin = new System.Windows.Forms.Padding(2);
+            this.colRC.Name = "colRC";
+            this.colRC.Size = new System.Drawing.Size(124, 20);
+            this.colRC.TabIndex = 10;
+            this.colRC.TextChanged += new System.EventHandler(this.colRC_TextChanged);
             // 
-            // maskedTextBox2
+            // numExtRC
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(370, 198);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox2.Mask = "99999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(151, 20);
-            this.maskedTextBox2.TabIndex = 69;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.numExtRC.Location = new System.Drawing.Point(370, 198);
+            this.numExtRC.Margin = new System.Windows.Forms.Padding(2);
+            this.numExtRC.Mask = "99999";
+            this.numExtRC.Name = "numExtRC";
+            this.numExtRC.Size = new System.Drawing.Size(151, 20);
+            this.numExtRC.TabIndex = 9;
+            this.numExtRC.ValidatingType = typeof(int);
             // 
             // label15
             // 
@@ -144,21 +146,22 @@
             this.label14.TabIndex = 66;
             this.label14.Text = "Calle";
             // 
-            // textBox7
+            // calleRC
             // 
-            this.textBox7.Location = new System.Drawing.Point(115, 196);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 20);
-            this.textBox7.TabIndex = 67;
+            this.calleRC.Location = new System.Drawing.Point(115, 196);
+            this.calleRC.Margin = new System.Windows.Forms.Padding(2);
+            this.calleRC.Name = "calleRC";
+            this.calleRC.Size = new System.Drawing.Size(124, 20);
+            this.calleRC.TabIndex = 8;
+            this.calleRC.TextChanged += new System.EventHandler(this.calleRC_TextChanged);
             // 
-            // dateTimePicker1
+            // fechaNacRc
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(370, 157);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
-            this.dateTimePicker1.TabIndex = 65;
+            this.fechaNacRc.Location = new System.Drawing.Point(370, 157);
+            this.fechaNacRc.Margin = new System.Windows.Forms.Padding(2);
+            this.fechaNacRc.Name = "fechaNacRc";
+            this.fechaNacRc.Size = new System.Drawing.Size(151, 20);
+            this.fechaNacRc.TabIndex = 6;
             // 
             // label13
             // 
@@ -180,13 +183,14 @@
             this.label11.TabIndex = 60;
             this.label11.Text = "Apellido materno";
             // 
-            // textBox6
+            // matRC
             // 
-            this.textBox6.Location = new System.Drawing.Point(693, 103);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 20);
-            this.textBox6.TabIndex = 61;
+            this.matRC.Location = new System.Drawing.Point(693, 103);
+            this.matRC.Margin = new System.Windows.Forms.Padding(2);
+            this.matRC.Name = "matRC";
+            this.matRC.Size = new System.Drawing.Size(124, 20);
+            this.matRC.TabIndex = 4;
+            this.matRC.TextChanged += new System.EventHandler(this.matRC_TextChanged);
             // 
             // label10
             // 
@@ -196,15 +200,16 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 13);
             this.label10.TabIndex = 58;
-            this.label10.Text = "Apellido peterno";
+            this.label10.Text = "Apellido paterno";
             // 
-            // textBox5
+            // patRC
             // 
-            this.textBox5.Location = new System.Drawing.Point(370, 103);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 20);
-            this.textBox5.TabIndex = 59;
+            this.patRC.Location = new System.Drawing.Point(370, 103);
+            this.patRC.Margin = new System.Windows.Forms.Padding(2);
+            this.patRC.Name = "patRC";
+            this.patRC.Size = new System.Drawing.Size(151, 20);
+            this.patRC.TabIndex = 3;
+            this.patRC.TextChanged += new System.EventHandler(this.patRC_TextChanged);
             // 
             // label9
             // 
@@ -216,13 +221,14 @@
             this.label9.TabIndex = 56;
             this.label9.Text = "Nombre(s)";
             // 
-            // textBox4
+            // nonRC
             // 
-            this.textBox4.Location = new System.Drawing.Point(115, 110);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 20);
-            this.textBox4.TabIndex = 57;
+            this.nonRC.Location = new System.Drawing.Point(115, 110);
+            this.nonRC.Margin = new System.Windows.Forms.Padding(2);
+            this.nonRC.Name = "nonRC";
+            this.nonRC.Size = new System.Drawing.Size(124, 20);
+            this.nonRC.TabIndex = 2;
+            this.nonRC.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label8
             // 
@@ -234,15 +240,16 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Correo";
             // 
-            // textBox3
+            // correoRC
             // 
-            this.textBox3.Location = new System.Drawing.Point(116, 284);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ShortcutsEnabled = false;
-            this.textBox3.Size = new System.Drawing.Size(124, 20);
-            this.textBox3.TabIndex = 55;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.correoRC.Location = new System.Drawing.Point(116, 284);
+            this.correoRC.Margin = new System.Windows.Forms.Padding(2);
+            this.correoRC.Name = "correoRC";
+            this.correoRC.ShortcutsEnabled = false;
+            this.correoRC.Size = new System.Drawing.Size(124, 20);
+            this.correoRC.TabIndex = 13;
+            this.correoRC.UseSystemPasswordChar = true;
+            this.correoRC.TextChanged += new System.EventHandler(this.correoRC_TextChanged);
             // 
             // label1
             // 
@@ -254,17 +261,17 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Como conocio el hotel";
             // 
-            // comboBox1
+            // comoRC
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comoRC.FormattingEnabled = true;
+            this.comoRC.Items.AddRange(new object[] {
             "Administrador",
             "Operativo"});
-            this.comboBox1.Location = new System.Drawing.Point(136, 15);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
-            this.comboBox1.TabIndex = 47;
+            this.comoRC.Location = new System.Drawing.Point(136, 15);
+            this.comoRC.Margin = new System.Windows.Forms.Padding(2);
+            this.comoRC.Name = "comoRC";
+            this.comoRC.Size = new System.Drawing.Size(124, 21);
+            this.comoRC.TabIndex = 1;
             // 
             // label12
             // 
@@ -276,15 +283,15 @@
             this.label12.TabIndex = 62;
             this.label12.Text = "RFC";
             // 
-            // maskedTextBox1
+            // rfcRC
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(116, 157);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Mask = "99999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(124, 20);
-            this.maskedTextBox1.TabIndex = 63;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.rfcRC.Location = new System.Drawing.Point(116, 157);
+            this.rfcRC.Margin = new System.Windows.Forms.Padding(2);
+            this.rfcRC.Mask = "99999";
+            this.rfcRC.Name = "rfcRC";
+            this.rfcRC.Size = new System.Drawing.Size(124, 20);
+            this.rfcRC.TabIndex = 5;
+            this.rfcRC.ValidatingType = typeof(int);
             // 
             // label18
             // 
@@ -296,17 +303,17 @@
             this.label18.TabIndex = 76;
             this.label18.Text = "Estado civil";
             // 
-            // comboBox2
+            // estadoCivRC
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.estadoCivRC.FormattingEnabled = true;
+            this.estadoCivRC.Items.AddRange(new object[] {
             "Administrador",
             "Operativo"});
-            this.comboBox2.Location = new System.Drawing.Point(693, 154);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(124, 21);
-            this.comboBox2.TabIndex = 77;
+            this.estadoCivRC.Location = new System.Drawing.Point(693, 154);
+            this.estadoCivRC.Margin = new System.Windows.Forms.Padding(2);
+            this.estadoCivRC.Name = "estadoCivRC";
+            this.estadoCivRC.Size = new System.Drawing.Size(124, 21);
+            this.estadoCivRC.TabIndex = 7;
             // 
             // label19
             // 
@@ -325,45 +332,59 @@
             "Administrador",
             "Operativo"});
             this.comboBox3.Location = new System.Drawing.Point(370, 281);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(151, 21);
-            this.comboBox3.TabIndex = 79;
+            this.comboBox3.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(370, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 45);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Registrar cliente";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 380);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.estadoCivRC);
+            this.Controls.Add(this.telCelRC);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.telCasaRC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.colRC);
+            this.Controls.Add(this.numExtRC);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.calleRC);
+            this.Controls.Add(this.fechaNacRc);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.rfcRC);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.matRC);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.patRC);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.nonRC);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.correoRC);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.comoRC);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cliente";
             this.Text = "Cliente";
             this.ResumeLayout(false);
@@ -373,33 +394,34 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox telCelRC;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox telCasaRC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox colRC;
+        private System.Windows.Forms.MaskedTextBox numExtRC;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox calleRC;
+        private System.Windows.Forms.DateTimePicker fechaNacRc;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox matRC;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox patRC;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nonRC;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox correoRC;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comoRC;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox rfcRC;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox estadoCivRC;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -195,5 +195,31 @@ namespace Mad.Ventanas
 
          
         }
+
+        private void colRU_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!string.IsNullOrEmpty(textBox.Text))
+            {
+                string firstLetter = textBox.Text.Substring(0, 1).ToUpper();
+                string remainingText = textBox.Text.Substring(1).ToLower();
+                textBox.Text = firstLetter + remainingText;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void calleRU_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!string.IsNullOrEmpty(textBox.Text))
+            {
+                string firstLetter = textBox.Text.Substring(0, 1).ToUpper();
+                string remainingText = textBox.Text.Substring(1).ToLower();
+                textBox.Text = firstLetter + remainingText;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
     }
 }

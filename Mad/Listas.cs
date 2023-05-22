@@ -11,6 +11,9 @@ namespace Mad
 
         public class tUser
         {
+            
+            public string idUs { get; set; }
+
             public string tipoUs { get; set; }
             public string correoElectronico { get; set; }
             public string contrasena { get; set; }
