@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
 			
 			tal como lo vimos en clase.
 			*/
-            string cnn = ConfigurationManager.ConnectionStrings["Grupo01"].ToString(); 
+            string cnn = ConfigurationManager.ConnectionStrings["Grupo03"].ToString(); 
 			// Cambiar Grupo01 por el que ustedes hayan definido en el App.Confif
             _conexion = new SqlConnection(cnn);
             _conexion.Open();
@@ -99,6 +99,41 @@ namespace WindowsFormsApplication1
             }
 
             return isValid;
+        }
+
+
+        public DataTable get_Deptos(string opc)
+        {
+            var msg = "";
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "sp_Gestiona_Deptos";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
+                parametro1.Value = opc;
+
+
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+
+            }
+            catch (SqlException e)
+            {
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return tabla;
         }
 
         public DataTable get_Users()

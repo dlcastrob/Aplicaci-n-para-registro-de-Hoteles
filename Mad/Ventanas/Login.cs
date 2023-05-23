@@ -54,7 +54,14 @@ namespace Mad
             string email = usTB.Text;
             string password = contraTB.Text;
 
-            if (funciones.IsValidLogin(email, password))
+
+
+            if (funciones.AreControlsNotEmpty(this))
+            {
+
+            }
+
+                if (funciones.IsValidLogin(email, password))
             {
                 // Acceso exitoso, mostrar la aplicación principal
                 MessageBox.Show("Inicio de sesión exitoso");
@@ -96,44 +103,53 @@ namespace Mad
 
             nuevoUsuario.ShowDialog();
         }
-        /*
-        private void PromptChangePassword(string email)
-        {
-            // Mostrar un cuadro de diálogo para ingresar la nueva contraseña
-            string newPassword = PromptForNewPassword();
 
-            if (!string.IsNullOrEmpty(newPassword))
-            {
-                // Actualizar la contraseña en el diccionario
-                userPasswords[email] = newPassword;
-                MessageBox.Show("Contraseña actualizada con éxito");
-            }
-            else
-            {
-                MessageBox.Show("No se pudo establecer la nueva contraseña");
-            }
-        }
-        
-        private string PromptForNewPassword()
+        private void button3_Click(object sender, EventArgs e)
         {
-            // Aquí puedes implementar tu propio cuadro de diálogo o formulario para que el usuario ingrese la nueva contraseña
-            // Por simplicidad, aquí simplemente mostramos un cuadro de diálogo de entrada de texto
-           // string newPassword = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva contraseña", "Cambiar contraseña");
-            Ventanas.Form2 form2= new Ventanas.Form2();
-
-            form2.ShowDialog();
+           
             
-            // Validar la nueva contraseña antes de retornarla
-            if (IsPasswordValid(newPassword))
-            {
-                return newPassword;
-            }
-            else
-            {
-                MessageBox.Show("La nueva contraseña no cumple los requisitos");
-                return null;
-            }
-        }*/
+           
+            
+
+        }
+        /*
+private void PromptChangePassword(string email)
+{
+   // Mostrar un cuadro de diálogo para ingresar la nueva contraseña
+   string newPassword = PromptForNewPassword();
+
+   if (!string.IsNullOrEmpty(newPassword))
+   {
+       // Actualizar la contraseña en el diccionario
+       userPasswords[email] = newPassword;
+       MessageBox.Show("Contraseña actualizada con éxito");
+   }
+   else
+   {
+       MessageBox.Show("No se pudo establecer la nueva contraseña");
+   }
+}
+
+private string PromptForNewPassword()
+{
+   // Aquí puedes implementar tu propio cuadro de diálogo o formulario para que el usuario ingrese la nueva contraseña
+   // Por simplicidad, aquí simplemente mostramos un cuadro de diálogo de entrada de texto
+  // string newPassword = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la nueva contraseña", "Cambiar contraseña");
+   Ventanas.Form2 form2= new Ventanas.Form2();
+
+   form2.ShowDialog();
+
+   // Validar la nueva contraseña antes de retornarla
+   if (IsPasswordValid(newPassword))
+   {
+       return newPassword;
+   }
+   else
+   {
+       MessageBox.Show("La nueva contraseña no cumple los requisitos");
+       return null;
+   }
+}*/
 
     }
 }
