@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using  Mad;
 using System.Text.RegularExpressions;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 namespace Mad
 {
     public partial class Form1 : Form
@@ -106,10 +109,28 @@ namespace Mad
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
-            
-           
-            
+            string connectionString = "Aquí va tu cadena de conexión"; // Reemplaza con tu cadena de conexión
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Realizar una consulta simple para verificar la conexión
+                    SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Cliente", connection);
+                    int count = (int)command.ExecuteScalar();
+
+                    MessageBox.Show("Conexión exitosa. Total de registros: " + count.ToString(), "Prueba de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Prueba de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
 
         }
         /*
