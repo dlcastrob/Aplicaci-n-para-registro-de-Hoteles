@@ -170,39 +170,6 @@ namespace WindowsFormsApplication1
 
 		// Ejemplo de método para recibir una consulta en forma de tabla
 		// Cuando el SP ejecutará un SELECT
-        public DataTable get_Deptos(string opc)
-        {
-            var msg = "";
-            DataTable tabla = new DataTable();
-            try
-            {
-                conectar();
-                string qry = "sp_Gestiona_Deptos";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                parametro1.Value = opc;
-
-
-                _adaptador.SelectCommand = _comandosql;
-                _adaptador.Fill(tabla);
-
-            }
-            catch (SqlException e)
-            {
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return tabla;
-        }
 		
 		// Ejemplo de método para ejecutar un SP que no se espera que regrese información, solo que ejecute
 		// ya sea un INSERT, UPDATE o DELETE
