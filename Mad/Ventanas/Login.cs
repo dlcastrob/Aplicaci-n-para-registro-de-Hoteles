@@ -54,6 +54,10 @@ namespace Mad
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Ventanas.Reservación reserv = new Ventanas.Reservación();
+
+            reserv.Show();
+            /*
             string email = usTB.Text;
             string password = contraTB.Text;
 
@@ -74,6 +78,7 @@ namespace Mad
             {
                 MessageBox.Show("Credenciales inválidas");
             }
+            */
         }
 
  
@@ -118,7 +123,7 @@ namespace Mad
                     connection.Open();
 
                     // Realizar una consulta simple para verificar la conexión
-                    SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Cliente", connection);
+                    SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Usuario", connection);
                     int count = (int)command.ExecuteScalar();
 
                     MessageBox.Show("Conexión exitosa. Total de registros: " + count.ToString(), "Prueba de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
