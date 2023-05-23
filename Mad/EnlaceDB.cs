@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1
             {
                 isValid = false;
             }
-            finally+
+            finally
             {
                 desconectar();
             }
