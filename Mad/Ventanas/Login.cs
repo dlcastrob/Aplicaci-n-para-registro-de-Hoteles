@@ -109,7 +109,7 @@ namespace Mad
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string connectionString = "Aquí va tu cadena de conexión"; // Reemplaza con tu cadena de conexión
+            string connectionString = ConfigurationManager.ConnectionStrings["Grupo03"].ToString();
 
             try
             {
