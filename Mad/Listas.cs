@@ -11,6 +11,9 @@ namespace Mad
 
         public class tUser
         {
+            
+            public string idUs { get; set; }
+
             public string tipoUs { get; set; }
             public string correoElectronico { get; set; }
             public string contrasena { get; set; }
@@ -20,6 +23,24 @@ namespace Mad
             public string domicilio { get; set; }
             public string telefonoCasa { get; set; }
             public string telefonoCelular { get; set; }
+            public string estado { get; set; }
+        }
+
+        public class Cliente
+        {
+            public int idCliente { get; set; }
+            public string nombreCompleto { get; set; }
+            public string domicilioCompleto { get; set; }
+            public string rfc { get; set; }
+            public string correoElectronico { get; set; }
+            public string telefonoCasa { get; set; }
+            public string telefonoCelular { get; set; }
+            public string referenciaHotel { get; set; }
+            public string fechaNacimiento { get; set; }
+            public string estadoCivil { get; set; }
+            public DateTime fecha { get; set; }
+            public TimeSpan hora { get; set; }
+            public string usuarioOperativo { get; set; }
             public string estado { get; set; }
         }
 

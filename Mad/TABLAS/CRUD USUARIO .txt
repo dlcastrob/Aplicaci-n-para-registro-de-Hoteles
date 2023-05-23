@@ -1,7 +1,8 @@
 -- Creación de la tabla Usuario
 CREATE TABLE Usuario (
+    idUs INT PRIMARY KEY,
     tipoUs VARCHAR(50),
-    correoElectronico VARCHAR(100) PRIMARY KEY,
+    correoElectronico VARCHAR(100),
     contrasena VARCHAR(50),
     nombreCompleto VARCHAR(100),
     numeroNomina VARCHAR(20),
