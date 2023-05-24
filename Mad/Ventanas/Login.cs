@@ -54,6 +54,10 @@ namespace Mad
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Ventanas.Reservación reserv = new Ventanas.Reservación();
+
+            reserv.Show();
+            /*
             string email = usTB.Text;
             string password = contraTB.Text;
 
@@ -75,6 +79,7 @@ namespace Mad
             {
                 MessageBox.Show("Credenciales inválidas");
             }
+            */
         }
 
  
