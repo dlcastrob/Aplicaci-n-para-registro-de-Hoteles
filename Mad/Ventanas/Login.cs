@@ -68,6 +68,7 @@ namespace Mad
             {
                 // Acceso exitoso, mostrar la aplicación principal
                 MessageBox.Show("Inicio de sesión exitoso");
+
                 // ...
             }
             else
@@ -109,7 +110,7 @@ namespace Mad
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string connectionString = "Aquí va tu cadena de conexión"; // Reemplaza con tu cadena de conexión
+            string connectionString = ConfigurationManager.ConnectionStrings["Grupo03"].ToString();
 
             try
             {
@@ -118,7 +119,7 @@ namespace Mad
                     connection.Open();
 
                     // Realizar una consulta simple para verificar la conexión
-                    SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Cliente", connection);
+                    SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Usuario", connection);
                     int count = (int)command.ExecuteScalar();
 
                     MessageBox.Show("Conexión exitosa. Total de registros: " + count.ToString(), "Prueba de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
