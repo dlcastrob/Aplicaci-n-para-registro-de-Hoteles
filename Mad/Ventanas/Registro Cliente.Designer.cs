@@ -104,7 +104,7 @@
             this.maskedTextBox4.Mask = "000-000-0000";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(200, 22);
-            this.maskedTextBox4.TabIndex = 75;
+            this.maskedTextBox4.TabIndex = 12;
             // 
             // label17
             // 
@@ -122,7 +122,7 @@
             this.maskedTextBox3.Mask = "(999)000-0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(164, 22);
-            this.maskedTextBox3.TabIndex = 73;
+            this.maskedTextBox3.TabIndex = 11;
             // 
             // label2
             // 
@@ -148,7 +148,7 @@
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(164, 22);
-            this.textBox8.TabIndex = 71;
+            this.textBox8.TabIndex = 10;
             // 
             // maskedTextBox2
             // 
@@ -157,7 +157,7 @@
             this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(200, 22);
-            this.maskedTextBox2.TabIndex = 69;
+            this.maskedTextBox2.TabIndex = 9;
             this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // label15
@@ -184,7 +184,7 @@
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(164, 22);
-            this.textBox7.TabIndex = 67;
+            this.textBox7.TabIndex = 8;
             // 
             // dateTimePicker1
             // 
@@ -192,7 +192,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 65;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // label13
             // 
@@ -218,7 +218,7 @@
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(164, 22);
-            this.textBox6.TabIndex = 61;
+            this.textBox6.TabIndex = 4;
             // 
             // label10
             // 
@@ -235,7 +235,7 @@
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 22);
-            this.textBox5.TabIndex = 59;
+            this.textBox5.TabIndex = 3;
             // 
             // label9
             // 
@@ -252,7 +252,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(164, 22);
-            this.textBox4.TabIndex = 57;
+            this.textBox4.TabIndex = 2;
             // 
             // label8
             // 
@@ -270,7 +270,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ShortcutsEnabled = false;
             this.textBox3.Size = new System.Drawing.Size(164, 22);
-            this.textBox3.TabIndex = 55;
+            this.textBox3.TabIndex = 13;
             this.textBox3.UseSystemPasswordChar = true;
             // 
             // label1
@@ -292,7 +292,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
-            this.comboBox1.TabIndex = 47;
+            this.comboBox1.TabIndex = 1;
             // 
             // label12
             // 
@@ -310,7 +310,7 @@
             this.maskedTextBox1.Mask = "99999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(164, 22);
-            this.maskedTextBox1.TabIndex = 63;
+            this.maskedTextBox1.TabIndex = 5;
             this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // label18
@@ -332,7 +332,7 @@
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 24);
-            this.comboBox2.TabIndex = 77;
+            this.comboBox2.TabIndex = 7;
             // 
             // label19
             // 
@@ -353,7 +353,7 @@
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(200, 24);
-            this.comboBox3.TabIndex = 79;
+            this.comboBox3.TabIndex = 14;
             // 
             // SideBarTimer
             // 
@@ -680,6 +680,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cliente";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.Cliente_Load);
             this.sidebarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

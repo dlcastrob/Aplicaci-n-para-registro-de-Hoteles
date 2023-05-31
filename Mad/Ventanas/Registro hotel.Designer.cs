@@ -138,7 +138,7 @@
             this.textBox2.Location = new System.Drawing.Point(142, 35);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 22);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
@@ -185,7 +185,7 @@
             this.textBox3.Location = new System.Drawing.Point(440, 35);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 6;
             // 
             // label3
             // 
@@ -210,7 +210,7 @@
             this.textBox8.Location = new System.Drawing.Point(670, 30);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(164, 22);
-            this.textBox8.TabIndex = 47;
+            this.textBox8.TabIndex = 10;
             // 
             // maskedTextBox2
             // 
@@ -218,7 +218,7 @@
             this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox2.TabIndex = 45;
+            this.maskedTextBox2.TabIndex = 9;
             this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // label15
@@ -244,7 +244,7 @@
             this.textBox7.Location = new System.Drawing.Point(142, 24);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(164, 22);
-            this.textBox7.TabIndex = 43;
+            this.textBox7.TabIndex = 8;
             // 
             // groupBox2
             // 
@@ -275,7 +275,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(1175, 40);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 50;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // checkBox1
             // 
@@ -284,7 +284,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBox1.Size = new System.Drawing.Size(116, 21);
-            this.checkBox1.TabIndex = 51;
+            this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Zona turística";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -308,7 +308,7 @@
             this.comboBox1.Location = new System.Drawing.Point(188, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
-            this.comboBox1.TabIndex = 54;
+            this.comboBox1.TabIndex = 12;
             // 
             // label7
             // 
@@ -324,7 +324,7 @@
             this.textBox5.Location = new System.Drawing.Point(188, 90);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(164, 22);
-            this.textBox5.TabIndex = 48;
+            this.textBox5.TabIndex = 13;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label8
@@ -341,7 +341,7 @@
             this.textBox6.Location = new System.Drawing.Point(188, 137);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(164, 22);
-            this.textBox6.TabIndex = 55;
+            this.textBox6.TabIndex = 14;
             // 
             // label9
             // 
@@ -356,14 +356,13 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Individual",
-            "Matrimonial",
-            "King size",
-            "Queen size"});
+            "Standard",
+            "Suite",
+            "Lujo"});
             this.comboBox2.Location = new System.Drawing.Point(188, 174);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 24);
-            this.comboBox2.TabIndex = 58;
+            this.comboBox2.TabIndex = 15;
             // 
             // groupBox3
             // 
@@ -396,7 +395,7 @@
             this.listBox5.Location = new System.Drawing.Point(188, 338);
             this.listBox5.Name = "listBox5";
             this.listBox5.Size = new System.Drawing.Size(167, 68);
-            this.listBox5.TabIndex = 63;
+            this.listBox5.TabIndex = 18;
             // 
             // label13
             // 
@@ -423,14 +422,14 @@
             this.listBox4.Location = new System.Drawing.Point(188, 248);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(167, 84);
-            this.listBox4.TabIndex = 1;
+            this.listBox4.TabIndex = 17;
             // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(188, 220);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(164, 22);
-            this.textBox10.TabIndex = 59;
+            this.textBox10.TabIndex = 16;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label11
@@ -461,7 +460,7 @@
             this.listBox1.Location = new System.Drawing.Point(17, 30);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(307, 132);
-            this.listBox1.TabIndex = 0;
+            this.listBox1.TabIndex = 11;
             // 
             // groupBox5
             // 
@@ -481,7 +480,7 @@
             this.listBox2.Location = new System.Drawing.Point(17, 30);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(307, 212);
-            this.listBox2.TabIndex = 0;
+            this.listBox2.TabIndex = 19;
             // 
             // groupBox6
             // 
@@ -501,14 +500,14 @@
             this.listBox3.Location = new System.Drawing.Point(17, 30);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(307, 212);
-            this.listBox3.TabIndex = 0;
+            this.listBox3.TabIndex = 20;
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(646, 40);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 63;
+            this.textBox9.TabIndex = 2;
             // 
             // label10
             // 
@@ -594,7 +593,7 @@
             this.button3.Location = new System.Drawing.Point(-9, -3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(202, 43);
-            this.button3.TabIndex = 1;
+            this.button3.TabIndex = 21;
             this.button3.Text = "      Registra usuario";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
@@ -617,7 +616,7 @@
             this.button11.Location = new System.Drawing.Point(-12, -2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(209, 40);
-            this.button11.TabIndex = 1;
+            this.button11.TabIndex = 22;
             this.button11.Text = "Registra cliente";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button11.UseVisualStyleBackColor = true;
@@ -640,7 +639,7 @@
             this.button12.Location = new System.Drawing.Point(-8, -5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(203, 46);
-            this.button12.TabIndex = 1;
+            this.button12.TabIndex = 23;
             this.button12.Text = "Registra hotel";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button12.UseVisualStyleBackColor = true;
@@ -663,7 +662,7 @@
             this.button13.Location = new System.Drawing.Point(-12, -2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(205, 46);
-            this.button13.TabIndex = 1;
+            this.button13.TabIndex = 24;
             this.button13.Text = "Estatus habitacion";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = true;
@@ -686,7 +685,7 @@
             this.button14.Location = new System.Drawing.Point(-4, -6);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(198, 43);
-            this.button14.TabIndex = 1;
+            this.button14.TabIndex = 25;
             this.button14.Text = "Historial";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.UseVisualStyleBackColor = true;
@@ -709,7 +708,7 @@
             this.button15.Location = new System.Drawing.Point(-10, -2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(208, 39);
-            this.button15.TabIndex = 1;
+            this.button15.TabIndex = 26;
             this.button15.Text = "Login";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button15.UseVisualStyleBackColor = true;
@@ -732,7 +731,7 @@
             this.button16.Location = new System.Drawing.Point(-12, -3);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(211, 41);
-            this.button16.TabIndex = 1;
+            this.button16.TabIndex = 27;
             this.button16.Text = "Reporte ocupacion";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button16.UseVisualStyleBackColor = true;
@@ -755,7 +754,7 @@
             this.button17.Location = new System.Drawing.Point(-12, -3);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(205, 39);
-            this.button17.TabIndex = 1;
+            this.button17.TabIndex = 28;
             this.button17.Text = "Cancelar";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button17.UseVisualStyleBackColor = true;
@@ -778,7 +777,7 @@
             this.button18.Location = new System.Drawing.Point(-10, -2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(204, 45);
-            this.button18.TabIndex = 1;
+            this.button18.TabIndex = 29;
             this.button18.Text = "Reservar";
             this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button18.UseVisualStyleBackColor = true;
@@ -801,7 +800,7 @@
             this.button19.Location = new System.Drawing.Point(-10, -5);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(207, 42);
-            this.button19.TabIndex = 1;
+            this.button19.TabIndex = 30;
             this.button19.Text = "Ventas";
             this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button19.UseVisualStyleBackColor = true;

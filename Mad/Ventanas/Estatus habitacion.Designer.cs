@@ -84,7 +84,7 @@
             this.textBox4.Location = new System.Drawing.Point(212, 40);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(218, 22);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 1;
             this.textBox4.Text = "Codigo de reservación";
             // 
             // label4
@@ -110,14 +110,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(274, 90);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(274, 121);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker2.TabIndex = 27;
+            this.dateTimePicker2.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -125,7 +125,7 @@
             this.checkBox1.Location = new System.Drawing.Point(230, 381);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(84, 21);
-            this.checkBox1.TabIndex = 29;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Check in";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +135,7 @@
             this.checkBox2.Location = new System.Drawing.Point(230, 418);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(93, 21);
-            this.checkBox2.TabIndex = 30;
+            this.checkBox2.TabIndex = 6;
             this.checkBox2.Text = "Check out";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -146,7 +146,7 @@
             this.listBox1.Location = new System.Drawing.Point(274, 202);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(267, 148);
-            this.listBox1.TabIndex = 31;
+            this.listBox1.TabIndex = 4;
             // 
             // label1
             // 

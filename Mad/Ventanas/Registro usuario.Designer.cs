@@ -107,7 +107,7 @@
             this.button2.Location = new System.Drawing.Point(551, 638);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 44);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 15;
             this.button2.Text = "Nueva cuenta";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +116,7 @@
             this.button1.Location = new System.Drawing.Point(437, 638);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 44);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 14;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +135,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ShortcutsEnabled = false;
             this.textBox2.Size = new System.Drawing.Size(164, 22);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 13;
             this.textBox2.UseSystemPasswordChar = true;
             // 
             // label1
@@ -156,7 +156,7 @@
             this.comboBox1.Location = new System.Drawing.Point(331, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
-            this.comboBox1.TabIndex = 10;
+            this.comboBox1.TabIndex = 1;
             // 
             // label4
             // 
@@ -215,7 +215,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ShortcutsEnabled = false;
             this.textBox3.Size = new System.Drawing.Size(164, 22);
-            this.textBox3.TabIndex = 22;
+            this.textBox3.TabIndex = 12;
             this.textBox3.UseSystemPasswordChar = true;
             // 
             // label9
@@ -232,7 +232,7 @@
             this.textBox4.Location = new System.Drawing.Point(330, 146);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(164, 22);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 2;
             // 
             // label10
             // 
@@ -248,7 +248,7 @@
             this.textBox5.Location = new System.Drawing.Point(650, 144);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(164, 22);
-            this.textBox5.TabIndex = 26;
+            this.textBox5.TabIndex = 3;
             // 
             // label11
             // 
@@ -264,7 +264,7 @@
             this.textBox6.Location = new System.Drawing.Point(980, 143);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(164, 22);
-            this.textBox6.TabIndex = 28;
+            this.textBox6.TabIndex = 4;
             // 
             // label12
             // 
@@ -281,7 +281,7 @@
             this.maskedTextBox1.Mask = "99999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(164, 22);
-            this.maskedTextBox1.TabIndex = 31;
+            this.maskedTextBox1.TabIndex = 5;
             this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // label13
@@ -298,7 +298,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(671, 204);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // notifyIcon1
             // 
@@ -319,7 +319,7 @@
             this.textBox7.Location = new System.Drawing.Point(330, 252);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(164, 22);
-            this.textBox7.TabIndex = 36;
+            this.textBox7.TabIndex = 7;
             // 
             // label15
             // 
@@ -336,7 +336,7 @@
             this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox2.TabIndex = 39;
+            this.maskedTextBox2.TabIndex = 8;
             this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // label16
@@ -353,7 +353,7 @@
             this.textBox8.Location = new System.Drawing.Point(858, 258);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(164, 22);
-            this.textBox8.TabIndex = 41;
+            this.textBox8.TabIndex = 9;
             // 
             // maskedTextBox3
             // 
@@ -361,7 +361,7 @@
             this.maskedTextBox3.Mask = "(999)000-0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox3.TabIndex = 43;
+            this.maskedTextBox3.TabIndex = 10;
             this.maskedTextBox3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
             // label2
@@ -380,7 +380,7 @@
             this.maskedTextBox4.Mask = "000-000-0000";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox4.TabIndex = 45;
+            this.maskedTextBox4.TabIndex = 11;
             // 
             // label17
             // 

@@ -115,7 +115,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1132, 245);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
@@ -231,7 +231,7 @@
             this.button1.Location = new System.Drawing.Point(479, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 2;
             this.button1.Text = "buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -241,7 +241,7 @@
             this.radioButton1.Location = new System.Drawing.Point(582, 48);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(86, 21);
-            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Apellidos";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -252,7 +252,7 @@
             this.radioButton2.Location = new System.Drawing.Point(674, 47);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(72, 21);
-            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Correo";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -263,7 +263,7 @@
             this.radioButton3.Location = new System.Drawing.Point(758, 46);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(56, 21);
-            this.radioButton3.TabIndex = 9;
+            this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "RFC";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -273,14 +273,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(261, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(522, 87);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 11;
+            this.dateTimePicker2.TabIndex = 7;
             // 
             // SideBarTimer
             // 
