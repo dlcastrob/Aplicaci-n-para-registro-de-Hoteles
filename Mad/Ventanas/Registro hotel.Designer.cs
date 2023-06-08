@@ -33,10 +33,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -56,6 +56,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -64,18 +70,20 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AMENIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CAMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,22 +133,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ubicación";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(440, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Estado";
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(670, 39);
@@ -156,6 +148,22 @@
             this.label4.Size = new System.Drawing.Size(35, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "País";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(440, 35);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(337, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Estado";
             // 
             // label16
             // 
@@ -350,6 +358,60 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipos de habitación";
             // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 16;
+            this.listBox5.Location = new System.Drawing.Point(188, 338);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(167, 68);
+            this.listBox5.TabIndex = 63;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(28, 344);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(86, 17);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "Amenidades";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(28, 248);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 17);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "Caracteristicas";
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 16;
+            this.listBox4.Location = new System.Drawing.Point(188, 248);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(167, 84);
+            this.listBox4.TabIndex = 1;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(188, 220);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(164, 22);
+            this.textBox10.TabIndex = 59;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(28, 223);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 17);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Cantidad de este tipo";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -426,65 +488,68 @@
             this.label10.TabIndex = 62;
             this.label10.Text = "Cantidad de pisos";
             // 
-            // textBox10
+            // groupBox7
             // 
-            this.textBox10.Location = new System.Drawing.Point(188, 220);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 22);
-            this.textBox10.TabIndex = 59;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.groupBox7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Controls.Add(this.dataGridView1);
+            this.groupBox7.Location = new System.Drawing.Point(75, 766);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(616, 174);
+            this.groupBox7.TabIndex = 64;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Servicios adicionales";
             // 
-            // label11
+            // button1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(28, 223);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 17);
-            this.label11.TabIndex = 60;
-            this.label11.Text = "Cantidad de este tipo";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.button1.Location = new System.Drawing.Point(477, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "AGREGAR";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // listBox4
+            // dataGridView1
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(188, 248);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(167, 84);
-            this.listBox4.TabIndex = 1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AMENIDADES,
+            this.CAMA,
+            this.OTRO});
+            this.dataGridView1.Location = new System.Drawing.Point(18, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(436, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // label12
+            // AMENIDADES
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 248);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 17);
-            this.label12.TabIndex = 61;
-            this.label12.Text = "Caracteristicas";
+            this.AMENIDADES.HeaderText = "AMENIDADES";
+            this.AMENIDADES.MinimumWidth = 6;
+            this.AMENIDADES.Name = "AMENIDADES";
+            this.AMENIDADES.Width = 125;
             // 
-            // label13
+            // CAMA
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 344);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 17);
-            this.label13.TabIndex = 62;
-            this.label13.Text = "Amenidades";
+            this.CAMA.HeaderText = "CAMA";
+            this.CAMA.MinimumWidth = 6;
+            this.CAMA.Name = "CAMA";
+            this.CAMA.Width = 125;
             // 
-            // listBox5
+            // OTRO
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(188, 338);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(167, 68);
-            this.listBox5.TabIndex = 63;
+            this.OTRO.HeaderText = "OTRO";
+            this.OTRO.MinimumWidth = 6;
+            this.OTRO.Name = "OTRO";
+            this.OTRO.Width = 125;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1410, 744);
+            this.ClientSize = new System.Drawing.Size(1410, 1055);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox6);
@@ -509,6 +574,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,5 +625,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AMENIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CAMA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OTRO;
     }
 }
