@@ -147,7 +147,7 @@ namespace Mad.Ventanas
         }
         private void tabPage4_Click(object sender, EventArgs e)
         {
-            Servicios_adicionales form1 = new Servicios_adicionales();
+            Servicios form1 = new Servicios();
 
             // Establecer el formulario como control hijo del TabPage
             form1.TopLevel = false;

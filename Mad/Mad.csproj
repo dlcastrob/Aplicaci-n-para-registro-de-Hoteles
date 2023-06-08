@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Ventanas\Reservación.resx">
       <DependentUpon>Reservación.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Servicios adicionales.resx">
+      <DependentUpon>Servicios adicionales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
