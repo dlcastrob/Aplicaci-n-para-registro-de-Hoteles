@@ -39,6 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.fechaInicioDTP = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -105,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(201, 325);
+            this.button1.Location = new System.Drawing.Point(113, 320);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 44);
@@ -116,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(319, 325);
+            this.button2.Location = new System.Drawing.Point(231, 320);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 44);
@@ -127,10 +128,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(509, 325);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(348, 320);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(100, 44);
             this.button3.TabIndex = 7;
             this.button3.Text = "Prueba";
             this.button3.UseVisualStyleBackColor = true;
@@ -139,7 +140,7 @@
             // fechaInicioDTP
             // 
             this.fechaInicioDTP.Location = new System.Drawing.Point(271, 245);
-            this.fechaInicioDTP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaInicioDTP.Margin = new System.Windows.Forms.Padding(4);
             this.fechaInicioDTP.Name = "fechaInicioDTP";
             this.fechaInicioDTP.Size = new System.Drawing.Size(177, 22);
             this.fechaInicioDTP.TabIndex = 4;
@@ -155,11 +156,22 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Ingrese fecha actual";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(506, 320);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(89, 44);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Recuperar contraseña";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 412);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.fechaInicioDTP);
             this.Controls.Add(this.button3);
@@ -192,6 +204,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DateTimePicker fechaInicioDTP;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button4;
     }
 }
 

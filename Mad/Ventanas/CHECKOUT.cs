@@ -19,7 +19,9 @@ namespace Mad.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Ventanas.FACTURA factura = new Ventanas.FACTURA();
 
+            factura.Show();
         }
     }
 }

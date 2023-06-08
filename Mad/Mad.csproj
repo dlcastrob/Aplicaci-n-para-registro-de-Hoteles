@@ -204,6 +204,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Ventanas\Registro Cliente.resx">
       <DependentUpon>Registro Cliente.cs</DependentUpon>
@@ -249,9 +250,21 @@
     <Content Include="QUERYS\cliente.sql" />
     <Content Include="QUERYS\dbo.GestionarUsuariosql.sql" />
     <Content Include="QUERYS\Funciones.sql" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\historial.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\icons8-menu-25.png" />
+    <None Include="Resources\registrar_usuario.png" />
+    <None Include="Resources\registrarcliente.png" />
+    <None Include="Resources\registrarhotel.png" />
+    <None Include="Resources\RepHotel.png" />
+    <None Include="Resources\reserv.png" />
+    <None Include="Resources\status.png" />
+    <None Include="Resources\ventas.png" />
     <Content Include="QUERYS\ObtenerReporteOcupacion.sql" />
     <Content Include="TABLAS\CRUD CLIENTE.txt" />
     <Content Include="TABLAS\CRUD USUARIO .txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

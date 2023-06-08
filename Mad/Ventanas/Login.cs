@@ -57,7 +57,7 @@ namespace Mad
            // Ventanas.Reservación reserv = new Ventanas.Reservación();
 
             //reserv.Show();
-            Ventanas.Form1 reserv = new Ventanas.Form1();
+            Ventanas.Reservación reserv = new Ventanas.Reservación();
 
             reserv.Show();
             /*
@@ -156,6 +156,13 @@ namespace Mad
         public DateTime ObtenerFechaSeleccionada()
         {
             return fechaInicioDTP.Value;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Ventanas.Form2 contraseña = new Ventanas.Form2();
+
+            contraseña.Show();
         }
         /*
 private void PromptChangePassword(string email)
