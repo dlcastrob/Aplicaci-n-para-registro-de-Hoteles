@@ -36,17 +36,19 @@ namespace Mad.Ventanas
             // 
             // nContraTB
             // 
-            this.nContraTB.Location = new System.Drawing.Point(107, 123);
+            this.nContraTB.Location = new System.Drawing.Point(143, 151);
+            this.nContraTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nContraTB.Name = "nContraTB";
-            this.nContraTB.Size = new System.Drawing.Size(149, 20);
-            this.nContraTB.TabIndex = 0;
+            this.nContraTB.Size = new System.Drawing.Size(197, 22);
+            this.nContraTB.TabIndex = 1;
             // 
             // okNCTB
             // 
-            this.okNCTB.Location = new System.Drawing.Point(140, 185);
+            this.okNCTB.Location = new System.Drawing.Point(187, 228);
+            this.okNCTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.okNCTB.Name = "okNCTB";
-            this.okNCTB.Size = new System.Drawing.Size(75, 23);
-            this.okNCTB.TabIndex = 1;
+            this.okNCTB.Size = new System.Drawing.Size(100, 28);
+            this.okNCTB.TabIndex = 2;
             this.okNCTB.Text = "Aceptar";
             this.okNCTB.UseVisualStyleBackColor = true;
             this.okNCTB.Click += new System.EventHandler(this.okNCTB_Click);
@@ -54,20 +56,22 @@ namespace Mad.Ventanas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 77);
+            this.label1.Location = new System.Drawing.Point(139, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
-            this.label1.TabIndex = 2;
+            this.label1.Size = new System.Drawing.Size(201, 17);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese una nueva contraseña";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 252);
+            this.ClientSize = new System.Drawing.Size(480, 310);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.okNCTB);
             this.Controls.Add(this.nContraTB);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Nueva contraseña";
             this.Load += new System.EventHandler(this.Form2_Load);

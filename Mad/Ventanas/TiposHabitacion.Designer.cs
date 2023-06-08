@@ -82,7 +82,7 @@ namespace Mad.Ventanas
             this.listBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox5.Name = "listBox5";
             this.listBox5.Size = new System.Drawing.Size(167, 68);
-            this.listBox5.TabIndex = 63;
+            this.listBox5.TabIndex = 7;
             // 
             // label13
             // 
@@ -90,7 +90,7 @@ namespace Mad.Ventanas
             this.label13.Location = new System.Drawing.Point(28, 345);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(86, 17);
-            this.label13.TabIndex = 62;
+            this.label13.TabIndex = 0;
             this.label13.Text = "Amenidades";
             // 
             // label12
@@ -99,7 +99,7 @@ namespace Mad.Ventanas
             this.label12.Location = new System.Drawing.Point(28, 249);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 17);
-            this.label12.TabIndex = 61;
+            this.label12.TabIndex = 0;
             this.label12.Text = "Caracteristicas";
             // 
             // listBox4
@@ -110,7 +110,7 @@ namespace Mad.Ventanas
             this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(167, 84);
-            this.listBox4.TabIndex = 1;
+            this.listBox4.TabIndex = 6;
             // 
             // textBox10
             // 
@@ -118,7 +118,7 @@ namespace Mad.Ventanas
             this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(164, 22);
-            this.textBox10.TabIndex = 59;
+            this.textBox10.TabIndex = 5;
             // 
             // label11
             // 
@@ -126,7 +126,7 @@ namespace Mad.Ventanas
             this.label11.Location = new System.Drawing.Point(28, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(142, 17);
-            this.label11.TabIndex = 60;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Cantidad de este tipo";
             // 
             // comboBox2
@@ -141,7 +141,7 @@ namespace Mad.Ventanas
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 24);
-            this.comboBox2.TabIndex = 58;
+            this.comboBox2.TabIndex = 4;
             // 
             // label9
             // 
@@ -149,7 +149,7 @@ namespace Mad.Ventanas
             this.label9.Location = new System.Drawing.Point(28, 174);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 17);
-            this.label9.TabIndex = 57;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Nivel de habitación";
             // 
             // textBox6
@@ -158,7 +158,7 @@ namespace Mad.Ventanas
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(164, 22);
-            this.textBox6.TabIndex = 55;
+            this.textBox6.TabIndex = 3;
             // 
             // label8
             // 
@@ -166,7 +166,7 @@ namespace Mad.Ventanas
             this.label8.Location = new System.Drawing.Point(25, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 17);
-            this.label8.TabIndex = 56;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Cantidad de personas";
             // 
             // textBox5
@@ -175,7 +175,7 @@ namespace Mad.Ventanas
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(164, 22);
-            this.textBox5.TabIndex = 48;
+            this.textBox5.TabIndex = 2;
             // 
             // label7
             // 
@@ -183,7 +183,7 @@ namespace Mad.Ventanas
             this.label7.Location = new System.Drawing.Point(25, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 17);
-            this.label7.TabIndex = 48;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Precio por noche";
             // 
             // comboBox1
@@ -198,7 +198,7 @@ namespace Mad.Ventanas
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
-            this.comboBox1.TabIndex = 54;
+            this.comboBox1.TabIndex = 1;
             // 
             // label6
             // 
@@ -206,7 +206,7 @@ namespace Mad.Ventanas
             this.label6.Location = new System.Drawing.Point(25, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 17);
-            this.label6.TabIndex = 48;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Tipos de cama";
             // 
             // TiposHabitacion
@@ -215,7 +215,7 @@ namespace Mad.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TiposHabitacion";
             this.Text = "Tipos Habitacion";
             this.groupBox3.ResumeLayout(false);

@@ -33,10 +33,10 @@ namespace Mad.Ventanas
             this.PAGAR = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace Mad.Ventanas
             this.PAGAR.Location = new System.Drawing.Point(60, 281);
             this.PAGAR.Name = "PAGAR";
             this.PAGAR.Size = new System.Drawing.Size(58, 17);
-            this.PAGAR.TabIndex = 2;
+            this.PAGAR.TabIndex = 0;
             this.PAGAR.Text = "TOTAL:";
             // 
             // comboBox1
@@ -67,7 +67,7 @@ namespace Mad.Ventanas
             this.comboBox1.Location = new System.Drawing.Point(54, 62);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 24);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -81,14 +81,7 @@ namespace Mad.Ventanas
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(447, 150);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(139, 278);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 7;
+            this.dataGridView1.TabIndex = 2;
             // 
             // TIPO
             // 
@@ -111,12 +104,19 @@ namespace Mad.Ventanas
             this.MONTO.Name = "MONTO";
             this.MONTO.Width = 125;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(139, 278);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(72, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 5;
             this.button1.Text = "PAGAR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -131,7 +131,7 @@ namespace Mad.Ventanas
             this.comboBox2.Location = new System.Drawing.Point(72, 357);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 9;
+            this.comboBox2.TabIndex = 4;
             // 
             // label2
             // 
@@ -139,7 +139,7 @@ namespace Mad.Ventanas
             this.label2.Location = new System.Drawing.Point(72, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 17);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Tipo de pago";
             // 
             // CHECKOUT

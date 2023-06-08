@@ -93,7 +93,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 22);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
@@ -101,7 +101,7 @@
             this.label2.Location = new System.Drawing.Point(25, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Ciudad";
             // 
             // groupBox1
@@ -135,7 +135,7 @@
             this.label4.Location = new System.Drawing.Point(609, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 17);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 0;
             this.label4.Text = "País";
             // 
             // textBox3
@@ -144,7 +144,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 6;
             // 
             // label3
             // 
@@ -152,7 +152,7 @@
             this.label3.Location = new System.Drawing.Point(337, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Estado";
             // 
             // label16
@@ -161,7 +161,7 @@
             this.label16.Location = new System.Drawing.Point(609, 30);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 17);
-            this.label16.TabIndex = 46;
+            this.label16.TabIndex = 0;
             this.label16.Text = "Colonia";
             // 
             // textBox8
@@ -170,7 +170,7 @@
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(164, 22);
-            this.textBox8.TabIndex = 47;
+            this.textBox8.TabIndex = 10;
             // 
             // maskedTextBox2
             // 
@@ -179,7 +179,7 @@
             this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox2.TabIndex = 45;
+            this.maskedTextBox2.TabIndex = 9;
             this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // label15
@@ -188,7 +188,7 @@
             this.label15.Location = new System.Drawing.Point(337, 30);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(81, 17);
-            this.label15.TabIndex = 44;
+            this.label15.TabIndex = 0;
             this.label15.Text = "No. exterior";
             // 
             // label14
@@ -197,7 +197,7 @@
             this.label14.Location = new System.Drawing.Point(37, 25);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 17);
-            this.label14.TabIndex = 42;
+            this.label14.TabIndex = 0;
             this.label14.Text = "Calle";
             // 
             // textBox7
@@ -206,7 +206,7 @@
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(164, 22);
-            this.textBox7.TabIndex = 43;
+            this.textBox7.TabIndex = 8;
             // 
             // groupBox2
             // 
@@ -231,7 +231,7 @@
             this.label5.Location = new System.Drawing.Point(741, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(212, 17);
-            this.label5.TabIndex = 49;
+            this.label5.TabIndex = 0;
             this.label5.Text = " Fecha de Inicio de Operaciones";
             // 
             // dateTimePicker1
@@ -240,7 +240,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 50;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // checkBox1
             // 
@@ -250,7 +250,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBox1.Size = new System.Drawing.Size(116, 21);
-            this.checkBox1.TabIndex = 51;
+            this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Zona turística";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -275,7 +275,7 @@
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(307, 132);
-            this.listBox1.TabIndex = 0;
+            this.listBox1.TabIndex = 11;
             // 
             // textBox9
             // 
@@ -283,7 +283,7 @@
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 63;
+            this.textBox9.TabIndex = 2;
             // 
             // label10
             // 
@@ -291,7 +291,7 @@
             this.label10.Location = new System.Drawing.Point(323, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 17);
-            this.label10.TabIndex = 62;
+            this.label10.TabIndex = 0;
             this.label10.Text = "Cantidad de pisos";
             // 
             // groupBox7
@@ -314,7 +314,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 14;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -331,7 +331,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(436, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 13;
             // 
             // AMENIDADES
             // 
@@ -361,19 +361,19 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(56, 305);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(966, 425);
-            this.tabControl1.TabIndex = 65;
+            this.tabControl1.TabIndex = 12;
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting_1);
             // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(958, 396);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Habitacion";
@@ -383,9 +383,9 @@
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(958, 396);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Caracteristicas";
@@ -395,9 +395,9 @@
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(958, 396);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Amenidades";
@@ -407,9 +407,9 @@
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(958, 396);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";

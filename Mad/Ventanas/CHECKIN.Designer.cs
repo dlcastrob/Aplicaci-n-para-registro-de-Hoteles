@@ -43,7 +43,7 @@ namespace Mad.Ventanas
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(661, 289);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 1;
             // 
             // label1
             // 
@@ -51,7 +51,7 @@ namespace Mad.Ventanas
             this.label1.Location = new System.Drawing.Point(85, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 17);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Quien es el huesped que llego";
             // 
             // button1

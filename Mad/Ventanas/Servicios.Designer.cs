@@ -46,7 +46,7 @@ namespace Mad.Ventanas
             this.label17.Location = new System.Drawing.Point(47, 56);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(161, 17);
-            this.label17.TabIndex = 74;
+            this.label17.TabIndex = 0;
             this.label17.Text = "SERVICIO O AMENIDAD";
             // 
             // button5
@@ -54,7 +54,7 @@ namespace Mad.Ventanas
             this.button5.Location = new System.Drawing.Point(282, 87);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 23);
-            this.button5.TabIndex = 71;
+            this.button5.TabIndex = 2;
             this.button5.Text = "ACEPTAR";
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -76,7 +76,7 @@ namespace Mad.Ventanas
             this.listBox6.Location = new System.Drawing.Point(6, 21);
             this.listBox6.Name = "listBox6";
             this.listBox6.Size = new System.Drawing.Size(386, 148);
-            this.listBox6.TabIndex = 2;
+            this.listBox6.TabIndex = 3;
             // 
             // comboBox3
             // 
@@ -84,14 +84,14 @@ namespace Mad.Ventanas
             this.comboBox3.Location = new System.Drawing.Point(45, 87);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(214, 24);
-            this.comboBox3.TabIndex = 73;
+            this.comboBox3.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(282, 400);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 75;
+            this.button1.TabIndex = 5;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -101,7 +101,7 @@ namespace Mad.Ventanas
             this.comboBox1.Location = new System.Drawing.Point(45, 400);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(214, 24);
-            this.comboBox1.TabIndex = 76;
+            this.comboBox1.TabIndex = 4;
             // 
             // label1
             // 
@@ -109,7 +109,7 @@ namespace Mad.Ventanas
             this.label1.Location = new System.Drawing.Point(51, 377);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 17);
-            this.label1.TabIndex = 77;
+            this.label1.TabIndex = 0;
             this.label1.Text = "A que usuario se le aplicara?";
             // 
             // Servicios

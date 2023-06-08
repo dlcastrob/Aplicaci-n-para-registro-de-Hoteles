@@ -40,7 +40,7 @@
             this.textBox1.Location = new System.Drawing.Point(216, 67);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -48,7 +48,7 @@
             this.label1.Location = new System.Drawing.Point(47, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 17);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Codigo de reservación";
             // 
             // listBox1
@@ -66,7 +66,7 @@
             this.label2.Location = new System.Drawing.Point(47, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 17);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Informacion reservación";
             // 
             // button1
@@ -74,7 +74,7 @@
             this.button1.Location = new System.Drawing.Point(216, 360);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
             // 

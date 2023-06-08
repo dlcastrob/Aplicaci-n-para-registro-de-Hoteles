@@ -76,7 +76,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Busqueda cliente";
             // 
             // label1
@@ -85,7 +85,7 @@
             this.label1.Location = new System.Drawing.Point(21, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 17);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Busqueda por:";
             // 
             // radioButton1
@@ -95,7 +95,7 @@
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(86, 21);
-            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Apellidos";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(56, 21);
-            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "RFC";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(72, 21);
-            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Correo";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 37);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 12;
             this.button2.Text = "🔎";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -144,7 +144,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(217, 22);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 8;
             this.textBox3.Text = "Busqueda ciudad";
             // 
             // listBox1
@@ -155,7 +155,7 @@
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(208, 132);
-            this.listBox1.TabIndex = 9;
+            this.listBox1.TabIndex = 13;
             // 
             // label2
             // 
@@ -163,7 +163,7 @@
             this.label2.Location = new System.Drawing.Point(43, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 17);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Hoteles en esta ciudad:";
             // 
             // listBox2
@@ -174,7 +174,7 @@
             this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(223, 132);
-            this.listBox2.TabIndex = 11;
+            this.listBox2.TabIndex = 14;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label3
@@ -183,7 +183,7 @@
             this.label3.Location = new System.Drawing.Point(315, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 17);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Información del hotel seleccionado";
             // 
             // button3
@@ -192,7 +192,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 38);
-            this.button3.TabIndex = 13;
+            this.button3.TabIndex = 19;
             this.button3.Text = "Reservar";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -202,7 +202,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 38);
-            this.button4.TabIndex = 14;
+            this.button4.TabIndex = 20;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -221,7 +221,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.TabIndex = 10;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
@@ -230,7 +230,7 @@
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dateTimePicker2.TabIndex = 11;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label5
@@ -251,7 +251,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 37);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 6;
             this.button1.Text = "🔎";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -288,7 +288,7 @@
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 19;
+            this.numericUpDown1.TabIndex = 9;
             // 
             // label7
             // 
@@ -296,7 +296,7 @@
             this.label7.Location = new System.Drawing.Point(605, 305);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(165, 17);
-            this.label7.TabIndex = 22;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Habitaciones disponibles";
             // 
             // listBox3
@@ -307,7 +307,7 @@
             this.listBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(223, 132);
-            this.listBox3.TabIndex = 21;
+            this.listBox3.TabIndex = 15;
             // 
             // groupBox2
             // 
@@ -329,7 +329,7 @@
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(94, 21);
-            this.checkBox2.TabIndex = 28;
+            this.checkBox2.TabIndex = 17;
             this.checkBox2.Text = "Pago total";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -340,7 +340,7 @@
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 21);
-            this.checkBox1.TabIndex = 27;
+            this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Anticipo";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -353,7 +353,7 @@
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(91, 37);
-            this.button6.TabIndex = 26;
+            this.button6.TabIndex = 18;
             this.button6.Text = "Pagar";
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -364,7 +364,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(217, 22);
-            this.textBox4.TabIndex = 23;
+            this.textBox4.TabIndex = 7;
             this.textBox4.Text = "Codigo de reservación";
             // 
             // notifyIcon1
@@ -385,7 +385,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(557, 162);
-            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.TabIndex = 4;
             // 
             // APELLIDOS
             // 

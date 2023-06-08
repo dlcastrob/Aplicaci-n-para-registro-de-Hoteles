@@ -45,7 +45,7 @@
             this.textBox4.Location = new System.Drawing.Point(26, 39);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(218, 22);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 1;
             this.textBox4.Text = "Codigo de reservación";
             // 
             // label4
@@ -54,7 +54,7 @@
             this.label4.Location = new System.Drawing.Point(23, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 25;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Salida";
             // 
             // label5
@@ -63,7 +63,7 @@
             this.label5.Location = new System.Drawing.Point(23, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 17);
-            this.label5.TabIndex = 28;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Llegada";
             // 
             // dateTimePicker1
@@ -71,14 +71,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(88, 89);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(88, 120);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker2.TabIndex = 27;
+            this.dateTimePicker2.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -86,7 +86,7 @@
             this.checkBox1.Location = new System.Drawing.Point(44, 380);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(84, 21);
-            this.checkBox1.TabIndex = 29;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Check in";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -96,7 +96,7 @@
             this.checkBox2.Location = new System.Drawing.Point(44, 417);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(93, 21);
-            this.checkBox2.TabIndex = 30;
+            this.checkBox2.TabIndex = 6;
             this.checkBox2.Text = "Check out";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -107,7 +107,7 @@
             this.listBox1.Location = new System.Drawing.Point(88, 201);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(267, 148);
-            this.listBox1.TabIndex = 31;
+            this.listBox1.TabIndex = 4;
             // 
             // label1
             // 
@@ -115,7 +115,7 @@
             this.label1.Location = new System.Drawing.Point(23, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 17);
-            this.label1.TabIndex = 32;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Informacion de habitacion";
             // 
             // Estatus_habitacion
