@@ -13,6 +13,8 @@ namespace Mad.Ventanas
 {
     public partial class Form1 : Form
     {
+        public object fechaInicioDTP { get; internal set; }
+
         public Form1()
         {
             InitializeComponent();
