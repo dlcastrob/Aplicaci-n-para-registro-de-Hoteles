@@ -88,8 +88,6 @@
             this.button18 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -742,33 +740,11 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1124, 40);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(113, 45);
-            this.button7.TabIndex = 23;
-            this.button7.Text = "El cliente llego?";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(1124, 125);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(113, 45);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "El cliente se va?";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // Reservación
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 789);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.sidebarContainer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
@@ -879,7 +855,5 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
     }
 }

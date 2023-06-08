@@ -224,6 +224,9 @@
     <EmbeddedResource Include="Ventanas\Reservación.resx">
       <DependentUpon>Reservación.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Servicios adicionales.resx">
+      <DependentUpon>Servicios adicionales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +261,7 @@
     <None Include="Resources\reserv.png" />
     <None Include="Resources\status.png" />
     <None Include="Resources\ventas.png" />
+    <Content Include="QUERYS\ObtenerReporteOcupacion.sql" />
     <Content Include="TABLAS\CRUD CLIENTE.txt" />
     <Content Include="TABLAS\CRUD USUARIO .txt" />
   </ItemGroup>

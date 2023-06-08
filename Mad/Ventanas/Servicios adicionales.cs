@@ -16,5 +16,10 @@ namespace Mad.Ventanas
         {
             InitializeComponent();
         }
+
+        private void Servicios_adicionales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
