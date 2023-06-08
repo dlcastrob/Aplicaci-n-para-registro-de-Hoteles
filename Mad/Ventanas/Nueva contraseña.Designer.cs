@@ -32,12 +32,14 @@ namespace Mad.Ventanas
             this.nContraTB = new System.Windows.Forms.TextBox();
             this.okNCTB = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // nContraTB
             // 
-            this.nContraTB.Location = new System.Drawing.Point(143, 151);
-            this.nContraTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nContraTB.Location = new System.Drawing.Point(143, 177);
+            this.nContraTB.Margin = new System.Windows.Forms.Padding(4);
             this.nContraTB.Name = "nContraTB";
             this.nContraTB.Size = new System.Drawing.Size(197, 22);
             this.nContraTB.TabIndex = 1;
@@ -45,7 +47,7 @@ namespace Mad.Ventanas
             // okNCTB
             // 
             this.okNCTB.Location = new System.Drawing.Point(187, 228);
-            this.okNCTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okNCTB.Margin = new System.Windows.Forms.Padding(4);
             this.okNCTB.Name = "okNCTB";
             this.okNCTB.Size = new System.Drawing.Size(100, 28);
             this.okNCTB.TabIndex = 2;
@@ -56,22 +58,42 @@ namespace Mad.Ventanas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 95);
+            this.label1.Location = new System.Drawing.Point(139, 146);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese una nueva contraseña";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(125, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "A que usuario se le hara el cambio?";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(143, 65);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 22);
+            this.textBox1.TabIndex = 4;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 310);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.okNCTB);
             this.Controls.Add(this.nContraTB);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Nueva contraseña";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -85,5 +107,7 @@ namespace Mad.Ventanas
         private System.Windows.Forms.TextBox nContraTB;
         private System.Windows.Forms.Button okNCTB;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
