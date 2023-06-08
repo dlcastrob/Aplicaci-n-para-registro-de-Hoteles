@@ -57,7 +57,7 @@ namespace Mad
            // Ventanas.Reservación reserv = new Ventanas.Reservación();
 
             //reserv.Show();
-            Ventanas.Form1 reserv = new Ventanas.Form1();
+            Ventanas.Cancelacion reserv = new Ventanas.Cancelacion();
 
             reserv.Show();
             /*
