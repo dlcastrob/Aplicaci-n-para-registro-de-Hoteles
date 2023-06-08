@@ -146,20 +146,6 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Ventanas.CHECKIN checkin = new Ventanas.CHECKIN();
-
-            checkin.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Ventanas.CHECKOUT CHECKOUT = new Ventanas.CHECKOUT();
-
-            CHECKOUT.Show();
-        }
-
 
 
         //AQUI TERMINA  EL SIDE MENU
