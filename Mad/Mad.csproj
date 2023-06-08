@@ -249,6 +249,7 @@
     <Content Include="QUERYS\cliente.sql" />
     <Content Include="QUERYS\dbo.GestionarUsuariosql.sql" />
     <Content Include="QUERYS\Funciones.sql" />
+    <Content Include="QUERYS\ObtenerReporteOcupacion.sql" />
     <Content Include="TABLAS\CRUD CLIENTE.txt" />
     <Content Include="TABLAS\CRUD USUARIO .txt" />
   </ItemGroup>
