@@ -49,6 +49,7 @@ namespace Mad.Ventanas
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox3.Controls.Add(this.listBox5);
             this.groupBox3.Controls.Add(this.label13);
@@ -64,11 +65,11 @@ namespace Mad.Ventanas
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(213, 47);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(284, 58);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(390, 343);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(520, 422);
             this.groupBox3.TabIndex = 54;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipos de habitación";
@@ -76,56 +77,55 @@ namespace Mad.Ventanas
             // listBox5
             // 
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(141, 275);
-            this.listBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox5.ItemHeight = 16;
+            this.listBox5.Location = new System.Drawing.Point(188, 338);
+            this.listBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(126, 56);
+            this.listBox5.Size = new System.Drawing.Size(167, 68);
             this.listBox5.TabIndex = 63;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 280);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(28, 345);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 13);
+            this.label13.Size = new System.Drawing.Size(86, 17);
             this.label13.TabIndex = 62;
             this.label13.Text = "Amenidades";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 202);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(28, 249);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 13);
+            this.label12.Size = new System.Drawing.Size(101, 17);
             this.label12.TabIndex = 61;
             this.label12.Text = "Caracteristicas";
             // 
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(141, 202);
-            this.listBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox4.ItemHeight = 16;
+            this.listBox4.Location = new System.Drawing.Point(188, 249);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(126, 69);
+            this.listBox4.Size = new System.Drawing.Size(167, 84);
             this.listBox4.TabIndex = 1;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(141, 179);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox10.Location = new System.Drawing.Point(188, 220);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(124, 20);
+            this.textBox10.Size = new System.Drawing.Size(164, 22);
             this.textBox10.TabIndex = 59;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 181);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(28, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 13);
+            this.label11.Size = new System.Drawing.Size(142, 17);
             this.label11.TabIndex = 60;
             this.label11.Text = "Cantidad de este tipo";
             // 
@@ -137,55 +137,52 @@ namespace Mad.Ventanas
             "Matrimonial",
             "King size",
             "Queen size"});
-            this.comboBox2.Location = new System.Drawing.Point(141, 141);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Location = new System.Drawing.Point(188, 174);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(124, 21);
+            this.comboBox2.Size = new System.Drawing.Size(164, 24);
             this.comboBox2.TabIndex = 58;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 141);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(28, 174);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
+            this.label9.Size = new System.Drawing.Size(128, 17);
             this.label9.TabIndex = 57;
             this.label9.Text = "Nivel de habitación";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(141, 111);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Location = new System.Drawing.Point(188, 137);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 20);
+            this.textBox6.Size = new System.Drawing.Size(164, 22);
             this.textBox6.TabIndex = 55;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 111);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(25, 137);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 13);
+            this.label8.Size = new System.Drawing.Size(147, 17);
             this.label8.TabIndex = 56;
             this.label8.Text = "Cantidad de personas";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 73);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Location = new System.Drawing.Point(188, 90);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(124, 20);
+            this.textBox5.Size = new System.Drawing.Size(164, 22);
             this.textBox5.TabIndex = 48;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 76);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(25, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.Size = new System.Drawing.Size(116, 17);
             this.label7.TabIndex = 48;
             this.label7.Text = "Precio por noche";
             // 
@@ -197,28 +194,28 @@ namespace Mad.Ventanas
             "Matrimonial",
             "King size",
             "Queen size"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 36);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(188, 44);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.Size = new System.Drawing.Size(164, 24);
             this.comboBox1.TabIndex = 54;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 36);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(25, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(101, 17);
             this.label6.TabIndex = 48;
             this.label6.Text = "Tipos de cama";
             // 
             // TiposHabitacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TiposHabitacion";
             this.Text = "Tipos Habitacion";
             this.groupBox3.ResumeLayout(false);
