@@ -90,35 +90,75 @@ namespace Mad.Ventanas
 
         }
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
-        {
-            
+       
 
-            
-        }
-        private void tabControl2_Selected(object sender, TabControlEventArgs e)
-        {
-           
-          
-        }
-        private void tabControl_Selected(object sender, TabControlEventArgs e)
+        private void tabControl1_Selecting_1(object sender, TabControlCancelEventArgs e)
         {
 
-         
-
         }
+
+    
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
+            // Crear una nueva instancia del formulario que deseas mostrar
+            TiposHabitacion form1 = new TiposHabitacion();
 
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage1.Controls.Add(form1);
+
+            // Mostrar el formulario
+            form1.Show();
         }
 
-        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        private void tabPage2_Click_1(object sender, EventArgs e)
         {
+            // Crear una nueva instancia del formulario que deseas mostrar
+            Caracteristicas form1 = new Caracteristicas();
 
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage2.Controls.Add(form1);
+
+            // Mostrar el formulario
+            form1.Show();
+
+        }
+        private void tabPage3_Click_1(object sender, EventArgs e)
+        {
             Amenidades form1 = new Amenidades();
 
             // Establecer el formulario como control hijo del TabPage
-            
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage3.Controls.Add(form1);
+
+            // Mostrar el formulario
+            form1.Show();
+        }
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+            Amenidades form1 = new Amenidades();
+
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage4.Controls.Add(form1);
+
+            // Mostrar el formulario
+            form1.Show();
+
         }
     }
 }
