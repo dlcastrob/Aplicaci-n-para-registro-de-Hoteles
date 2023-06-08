@@ -371,7 +371,7 @@
             this.tabControl1.Location = new System.Drawing.Point(42, 248);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(642, 200);
+            this.tabControl1.Size = new System.Drawing.Size(642, 269);
             this.tabControl1.TabIndex = 65;
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting_1);
             // 
@@ -380,7 +380,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(634, 174);
+            this.tabPage1.Size = new System.Drawing.Size(634, 243);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
