@@ -50,11 +50,23 @@
     <Compile Include="Funciones.cs" />
     <Compile Include="EnlaceDB.cs" />
     <Compile Include="Listas.cs" />
+    <Compile Include="Ventanas\Amenidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Amenidades.Designer.cs">
+      <DependentUpon>Amenidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Cancelacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Cancelacion.Designer.cs">
       <DependentUpon>Cancelacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Caracteristicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Caracteristicas.Designer.cs">
+      <DependentUpon>Caracteristicas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\CHECKIN.cs">
       <SubType>Form</SubType>
@@ -136,14 +148,32 @@
     <Compile Include="Ventanas\RepVentas.Designer.cs">
       <DependentUpon>RepVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Servicios adicionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Servicios adicionales.Designer.cs">
+      <DependentUpon>Servicios adicionales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Servicios.Designer.cs">
       <DependentUpon>Servicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\TiposHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\TiposHabitacion.Designer.cs">
+      <DependentUpon>TiposHabitacion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ventanas\Amenidades.resx">
+      <DependentUpon>Amenidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Cancelacion.resx">
       <DependentUpon>Cancelacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Caracteristicas.resx">
+      <DependentUpon>Caracteristicas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\CHECKIN.resx">
       <DependentUpon>CHECKIN.cs</DependentUpon>
@@ -195,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\TiposHabitacion.resx">
+      <DependentUpon>TiposHabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

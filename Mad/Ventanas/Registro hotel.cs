@@ -39,5 +39,86 @@ namespace Mad.Ventanas
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            TiposHabitacion form1 = new TiposHabitacion();
+
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage1.Controls.Add(form1);
+            form1.Show();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            Caracteristicas form1 = new Caracteristicas();
+
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage1.Controls.Add(form1);
+            form1.Show();
+
+        }
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+            Amenidades form1 = new Amenidades();
+
+            // Establecer el formulario como control hijo del TabPage
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+
+            tabPage1.Controls.Add(form1);
+            form1.Show();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            
+
+            
+        }
+        private void tabControl2_Selected(object sender, TabControlEventArgs e)
+        {
+           
+          
+        }
+        private void tabControl_Selected(object sender, TabControlEventArgs e)
+        {
+
+         
+
+        }
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+
+            Amenidades form1 = new Amenidades();
+
+            // Establecer el formulario como control hijo del TabPage
+            
+        }
     }
 }

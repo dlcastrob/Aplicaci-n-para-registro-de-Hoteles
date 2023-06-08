@@ -387,6 +387,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cliente";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.Cliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
