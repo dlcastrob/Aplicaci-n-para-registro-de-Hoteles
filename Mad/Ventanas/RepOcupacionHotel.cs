@@ -131,46 +131,7 @@ namespace Mad.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Obtener los valores de los filtros seleccionados
-            string pais = textBox4.Text;
-            int año = Convert.ToInt32(textBox3.Text);
-            string ciudad = textBox1.Text;
-            string nombreHotel = textBox2.Text;
-
-            // Establecer la cadena de conexión a tu base de datos
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["Grupo03"].ToString();
-
-            // Crear una DataTable para almacenar los resultados de la consulta
-            DataTable dtResultados = new DataTable();
-
-            string connectionString = ConfigurationManager.ConnectionStrings["Grupo03"].ToString();
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString)) { }
-
-                    connectionString.Open();
-
-                // Crear un SqlCommand para ejecutar el stored procedure
-                using (SqlCommand comando = new SqlCommand("ObtenerReporteOcupacion", cadenaConexion))
-                {
-                    comando.CommandType = CommandType.StoredProcedure;
-
-                    // Asignar los valores de los parámetros en el stored procedure
-                    comando.Parameters.AddWithValue("@Pais", pais);
-                    comando.Parameters.AddWithValue("@Año", año);
-                    comando.Parameters.AddWithValue("@Ciudad", ciudad);
-                    comando.Parameters.AddWithValue("@NombreHotel", nombreHotel);
-
-                    // Crear un SqlDataAdapter para llenar el DataTable con los resultados de la consulta
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
-                    {
-                        // Llenar el DataTable con los resultados de la consulta
-                        adapter.Fill(dtResultados);
-                    }
-                }
-            }
-
-            // Mostrar los resultados en el DataGridView
-            dataGridView1.DataSource = dtResultados;
+          
         }
 
         private void RepOcupacionHoteñ_Load(object sender, EventArgs e)
