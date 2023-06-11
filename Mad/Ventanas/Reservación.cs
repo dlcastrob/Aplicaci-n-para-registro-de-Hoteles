@@ -192,6 +192,26 @@ namespace Mad.Ventanas
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_MouseClick(object sender, MouseEventArgs e)
+        {
+         
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU
