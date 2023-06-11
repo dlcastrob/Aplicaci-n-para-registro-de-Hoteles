@@ -98,6 +98,12 @@
     <Compile Include="Ventanas\Nueva contraseña.Designer.cs">
       <DependentUpon>Nueva contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Pago.Designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Registro Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ventanas\Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Registro Cliente.resx">
       <DependentUpon>Registro Cliente.cs</DependentUpon>
     </EmbeddedResource>
