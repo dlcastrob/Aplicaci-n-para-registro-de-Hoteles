@@ -182,6 +182,16 @@ namespace Mad.Ventanas
             }
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

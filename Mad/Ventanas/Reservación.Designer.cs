@@ -52,9 +52,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -88,9 +85,14 @@
             this.button18 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.sidebarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -105,6 +107,7 @@
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -227,7 +230,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(536, 526);
+            this.button3.Location = new System.Drawing.Point(530, 637);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 31);
@@ -238,7 +241,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(646, 526);
+            this.button4.Location = new System.Drawing.Point(640, 637);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 31);
@@ -352,47 +355,12 @@
             this.listBox3.Size = new System.Drawing.Size(168, 108);
             this.listBox3.TabIndex = 15;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(166, 413);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(285, 102);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pago";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(23, 54);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(74, 17);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.Text = "Pago total";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(23, 25);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(64, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Anticipo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(352, 526);
+            this.button6.Location = new System.Drawing.Point(346, 637);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(68, 30);
@@ -771,16 +739,74 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(166, 427);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(621, 109);
+            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(794, 308);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 43);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Agregar Habitación";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(231, 555);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(171, 558);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Total";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(171, 593);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Anticipo";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(231, 590);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 27;
+            // 
             // Reservación
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 609);
+            this.ClientSize = new System.Drawing.Size(946, 703);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.sidebarContainer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.button1);
@@ -803,8 +829,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.sidebarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -820,6 +844,7 @@
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -850,9 +875,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
@@ -886,5 +908,11 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
