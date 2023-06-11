@@ -234,6 +234,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Reservar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
@@ -398,6 +399,7 @@
             this.button6.TabIndex = 18;
             this.button6.Text = "Pagar";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox4
             // 

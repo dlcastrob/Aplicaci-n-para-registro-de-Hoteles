@@ -146,6 +146,42 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Pagar", "Pago", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //reserv.Show();
+                Ventanas.Pago reserv = new Ventanas.Pago();
+
+                reserv.ShowDialog();
+            }
+            else if (result == DialogResult.No)
+            {
+                // El usuario seleccionó "No"
+                // Realiza las acciones correspondientes
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea agregar servicios adicionales?", "Servicios adicionales", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //reserv.Show();
+                Ventanas.Servicios_adicionales reserv = new Ventanas.Servicios_adicionales();
+
+                reserv.ShowDialog();
+            }
+            else if (result == DialogResult.No)
+            {
+                // El usuario seleccionó "No"
+                // Realiza las acciones correspondientes
+            }
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU
