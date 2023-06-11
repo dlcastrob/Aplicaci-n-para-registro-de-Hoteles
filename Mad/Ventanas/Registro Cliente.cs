@@ -110,6 +110,23 @@ namespace Mad.Ventanas
                 {
 
                     MessageBox.Show("Todos los datos son correctos.");
+                    string apellidos = patRC.Text+" "+matRC;
+                    string nombre = nonRC.Text;
+                    string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " +colRC;
+                    string rfc = rfcRC.Text;
+                    string correoElectronico = correoRC.Text;
+                    string telefonoCasa = telCasaRC.Text;
+                    string telefonoCelular = telCelRC.Text;
+                    string referenciaHotel = comoRC.Text;
+                  //  string fechaNacimiento = fechaNacRc.Text;
+                    string estadoCivil = estadoCivRC.Text;
+                    DateTime fecha = DateTime.Now.Date; // Fecha actual
+                   // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
+                    string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
+                  //  string estado = "Activo"; // Estado predeterminado
+
+                    // Cierra la conexión cuando hayas terminado de usarla
+                    
 
                 }
 

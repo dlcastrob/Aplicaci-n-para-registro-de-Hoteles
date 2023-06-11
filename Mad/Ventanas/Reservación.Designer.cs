@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -91,6 +90,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -109,16 +109,6 @@
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox1.Location = new System.Drawing.Point(173, 108);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Busqueda cliente";
             // 
             // label1
             // 
@@ -357,12 +347,13 @@
             this.textBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox4.Location = new System.Drawing.Point(352, 7);
+            this.textBox4.Location = new System.Drawing.Point(341, 11);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(164, 24);
+            this.textBox4.Size = new System.Drawing.Size(411, 24);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // notifyIcon1
             // 
@@ -382,7 +373,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(523, 111);
+            this.dataGridView1.Size = new System.Drawing.Size(532, 111);
             this.dataGridView1.TabIndex = 4;
             // 
             // APELLIDOS
@@ -772,7 +763,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Location = new System.Drawing.Point(165, 10);
+            this.label11.Location = new System.Drawing.Point(154, 14);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 18);
@@ -784,7 +775,7 @@
             this.button8.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button8.Location = new System.Drawing.Point(939, 89);
+            this.button8.Location = new System.Drawing.Point(960, 88);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 49);
             this.button8.TabIndex = 29;
@@ -797,7 +788,7 @@
             this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(867, 332);
+            this.button4.Location = new System.Drawing.Point(878, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 62);
             this.button4.TabIndex = 31;
@@ -805,6 +796,16 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_MouseClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.textBox1.Location = new System.Drawing.Point(173, 108);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(164, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Busqueda cliente";
             // 
             // Reservación
             // 
@@ -840,6 +841,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reservación";
             this.Text = "Reservación";
+            this.Load += new System.EventHandler(this.Reservación_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -865,8 +867,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -928,5 +928,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

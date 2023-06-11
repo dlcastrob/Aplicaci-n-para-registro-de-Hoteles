@@ -54,7 +54,11 @@ namespace Mad
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // Ventanas.Reservación reserv = new Ventanas.Reservación();
+           
+            
+            
+            
+            // Ventanas.Reservación reserv = new Ventanas.Reservación();
 
             //reserv.Show();
             Ventanas.Cancelacion reserv = new Ventanas.Cancelacion();
