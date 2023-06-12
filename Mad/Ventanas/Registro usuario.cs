@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 using static Mad.Funciones;
 using static Mad.Listas;
 
 namespace Mad.Ventanas
 {
+
     public partial class correoRU : Form
     {
         bool sidebarExpand;
-
         Mad.Funciones funciones = new Mad.Funciones();
         public correoRU()
         {
@@ -79,12 +80,19 @@ namespace Mad.Ventanas
         {
             if (funciones.AreControlsNotEmpty(this))
             {
+
                 bool validar = false;
                 DateTime fechaNacimiento = fechaNacRU.Value;
                 DateTime fechaActual = DateTime.Today;
                 string emailAddress = correoRU1.Text;
-                string contra = contraRU.Text; 
-
+                string contra = contraRU.Text;
+                int tipoUs = int.Parse(tipoUsRUCB.SelectedItem.ToString());
+                string NombreCompleto = nomRU.Text + " " + matRU.Text + " " + patRU;
+                int NumeroNomina = int.Parse(numNomRU.Text);
+                string FechaNacimiento = fechaNacRU.Text;
+                string Domicilio = calleRU.Text + " " + numExtRU + " " + colRU;
+                int TelefonoCasa = int.Parse(telCasaRU.Text);
+                int TelefonoCel = int.Parse(telCelRU.Text);
 
                 if (fechaNacimiento >= fechaActual)
                 {
@@ -116,16 +124,10 @@ namespace Mad.Ventanas
                     List<tUser> usuarios = new List<tUser>();
 
                     tUser usuario = new tUser();
+                    
+                    var dB = new EnlaceDB();
+                    bool insertarUser = dB.InsertUsuario(emailAddress, NombreCompleto, NumeroNomina, FechaNacimiento, Domicilio, contra, tipoUs, TelefonoCasa, TelefonoCel);
 
-                    usuario.tipoUs = tipoUsRUCB.SelectedItem.ToString();
-                    usuario.CorreoElectronico = correoRU1.Text;
-                    usuario.Contrasena = contraRU.Text;
-                    usuario.NombreCompleto = nomRU.Text+ " " + matRU.Text+" "+patRU;
-                    usuario.NumeroNomina = int.Parse(numNomRU.Text);
-                    usuario.FechaNacimiento = fechaNacRU.Value;
-                    usuario.Domicilio = calleRU.Text+" "+ numExtRU+ " "+ colRU;
-                    usuario.TelefonoCasa = telCasaRU.Text;
-                    usuario.TelefonoCasa = telCelRU.Text;
 
                     usuarios.Add(usuario);
                     MessageBox.Show("Todos los datos son correctos.");

@@ -259,6 +259,116 @@ namespace WindowsFormsApplication1
             return dataTable;
 
         }
+
+
+        public bool InsertUsuario(string emailAddress, string NombreCompleto, int NumeroNomina, string FechaNacimiento, string Domicilio, string contra, int tipoUs, int TelefonoCasa, int TelefonoCel)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionUsuarios";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
+                paramOpcion.Value = "I";
+                var paramCorreo = _comandosql.Parameters.Add("@Correo", SqlDbType.VarChar, 30);
+                paramCorreo.Value = emailAddress;
+                var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
+                paramNombre.Value = NombreCompleto;
+                var numNomina = _comandosql.Parameters.Add("@#Nomina", SqlDbType.Int);
+                numNomina.Value = NumeroNomina;
+                var paramFechaNac = _comandosql.Parameters.Add("@FechaNacUser", SqlDbType.Date);
+                paramFechaNac.Value = FechaNacimiento;
+                var paramDomicilio = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 50);
+                paramDomicilio.Value = Domicilio;
+                var paramPassword = _comandosql.Parameters.Add("@PasswordActual", SqlDbType.VarChar, 30);
+                paramPassword.Value = contra;
+                var paramTipoUsuario = _comandosql.Parameters.Add("@TUsuario", SqlDbType.Int);
+                paramTipoUsuario.Value = tipoUs;
+                var paramTelefono = _comandosql.Parameters.Add("@Telefono", SqlDbType.Int);
+                paramTelefono.Value = TelefonoCasa;
+                var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
+                paramUsuarioRegistro.Value = TelefonoCel;
+
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "ERROR" + e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+
+        public bool InsertarCliente(string NombreCompleto, string DomicilioC, string RFC, string Correo, string EstadoCivil, string Referencia, string FechaNacCliente, string Historial, int Telefono, int RegistroUsuairo)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionClientes";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
+                paramOpcion.Value = "I";
+                var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
+                paramNombre.Value = NombreCompleto;
+                var paramDomicilio = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 50);
+                paramDomicilio.Value = DomicilioC;
+                var paramRFC = _comandosql.Parameters.Add("@RFC", SqlDbType.VarChar, 20);
+                paramRFC.Value = RFC;
+                var paramCorreo = _comandosql.Parameters.Add("@Correo", SqlDbType.VarChar, 30);
+                paramCorreo.Value = Correo;
+                var paramEstadoCivil = _comandosql.Parameters.Add("@EstadoCivil", SqlDbType.VarChar, 30);
+                paramEstadoCivil.Value = EstadoCivil;
+                var paramReferencia = _comandosql.Parameters.Add("@Referencia", SqlDbType.VarChar, 50);
+                paramReferencia.Value = Referencia;
+                var paramFechaNacCliente = _comandosql.Parameters.Add("@FechaNacCliente", SqlDbType.Date);
+                paramFechaNacCliente.Value = FechaNacCliente;
+                var paramHistorial = _comandosql.Parameters.Add("@Historial", SqlDbType.VarChar, 60);
+                paramHistorial.Value = Historial;
+                var paramTelefono = _comandosql.Parameters.Add("@Telefono", SqlDbType.Int);
+                paramTelefono.Value = Telefono;
+                var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
+                paramUsuarioRegistro.Value = RegistroUsuairo;
+
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+
     }
 
 }
