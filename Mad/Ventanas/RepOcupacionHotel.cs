@@ -188,6 +188,11 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

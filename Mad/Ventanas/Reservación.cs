@@ -321,6 +321,11 @@ namespace Mad.Ventanas
             dataGridView3.DataSource = tablita;
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
