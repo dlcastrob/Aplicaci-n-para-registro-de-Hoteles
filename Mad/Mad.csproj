@@ -256,6 +256,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Nueva carpeta\factura.sql" />
+    <Content Include="Nueva carpeta\ObtenerReporteOcupacion.sql" />
+    <Content Include="Nueva carpeta\spBuscarCliente.sql" />
+    <Content Include="Nueva carpeta\spGestionarCliente.sql" />
+    <Content Include="Nueva carpeta\spGestionarUsuario.sql" />
+    <Content Include="Nueva carpeta\spMostrarCiudadesConHoteles.sql" />
+    <Content Include="Nueva carpeta\spReservacion.sql" />
+    <Content Include="Nueva carpeta\sp_BuscarHotelesPorCiudad.sql" />
+    <Content Include="Nueva carpeta\sp_Checkin.sql" />
+    <Content Include="Nueva carpeta\sp_Checkout.sql" />
+    <Content Include="Nueva carpeta\sp_HabitacionesReserv.sql" />
+    <Content Include="Nueva carpeta\TABLAS.sql" />
     <Content Include="QUERYS\cliente.sql" />
     <Content Include="QUERYS\dbo.GestionarUsuariosql.sql" />
     <Content Include="QUERYS\Funciones.sql" />

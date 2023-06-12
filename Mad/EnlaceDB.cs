@@ -213,7 +213,7 @@ namespace WindowsFormsApplication1
             return dataTable;
         }
 
-        public DataTable BuscarhabReserv(DateTime fechaentrada, DateTime fechaSalida)
+        public DataTable BuscarhabReserv(string fechaentrada, string fechaSalida)
         {
 
             DataTable dataTable = new DataTable();
@@ -227,13 +227,13 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandTimeout = 1200;
 
                 SqlParameter parametroFecha = new SqlParameter("@FechaEntrada", SqlDbType.Date);
-                parametroFecha.Value = fechaentrada.Date; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.AddWithValue("@FechaEntrada", parametroFecha);
+                parametroFecha.Value = fechaentrada; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add( parametroFecha);
 
 
                 SqlParameter parametroFecha2 = new SqlParameter("@FechaSalida", SqlDbType.Date);
-                parametroFecha2.Value = fechaSalida.Date; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.AddWithValue("@FechaSalida", parametroFecha2);
+                parametroFecha2.Value = fechaSalida; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add( parametroFecha2);
 
 
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados

@@ -309,8 +309,8 @@ namespace Mad.Ventanas
 
         private void dataGridView3_SelectionChanged(object sender, EventArgs e)
         {
-            DateTime fechaEntrada = dateTimePicker2.Value;
-            DateTime fechaSalida = dateTimePicker1.Value;
+            string fechaEntrada = dateTimePicker2.Text.ToString();
+            string fechaSalida = dateTimePicker1.Text.ToString();
 
 
             var obj = new EnlaceDB();
