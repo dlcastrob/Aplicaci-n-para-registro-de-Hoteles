@@ -86,10 +86,10 @@ namespace Mad.Ventanas
                 string contra = contraRU.Text; 
 
 
-                if (fechaNacimiento > fechaActual)
+                if (fechaNacimiento >= fechaActual)
                 {
                     validar = true;
-                    MessageBox.Show("La fecha de nacimiento no puede ser posterior a la fecha actual.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Seleccione su fecha de nacimiento.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 bool isValidEmail = funciones.IsValidEmail(emailAddress);
@@ -129,6 +129,18 @@ namespace Mad.Ventanas
 
                     usuarios.Add(usuario);
                     MessageBox.Show("Todos los datos son correctos.");
+
+                    nomRU.Text = string.Empty;
+                    patRU.Text = string.Empty;
+                    matRU.Text = string.Empty;
+                    numNomRU.Text = string.Empty;
+                    calleRU.Text = string.Empty;
+                    numExtRU.Text = string.Empty;
+                    colRU.Text = string.Empty;
+                    telCasaRU.Text = string.Empty;
+                    telCelRU.Text = string.Empty;
+                    correoRU1.Text = string.Empty;
+                    contraRU.Text = string.Empty;
 
                 }
 
