@@ -38,6 +38,10 @@ namespace Mad.Ventanas
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tarjeta Credito",
+            "Tarjeta Debito",
+            "Efectivo"});
             this.comboBox1.Location = new System.Drawing.Point(203, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);

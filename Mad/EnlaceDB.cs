@@ -101,30 +101,33 @@ namespace WindowsFormsApplication1
             return isValid;
         }
 
-
-        public DataTable get_Deptos(string opc)
+        public DataTable BuscarClientes(string busqueda, int opcionBusqueda)
         {
-            var msg = "";
             DataTable tabla = new DataTable();
             try
             {
                 conectar();
-                string qry = "sp_Gestiona_Deptos";
+                string qry = "spBuscarCliente";
+
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                parametro1.Value = opc;
+                var parametro1 = _comandosql.Parameters.Add("@Busqueda", SqlDbType.VarChar, 255);
+                parametro1.Value = busqueda;
 
+                var parametro2 = _comandosql.Parameters.Add("@OpcionBusqueda", SqlDbType.Int);
+                parametro2.Value = opcionBusqueda;
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
-
+            
             }
+
+
             catch (SqlException e)
             {
-                msg = "Excepción de base de datos: \n";
+                string msg = "Excepción de base de datos: \n";
                 msg += e.Message;
                 MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -136,27 +139,32 @@ namespace WindowsFormsApplication1
             return tabla;
         }
 
-        public DataTable get_Users()
+
+        public DataTable BuscarCiudadHotel()
         {
-            var msg = "";
             DataTable tabla = new DataTable();
             try
             {
                 conectar();
-				// Ejemplo de cómo ejecutar un query, 
-				// PERO lo correcto es siempre usar SP para cualquier consulta a la base de datos
-                string qry = "Select Nombre, email, Fecha_modif from Usuarios where Activo = 0;";
+                string qry = "spMostrarCiudadesConHoteles";
+
                 _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.Text;
+                _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                _adaptador.SelectCommand = _comandosql;
-                _adaptador.Fill(tabla);
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+                DataTable dataTable = new DataTable();
+
+                adapter.Fill(dataTable);
+            
 
             }
+
+
             catch (SqlException e)
             {
-                msg = "Excepción de base de datos: \n";
+                string msg = "Excepción de base de datos: \n";
                 msg += e.Message;
                 MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -167,48 +175,5 @@ namespace WindowsFormsApplication1
 
             return tabla;
         }
-
-		// Ejemplo de método para recibir una consulta en forma de tabla
-		// Cuando el SP ejecutará un SELECT
-		
-		// Ejemplo de método para ejecutar un SP que no se espera que regrese información, solo que ejecute
-		// ya sea un INSERT, UPDATE o DELETE
-        public bool Add_Deptos(string opc, string depto)
-        {
-            var msg = "";
-            var add = true;
-            try
-            {
-                conectar();
-                string qry = "sp_Gestiona_Deptos";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                parametro1.Value = opc;
-                var parametro2 = _comandosql.Parameters.Add("@Nombre", SqlDbType.VarChar, 20);
-                parametro2.Value = depto;
-
-                _adaptador.InsertCommand = _comandosql;
-                
-                _comandosql.ExecuteNonQuery();
-
-            }
-            catch (SqlException e)
-            {
-                add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();                
-            }
-
-            return add;
-        }
-
     }
 }

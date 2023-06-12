@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Ciudad = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,10 +55,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.APELLIDOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CORREO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -132,29 +130,29 @@
             this.radioButton1.Text = "Apellidos";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(302, 65);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(46, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "RFC";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(243, 65);
+            this.radioButton3.Location = new System.Drawing.Point(302, 65);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(56, 17);
-            this.radioButton3.TabIndex = 2;
+            this.radioButton3.Size = new System.Drawing.Size(46, 17);
+            this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Correo";
+            this.radioButton3.Text = "RFC";
             this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(243, 65);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(56, 17);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Correo";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -233,6 +231,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(512, 24);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -242,6 +241,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(512, 49);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -271,9 +271,12 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "🔎";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Ciudad);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label4);
@@ -290,6 +293,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.AutoSize = true;
+            this.Ciudad.Location = new System.Drawing.Point(11, 45);
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.Size = new System.Drawing.Size(40, 13);
+            this.Ciudad.TabIndex = 22;
+            this.Ciudad.Text = "Ciudad";
+            this.Ciudad.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(58, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 21;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -362,47 +384,18 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.APELLIDOS,
-            this.NOMBRE,
-            this.CORREO,
-            this.RFC});
             this.dataGridView1.Location = new System.Drawing.Point(398, 62);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(532, 111);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // APELLIDOS
-            // 
-            this.APELLIDOS.HeaderText = "APPELLIDOS";
-            this.APELLIDOS.MinimumWidth = 6;
-            this.APELLIDOS.Name = "APELLIDOS";
-            this.APELLIDOS.Width = 125;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.MinimumWidth = 6;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.Width = 125;
-            // 
-            // CORREO
-            // 
-            this.CORREO.HeaderText = "CORREO";
-            this.CORREO.MinimumWidth = 6;
-            this.CORREO.Name = "CORREO";
-            this.CORREO.Width = 125;
-            // 
-            // RFC
-            // 
-            this.RFC.HeaderText = "RFC";
-            this.RFC.MinimumWidth = 6;
-            this.RFC.Name = "RFC";
-            this.RFC.Width = 125;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SideBarTimer
             // 
@@ -805,7 +798,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 20);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Busqueda cliente";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Reservación
             // 
@@ -832,8 +825,8 @@
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -869,8 +862,8 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
@@ -891,10 +884,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CORREO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RFC;
         private System.Windows.Forms.Timer SideBarTimer;
         private System.Windows.Forms.FlowLayoutPanel sidebarContainer;
         private System.Windows.Forms.Panel panel1;
@@ -929,5 +918,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label Ciudad;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

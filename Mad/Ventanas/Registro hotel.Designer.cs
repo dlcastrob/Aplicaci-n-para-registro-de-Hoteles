@@ -48,8 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -88,9 +86,10 @@
             this.button18 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -107,6 +106,7 @@
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -283,6 +283,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(878, 38);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -300,28 +301,6 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Zona turística";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox4.Controls.Add(this.listBox1);
-            this.groupBox4.Location = new System.Drawing.Point(872, 76);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(256, 141);
-            this.groupBox4.TabIndex = 59;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Servicios adicionales";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 24);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(231, 108);
-            this.listBox1.TabIndex = 11;
             // 
             // textBox9
             // 
@@ -770,6 +749,28 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(13, 24);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(231, 108);
+            this.listBox1.TabIndex = 11;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox4.Controls.Add(this.listBox1);
+            this.groupBox4.Location = new System.Drawing.Point(872, 76);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(256, 141);
+            this.groupBox4.TabIndex = 59;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Servicios adicionales";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -796,7 +797,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -814,6 +814,7 @@
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -840,8 +841,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -880,5 +879,7 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
