@@ -54,8 +54,8 @@ namespace WindowsFormsApplication1
 			
 			tal como lo vimos en clase.
 			*/
-            string cnn = ConfigurationManager.ConnectionStrings["Grupo03"].ToString(); 
-			// Cambiar Grupo01 por el que ustedes hayan definido en el App.Confif
+            string cnn = ConfigurationManager.ConnectionStrings["Grupo03"].ToString();
+            // Cambiar Grupo01 por el que ustedes hayan definido en el App.Confif
             _conexion = new SqlConnection(cnn);
             _conexion.Open();
         }
@@ -83,13 +83,13 @@ namespace WindowsFormsApplication1
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(_tabla);
 
-                if(_tabla.Rows.Count > 0)
+                if (_tabla.Rows.Count > 0)
                 {
                     isValid = true;
                 }
 
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 isValid = false;
             }
@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1
 
                 _adaptador.SelectCommand = _comandosql;
                 _adaptador.Fill(tabla);
-            
+
             }
 
 
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1
 
         public DataTable BuscarCiudadHotel()
         {
-            DataTable tabla = new DataTable();
+            DataTable dataTable = new DataTable();
             try
             {
                 conectar();
@@ -154,10 +154,9 @@ namespace WindowsFormsApplication1
 
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados
                 SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
-                DataTable dataTable = new DataTable();
 
                 adapter.Fill(dataTable);
-            
+
 
             }
 
@@ -173,7 +172,88 @@ namespace WindowsFormsApplication1
                 desconectar();
             }
 
-            return tabla;
+            return dataTable;
+        }
+
+        public DataTable BuscarHotelesenCiudad(string Ciudad)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "sp_BuscarHotelesPorCiudad";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@Ciudad", SqlDbType.VarChar, 255);
+                parametro1.Value = Ciudad;
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
+
+        public DataTable BuscarhabReserv(DateTime fechaentrada, DateTime fechaSalida)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spReservacion";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                _comandosql.Parameters.AddWithValue("@FechaEntrada", fechaentrada);
+                _comandosql.Parameters.AddWithValue("@FechaSalida", fechaSalida);
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
         }
     }
+
 }
+

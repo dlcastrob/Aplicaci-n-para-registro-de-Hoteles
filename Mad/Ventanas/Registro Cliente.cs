@@ -256,6 +256,11 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
+        private void comoRC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

@@ -304,13 +304,19 @@
             // 
             this.comoRC.FormattingEnabled = true;
             this.comoRC.Items.AddRange(new object[] {
-            "Administrador",
-            "Operativo"});
+            "Publicidad",
+            "Panoramica",
+            "web",
+            "recomendaciones",
+            "Amigos",
+            "Agencia de viaje",
+            "otro"});
             this.comoRC.Location = new System.Drawing.Point(275, 15);
             this.comoRC.Margin = new System.Windows.Forms.Padding(2);
             this.comoRC.Name = "comoRC";
             this.comoRC.Size = new System.Drawing.Size(124, 21);
             this.comoRC.TabIndex = 1;
+            this.comoRC.SelectedIndexChanged += new System.EventHandler(this.comoRC_SelectedIndexChanged);
             // 
             // label12
             // 

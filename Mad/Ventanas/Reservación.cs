@@ -31,7 +31,6 @@ namespace Mad.Ventanas
                 string ciudad = row["Ciudad"].ToString();
                 comboBox1.Items.Add(ciudad);
             }
-
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -283,9 +282,47 @@ namespace Mad.Ventanas
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+           
         }
 
-   
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string textoSeleccionado = comboBox1.SelectedItem.ToString();
+
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            tablita = obj.BuscarHotelesenCiudad(textoSeleccionado);
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView3.DataSource = tablita;
+        }
+
+        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        {
+            DateTime fechaEntrada = dateTimePicker2.Value;
+            DateTime fechaSalida = dateTimePicker1.Value;
+
+
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            tablita = obj.BuscarhabReserv(fechaEntrada, fechaSalida);
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView3.DataSource = tablita;
+        }
+
+
+
 
 
         //AQUI TERMINA  EL SIDE MENU
