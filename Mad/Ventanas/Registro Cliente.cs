@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1;
+using static Mad.Funciones;
+using static Mad.Listas;
 namespace Mad.Ventanas
 {
     public partial class Cliente : Form
@@ -85,7 +87,19 @@ namespace Mad.Ventanas
                 DateTime fechaActual = DateTime.Today;
                 string emailAddress = correoRC.Text;
 
-
+                string apellidos = patRC.Text + " " + matRC;
+                string nombre= nonRC.Text + " " + patRC.Text + " " + matRC.Text;
+                string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " + colRC;
+                string rfc = rfcRC.Text;
+                string correoElectronico = correoRC.Text;
+                string telefonoCasa = telCasaRC.Text;
+                string telefonoCelular = telCelRC.Text;
+                string referenciaHotel = comoRC.Text;
+                //  string fechaNacimiento = fechaNacRc.Text;
+                string estadoCivil = estadoCivRC.Text;
+                DateTime fecha = DateTime.Now.Date; // Fecha actual
+                                                    // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
+                string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
 
                 if (fechaNacimiento > fechaActual)
                 {
@@ -109,24 +123,10 @@ namespace Mad.Ventanas
                 if (validar == false)
                 {
 
-                    List<tCliente> usuarios = new List<tUser>();
-
-                    tUser usuario = new tUser();
-
+                    var dB = new EnlaceDB();
+                    bool insertarCliente = dB.InsertarCliente(nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento, ClienteHistorial, telefonoCasa, UserIDRegistro);
                     MessageBox.Show("Todos los datos son correctos.");
-                    string apellidos = patRC.Text+" "+matRC;
-                    string nombre = nonRC.Text;
-                    string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " +colRC;
-                    string rfc = rfcRC.Text;
-                    string correoElectronico = correoRC.Text;
-                    string telefonoCasa = telCasaRC.Text;
-                    string telefonoCelular = telCelRC.Text;
-                    string referenciaHotel = comoRC.Text;
-                  //  string fechaNacimiento = fechaNacRc.Text;
-                    string estadoCivil = estadoCivRC.Text;
-                    DateTime fecha = DateTime.Now.Date; // Fecha actual
-                   // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
-                    string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
+                   
                                                                     //  string estado = "Activo"; // Estado predeterminado
 
                     // Cierra la conexión cuando hayas terminado de usarla
