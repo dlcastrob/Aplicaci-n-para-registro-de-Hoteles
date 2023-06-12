@@ -226,8 +226,14 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                _comandosql.Parameters.AddWithValue("@FechaEntrada", fechaentrada);
-                _comandosql.Parameters.AddWithValue("@FechaSalida", fechaSalida);
+                SqlParameter parametroFecha = new SqlParameter("@FechaEntrada", SqlDbType.Date);
+                parametroFecha.Value = fechaentrada.Date; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.AddWithValue("@FechaEntrada", parametroFecha);
+
+
+                SqlParameter parametroFecha2 = new SqlParameter("@FechaSalida", SqlDbType.Date);
+                parametroFecha2.Value = fechaSalida.Date; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.AddWithValue("@FechaSalida", parametroFecha2);
 
 
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados
