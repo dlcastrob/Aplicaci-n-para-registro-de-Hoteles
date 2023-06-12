@@ -109,6 +109,10 @@ namespace Mad.Ventanas
                 if (validar == false)
                 {
 
+                    List<tCliente> usuarios = new List<tUser>();
+
+                    tUser usuario = new tUser();
+
                     MessageBox.Show("Todos los datos son correctos.");
                     string apellidos = patRC.Text+" "+matRC;
                     string nombre = nonRC.Text;
@@ -123,10 +127,19 @@ namespace Mad.Ventanas
                     DateTime fecha = DateTime.Now.Date; // Fecha actual
                    // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
                     string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
-                  //  string estado = "Activo"; // Estado predeterminado
+                                                                    //  string estado = "Activo"; // Estado predeterminado
 
                     // Cierra la conexión cuando hayas terminado de usarla
-                    
+
+                    nonRC.Text = string.Empty;
+                    patRC.Text = string.Empty;
+                    matRC.Text = string.Empty;
+                    calleRC.Text = string.Empty;
+                    numExtRC.Text = string.Empty;
+                    colRC.Text = string.Empty;
+                    telCasaRC.Text = string.Empty;
+                    telCelRC.Text = string.Empty;
+                    estadoCivRC.Text = string.Empty;
 
                 }
 

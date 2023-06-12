@@ -253,6 +253,60 @@ namespace WindowsFormsApplication1
             return dataTable;
 
         }
+
+
+        public bool InsertUsuario(string emailAddress, string NombreCompleto, int NumeroNomina, string FechaNacimiento, string Domicilio, string contra, int tipoUs, int TelefonoCasa, int TelefonoCel)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionUsuarios";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
+                paramOpcion.Value = "I";
+                var paramCorreo = _comandosql.Parameters.Add("@Correo", SqlDbType.VarChar, 30);
+                paramCorreo.Value = emailAddress;
+                var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
+                paramNombre.Value = NombreCompleto;
+                var numNomina = _comandosql.Parameters.Add("@#Nomina", SqlDbType.Int);
+                numNomina.Value = NumeroNomina;
+                var paramFechaNac = _comandosql.Parameters.Add("@FechaNacUser", SqlDbType.Date);
+                paramFechaNac.Value = FechaNacimiento;
+                var paramDomicilio = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 50);
+                paramDomicilio.Value = Domicilio;
+                var paramPassword = _comandosql.Parameters.Add("@PasswordActual", SqlDbType.VarChar, 30);
+                paramPassword.Value = contra;
+                var paramTipoUsuario = _comandosql.Parameters.Add("@TUsuario", SqlDbType.Int);
+                paramTipoUsuario.Value = tipoUs;
+                var paramTelefono = _comandosql.Parameters.Add("@Telefono", SqlDbType.Int);
+                paramTelefono.Value = TelefonoCasa;
+                var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
+                paramUsuarioRegistro.Value = TelefonoCel;
+
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "ERROR" + e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
     }
 
 }
