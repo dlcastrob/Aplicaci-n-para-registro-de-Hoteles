@@ -199,6 +199,7 @@
             this.fechaNacRc.Name = "fechaNacRc";
             this.fechaNacRc.Size = new System.Drawing.Size(151, 20);
             this.fechaNacRc.TabIndex = 6;
+            this.fechaNacRc.ValueChanged += new System.EventHandler(this.fechaNacRc_ValueChanged);
             // 
             // label13
             // 

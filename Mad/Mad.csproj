@@ -80,11 +80,11 @@
     <Compile Include="Ventanas\FACTURA.Designer.cs">
       <DependentUpon>FACTURA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Form3.cs">
+    <Compile Include="Ventanas\Registro servicios adicionales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Ventanas\Registro servicios adicionales.Designer.cs">
+      <DependentUpon>Registro servicios adicionales.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Nueva contraseña.cs">
       <SubType>Form</SubType>
@@ -175,8 +175,8 @@
     <EmbeddedResource Include="Ventanas\FACTURA.resx">
       <DependentUpon>FACTURA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Registro servicios adicionales.resx">
+      <DependentUpon>Registro servicios adicionales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Nueva contraseña.resx">
       <DependentUpon>Nueva contraseña.cs</DependentUpon>

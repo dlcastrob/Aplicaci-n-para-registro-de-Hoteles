@@ -277,6 +277,11 @@ namespace Mad.Ventanas
 
         }
 
+        private void fechaNacRc_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU
