@@ -101,18 +101,7 @@ namespace Mad.Ventanas
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-            // Crear una nueva instancia del formulario que deseas mostrar
-            TiposHabitacion form1 = new TiposHabitacion();
-
-            // Establecer el formulario como control hijo del TabPage
-            form1.TopLevel = false;
-            form1.FormBorderStyle = FormBorderStyle.None;
-            form1.Dock = DockStyle.Fill;
-
-            tabPage1.Controls.Add(form1);
-
-            // Mostrar el formulario
-            form1.Show();
+            
         }
 
         private void tabPage2_Click_1(object sender, EventArgs e)

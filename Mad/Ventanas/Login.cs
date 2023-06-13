@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using WindowsFormsApplication1;
 namespace Mad
 {
     public partial class Form1 : Form
@@ -134,7 +135,7 @@ namespace Mad
                     SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Usuario", connection);
                     int count = (int)command.ExecuteScalar();
 
-                    MessageBox.Show("Conexión exitosa. Total de registros: " + count.ToString(), "Prueba de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Conexión exitosa. Total de registros: " + count.ToString(), "Prueb5a de conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -160,6 +161,21 @@ namespace Mad
         public DateTime ObtenerFechaSeleccionada()
         {
             return fechaInicioDTP.Value;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string num = textBox1.Text;
+
+            var dB = new EnlaceDB();
+            bool insertarCliente = dB.insertprueba(num);
+            MessageBox.Show("Todos los datos son correctos.");
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
         /*
 private void PromptChangePassword(string email)

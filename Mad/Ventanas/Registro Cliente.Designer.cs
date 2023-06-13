@@ -285,7 +285,6 @@
             this.correoRC.ShortcutsEnabled = false;
             this.correoRC.Size = new System.Drawing.Size(124, 20);
             this.correoRC.TabIndex = 13;
-            this.correoRC.UseSystemPasswordChar = true;
             this.correoRC.TextChanged += new System.EventHandler(this.correoRC_TextChanged);
             // 
             // label1
@@ -350,8 +349,8 @@
             // 
             this.estadoCivRC.FormattingEnabled = true;
             this.estadoCivRC.Items.AddRange(new object[] {
-            "Administrador",
-            "Operativo"});
+            "Casado",
+            "Soltero"});
             this.estadoCivRC.Location = new System.Drawing.Point(832, 155);
             this.estadoCivRC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.estadoCivRC.Name = "estadoCivRC";
