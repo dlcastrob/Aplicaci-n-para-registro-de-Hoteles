@@ -160,6 +160,8 @@ namespace Mad.Ventanas
 
         private void button6_Click(object sender, EventArgs e)
         {
+
+
             DialogResult result = MessageBox.Show("¿Desea Pagar", "Pago", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -178,6 +180,33 @@ namespace Mad.Ventanas
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+/*
+
+            string reservacionID = textBox4.Text;
+            int servicioID = 1;
+            int clienteID = 1;
+            int hotelID = 1;
+            int habitacionID = 1;
+            DateTime fechaEntrada = DateTime.Now;
+            DateTime fechaSalida = DateTime.Now.AddDays(3);
+            decimal anticipo = 100.50m;
+            int usuarioOperativo = 123;
+            int cantidadHabitaciones = 1;
+            int cantidadPersonasHabitacion = 2;
+            string estado = "Activa";
+
+            var dB = new EnlaceDB();
+            bool insertarReservacion = dB.InsertarReservacion()
+
+            if (insertarReservacion)
+            {
+                MessageBox.Show("Reservación creada exitosamente.");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al crear la reservación.");
+            }
+
             DialogResult result = MessageBox.Show("¿Desea agregar servicios adicionales?", "Servicios adicionales", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -192,6 +221,7 @@ namespace Mad.Ventanas
                 // El usuario seleccionó "No"
                 // Realiza las acciones correspondientes
             }
+*/
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -323,6 +353,11 @@ namespace Mad.Ventanas
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
