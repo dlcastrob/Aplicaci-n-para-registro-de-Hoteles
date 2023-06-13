@@ -164,6 +164,11 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

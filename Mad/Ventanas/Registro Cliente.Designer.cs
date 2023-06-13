@@ -300,6 +300,7 @@
             // 
             // comoRC
             // 
+            this.comoRC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comoRC.FormattingEnabled = true;
             this.comoRC.Items.AddRange(new object[] {
             "Publicidad",
@@ -348,6 +349,7 @@
             // 
             // estadoCivRC
             // 
+            this.estadoCivRC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estadoCivRC.FormattingEnabled = true;
             this.estadoCivRC.Items.AddRange(new object[] {
             "Casado",

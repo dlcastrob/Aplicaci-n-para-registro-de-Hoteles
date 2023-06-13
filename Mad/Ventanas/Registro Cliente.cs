@@ -90,9 +90,9 @@ namespace Mad.Ventanas
                 
                 string emailAddress = correoRC.Text;
 
-                string apellidos = patRC.Text + " " + matRC;
+                string apellidos = patRC.Text + " " + matRC.Text;
                 string nombre= nonRC.Text;
-                string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " + colRC;
+                string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " + colRC.Text;
                 string rfc = rfcRC.Text;
                 string correoElectronico = correoRC.Text;
                 string telefonoCasa = telCasaRC.Text;
@@ -125,24 +125,27 @@ namespace Mad.Ventanas
 
                 if (validar == false)
                 {
+                    MessageBox.Show("Todos los datos son correctos.");
 
                     var dB = new EnlaceDB();
                     bool insertarCliente = dB.InsertarCliente(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_,  telefonoCasa, telefonoCelular,1);
-                    MessageBox.Show("Todos los datos son correctos.");
-                   
-                                                                    //  string estado = "Activo"; // Estado predeterminado
+                    if (insertarCliente == true)
+                    {
+
+                        MessageBox.Show("Se registro Correctamente");
+
+                    }
+                    else {
+                        MessageBox.Show("El registro salio mal");
+
+
+                    }
+
+                    //  string estado = "Activo"; // Estado predeterminado
 
                     // Cierra la conexión cuando hayas terminado de usarla
 
-                    nonRC.Text = string.Empty;
-                    patRC.Text = string.Empty;
-                    matRC.Text = string.Empty;
-                    calleRC.Text = string.Empty;
-                    numExtRC.Text = string.Empty;
-                    colRC.Text = string.Empty;
-                    telCasaRC.Text = string.Empty;
-                    telCelRC.Text = string.Empty;
-                    estadoCivRC.Text = string.Empty;
+                    //funciones.LimpiarControles(this);
 
                 }
 

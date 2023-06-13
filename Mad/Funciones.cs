@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mad.Ventanas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -141,6 +142,41 @@ namespace Mad
             bool isValid = Regex.IsMatch(email, emailPattern);
 
             return isValid;
+        }
+
+       
+
+        public void LimpiarControles(Control.ControlCollection controles)
+        {
+            foreach (Control control in controles)
+            {
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    comboBox.SelectedIndex = -1;
+                }
+                else if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Clear();
+                }
+                else if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)control;
+                    dateTimePicker.Value = DateTime.Now;
+                }
+                else if (control is MaskedTextBox)
+                {
+                    MaskedTextBox maskedTextBox = (MaskedTextBox)control;
+                    maskedTextBox.Clear();
+                }
+
+                // Verificar si el control contiene controles secundarios
+                if (control.HasChildren)
+                {
+                    LimpiarControles(control.Controls);
+                }
+            }
         }
 
         public bool AreControlsNotEmpty(Control form)
