@@ -84,7 +84,10 @@ namespace Mad.Ventanas
             {
                 bool validar = false;
                 DateTime fechaNacimiento = fechaNacRc.Value;
-                DateTime fechaActual = DateTime.Today;
+                DateTime fechaActual = fechaNacRc.Value;
+
+                string fechaNacimiento_ = fechaNacRc.Text;
+                
                 string emailAddress = correoRC.Text;
 
                 string apellidos = patRC.Text + " " + matRC;
@@ -99,7 +102,7 @@ namespace Mad.Ventanas
                 string estadoCivil = estadoCivRC.Text;
                 DateTime fecha = DateTime.Now.Date; // Fecha actual
                                                     // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
-                string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
+              //  string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
 
                 if (fechaNacimiento > fechaActual)
                 {
@@ -123,8 +126,8 @@ namespace Mad.Ventanas
                 if (validar == false)
                 {
 
-                 /*   var dB = new EnlaceDB();
-                    bool insertarCliente = dB.InsertarCliente(nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento,  telefonoCasa);*/
+                    var dB = new EnlaceDB();
+                    bool insertarCliente = dB.InsertarCliente(nombre,apellidos, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_,  telefonoCasa, telefonoCelular,1);
                     MessageBox.Show("Todos los datos son correctos.");
                    
                                                                     //  string estado = "Activo"; // Estado predeterminado

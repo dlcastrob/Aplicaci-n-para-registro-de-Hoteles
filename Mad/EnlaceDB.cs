@@ -321,7 +321,7 @@ namespace WindowsFormsApplication1
             try
             {
                 conectar();
-                string qry = "spGestionClientes";
+                string qry = "spGestionarCliente";
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
@@ -368,7 +368,7 @@ namespace WindowsFormsApplication1
             }
 
             return add;
-        }*/
+        }
 
 
     }
