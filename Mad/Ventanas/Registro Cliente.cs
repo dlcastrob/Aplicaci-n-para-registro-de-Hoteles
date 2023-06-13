@@ -123,8 +123,8 @@ namespace Mad.Ventanas
                 if (validar == false)
                 {
 
-                    var dB = new EnlaceDB();
-                    bool insertarCliente = dB.InsertarCliente(nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento, ClienteHistorial, telefonoCasa, UserIDRegistro);
+                 /*   var dB = new EnlaceDB();
+                    bool insertarCliente = dB.InsertarCliente(nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento,  telefonoCasa);*/
                     MessageBox.Show("Todos los datos son correctos.");
                    
                                                                     //  string estado = "Activo"; // Estado predeterminado

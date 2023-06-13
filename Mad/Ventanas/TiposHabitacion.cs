@@ -16,5 +16,15 @@ namespace Mad.Ventanas
         {
             InitializeComponent();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

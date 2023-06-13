@@ -126,7 +126,7 @@ namespace Mad.Ventanas
                     tUser usuario = new tUser();
                     
                     var dB = new EnlaceDB();
-                    bool insertarUser = dB.InsertUsuario(emailAddress, NombreCompleto, NumeroNomina, FechaNacimiento, Domicilio, contra, tipoUs, TelefonoCasa, TelefonoCel);
+                  //  bool insertarUser = dB.InsertUsuario(emailAddress, NombreCompleto, NumeroNomina, FechaNacimiento, Domicilio, contra, tipoUs, TelefonoCasa, TelefonoCel);
 
 
                     usuarios.Add(usuario);

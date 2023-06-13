@@ -260,8 +260,8 @@ namespace WindowsFormsApplication1
 
         }
 
-
-        public bool InsertUsuario(string emailAddress, string NombreCompleto, int NumeroNomina, string FechaNacimiento, string Domicilio, string contra, int tipoUs, int TelefonoCasa, int TelefonoCel)
+        /*
+        public bool InsertUsuario(string tipoUs, string CorreoElectronico, int Contrasena, string NombreCompleto, string NumeroNomina, string FechaNacimiento, string Domicilio, string TelefonoCasa, string TelefonoCel, string UsuarioID)
         {
             var msg = "";
             var add = true;
@@ -273,26 +273,26 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
+                var paramOpcion = _comandosql.Parameters.Add("@tipoUs", SqlDbType.Char, 1);
                 paramOpcion.Value = "I";
-                var paramCorreo = _comandosql.Parameters.Add("@Correo", SqlDbType.VarChar, 30);
-                paramCorreo.Value = emailAddress;
-                var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
-                paramNombre.Value = NombreCompleto;
-                var numNomina = _comandosql.Parameters.Add("@#Nomina", SqlDbType.Int);
-                numNomina.Value = NumeroNomina;
-                var paramFechaNac = _comandosql.Parameters.Add("@FechaNacUser", SqlDbType.Date);
-                paramFechaNac.Value = FechaNacimiento;
-                var paramDomicilio = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 50);
-                paramDomicilio.Value = Domicilio;
-                var paramPassword = _comandosql.Parameters.Add("@PasswordActual", SqlDbType.VarChar, 30);
-                paramPassword.Value = contra;
-                var paramTipoUsuario = _comandosql.Parameters.Add("@TUsuario", SqlDbType.Int);
-                paramTipoUsuario.Value = tipoUs;
-                var paramTelefono = _comandosql.Parameters.Add("@Telefono", SqlDbType.Int);
+                var paramCorreo = _comandosql.Parameters.Add("@CorreoElectronico", SqlDbType.VarChar, 30);
+                paramCorreo.Value = CorreoElectronico;
+                var paramNombre = _comandosql.Parameters.Add("@Contrasena", SqlDbType.VarChar, 50);
+                paramNombre.Value = Contrasena;
+                var numNomina = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.Int);
+                numNomina.Value = NombreCompleto;
+                var paramFechaNac = _comandosql.Parameters.Add("@NumeroNomina", SqlDbType.Date);
+                paramFechaNac.Value = NumeroNomina;
+                var paramDomicilio = _comandosql.Parameters.Add("@FechaNacimiento", SqlDbType.VarChar, 50);
+                paramDomicilio.Value = FechaNacimiento;
+                var paramPassword = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 30);
+                paramPassword.Value = Domicilio;
+                var paramTipoUsuario = _comandosql.Parameters.Add("@TelefonoCasa", SqlDbType.Int);
+                paramTipoUsuario.Value = TelefonoCasa;
+                var paramTelefono = _comandosql.Parameters.Add("@TelefonoCelular", SqlDbType.Int);
                 paramTelefono.Value = TelefonoCasa;
-                var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
-                paramUsuarioRegistro.Value = TelefonoCel;
+                var paramUsuarioRegistro = _comandosql.Parameters.Add("@UsuarioID", SqlDbType.Int);
+                paramUsuarioRegistro.Value = UsuarioID;
 
                 _adaptador.InsertCommand = _comandosql;
 
@@ -313,7 +313,7 @@ namespace WindowsFormsApplication1
             return add;
         }
 
-
+        */
         public bool InsertarCliente(string NombreCompleto, string DomicilioC, string RFC, string Correo, string EstadoCivil, string Referencia, string FechaNacCliente, string Historial, int Telefono, int RegistroUsuairo)
         {
             var msg = "";

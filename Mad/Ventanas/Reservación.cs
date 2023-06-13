@@ -307,7 +307,7 @@ namespace Mad.Ventanas
             dataGridView3.DataSource = tablita;
         }
 
-        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+      /*  private void dataGridView3_SelectionChanged(object sender, EventArgs e)
         {
             string fechaEntrada = dateTimePicker2.Text.ToString();
             string fechaSalida = dateTimePicker1.Text.ToString();
@@ -319,7 +319,7 @@ namespace Mad.Ventanas
 
             // Mostrar los resultados en un DataGridView u otro control adecuado
             dataGridView3.DataSource = tablita;
-        }
+        }*/
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
