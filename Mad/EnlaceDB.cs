@@ -228,12 +228,12 @@ namespace WindowsFormsApplication1
 
                 SqlParameter parametroFecha = new SqlParameter("@FechaEntrada", SqlDbType.Date);
                 parametroFecha.Value = fechaentrada; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.Add( parametroFecha);
+                _comandosql.Parameters.Add(parametroFecha);
 
 
                 SqlParameter parametroFecha2 = new SqlParameter("@FechaSalida", SqlDbType.Date);
                 parametroFecha2.Value = fechaSalida; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.Add( parametroFecha2);
+                _comandosql.Parameters.Add(parametroFecha2);
 
 
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados
@@ -328,7 +328,7 @@ namespace WindowsFormsApplication1
 
                 var paramOpcion = _comandosql.Parameters.Add("@num1", SqlDbType.Int);
                 paramOpcion.Value = num;
-                
+
                 _adaptador.InsertCommand = _comandosql;
 
                 _comandosql.ExecuteNonQuery();
@@ -347,7 +347,7 @@ namespace WindowsFormsApplication1
 
             return add;
         }
-        public bool InsertarCliente( string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int usuarioOperativo)
+        public bool InsertarCliente(string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int UsuarioID)
         {
             var msg = "";
             var add = true;
@@ -359,13 +359,13 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
+                var paramOpcion = _comandosql.Parameters.Add("@Accion", SqlDbType.Char, 1);
                 paramOpcion.Value = "C";
                 var paramApellidos = _comandosql.Parameters.Add("@apellidos", SqlDbType.VarChar, 100);
                 paramApellidos.Value = apellidos;
                 var paramNombre = _comandosql.Parameters.Add("@nombre", SqlDbType.VarChar, 100);
                 paramNombre.Value = Nombre;
-                
+
                 var paramDomicilio = _comandosql.Parameters.Add("@domicilioCompleto", SqlDbType.VarChar, 200);
                 paramDomicilio.Value = DomicilioC;
                 var paramRFC = _comandosql.Parameters.Add("@rfc", SqlDbType.VarChar, 13);
@@ -375,7 +375,7 @@ namespace WindowsFormsApplication1
                 var paramTelefono = _comandosql.Parameters.Add("@telefonoCasa", SqlDbType.VarChar, 20);
                 paramTelefono.Value = telefonoCasa;
                 var paramCelular = _comandosql.Parameters.Add("@telefonoCelular", SqlDbType.VarChar, 20);
-                paramTelefono.Value = telefonoCelular;
+                paramCelular.Value = telefonoCelular;
                 var paramReferencia = _comandosql.Parameters.Add("@referenciaHotel", SqlDbType.VarChar, 200);
                 paramReferencia.Value = referenciaHotel;
                 var paramFechaNacCliente = _comandosql.Parameters.Add("@fechaNacimiento", SqlDbType.Date);
@@ -383,10 +383,9 @@ namespace WindowsFormsApplication1
 
                 var paramEstadoCivil = _comandosql.Parameters.Add("@estadoCivil", SqlDbType.VarChar, 20);
                 paramEstadoCivil.Value = estadoCivil;
-      
-               
-                var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
-                paramUsuarioRegistro.Value = usuarioOperativo;
+
+                var paramUsuarioRegistro = _comandosql.Parameters.Add("@UsuarioID", SqlDbType.Int);
+                paramUsuarioRegistro.Value = UsuarioID;
 
                 _adaptador.InsertCommand = _comandosql;
 
@@ -409,6 +408,5 @@ namespace WindowsFormsApplication1
 
 
     }
-
 }
 

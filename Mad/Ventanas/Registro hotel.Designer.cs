@@ -639,7 +639,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Servicios adicionales";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // tabPage1
             // 
@@ -651,7 +650,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Habitacion";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox3
             // 
