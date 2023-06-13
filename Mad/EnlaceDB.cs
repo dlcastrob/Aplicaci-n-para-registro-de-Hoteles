@@ -314,7 +314,7 @@ namespace WindowsFormsApplication1
         }
 
         */
-        public bool InsertarCliente(string NombreCompleto, string DomicilioC, string RFC, string Correo, string EstadoCivil, string Referencia, string FechaNacCliente, string Historial, int Telefono, int RegistroUsuairo)
+       /* public bool InsertarCliente(string NombreCompleto, string DomicilioC, string RFC, string Correo, string EstadoCivil, string Referencia, string FechaNacCliente, string Historial, int Telefono, int RegistroUsuairo)
         {
             var msg = "";
             var add = true;
@@ -327,8 +327,10 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandTimeout = 1200;
 
                 var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
-                paramOpcion.Value = "I";
+                paramOpcion.Value = "C";
                 var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
+                paramNombre.Value = NombreCompleto;
+                 var paramNombre = _comandosql.Parameters.Add("@NombreCompleto", SqlDbType.VarChar, 50);
                 paramNombre.Value = NombreCompleto;
                 var paramDomicilio = _comandosql.Parameters.Add("@Domicilio", SqlDbType.VarChar, 50);
                 paramDomicilio.Value = DomicilioC;
@@ -366,7 +368,7 @@ namespace WindowsFormsApplication1
             }
 
             return add;
-        }
+        }*/
 
 
     }
