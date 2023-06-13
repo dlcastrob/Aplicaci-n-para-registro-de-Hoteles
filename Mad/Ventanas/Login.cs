@@ -163,15 +163,7 @@ namespace Mad
             return fechaInicioDTP.Value;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string num = textBox1.Text;
-
-            var dB = new EnlaceDB();
-            bool insertarCliente = dB.insertprueba(num);
-            MessageBox.Show("Todos los datos son correctos.");
-
-        }
+      
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {

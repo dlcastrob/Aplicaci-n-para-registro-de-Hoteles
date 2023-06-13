@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1
             try
             {
                 conectar();
-                string qry = "spMostrarCiudadesConHoteles";
+                string qry = "spMostrarHoteles";
 
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
@@ -175,6 +175,73 @@ namespace WindowsFormsApplication1
             return dataTable;
         }
 
+        public string BuscarIDhotel(string NombreHotel)
+        {
+            string hotelID = string.Empty;
+
+            try
+            {
+                conectar();
+                string qry = "spObtenerHotelIDPorNombre";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+                var parametro1 = _comandosql.Parameters.Add("@NombreHotel", SqlDbType.VarChar, 255);
+                parametro1.Value = NombreHotel;
+
+                conectar();
+
+                hotelID = _comandosql.ExecuteScalar()?.ToString();
+            }
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return hotelID;
+        }
+
+        public DataTable ObtenerNombresHoteles()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spMostrarHoteles";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
         public DataTable BuscarHotelesenCiudad(string Ciudad)
         {
 
@@ -314,39 +381,6 @@ namespace WindowsFormsApplication1
         }
 
         */
-        public bool insertprueba(string num)
-        {
-            var msg = "";
-            var add = true;
-            try
-            {
-                conectar();
-                string qry = "spGestionarnum";
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                var paramOpcion = _comandosql.Parameters.Add("@num1", SqlDbType.Int);
-                paramOpcion.Value = num;
-
-                _adaptador.InsertCommand = _comandosql;
-
-                _comandosql.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return add;
-        }
         public bool InsertarCliente(string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int UsuarioID)
         {
             var msg = "";
@@ -406,6 +440,175 @@ namespace WindowsFormsApplication1
             return add;
         }
 
+        public bool InsertarHotel(string nombreHotel, string ciudad, string estado, string pais, string domicilio, int numeroPisos, string FechaInicioOperaciones)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionarHotel";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramAccion = _comandosql.Parameters.Add("@accion", SqlDbType.Char, 1);
+                paramAccion.Value = "C";
+                var paramNombreHotel = _comandosql.Parameters.Add("@nombreHotel", SqlDbType.VarChar, 255);
+                paramNombreHotel.Value = nombreHotel;
+                var paramCiudad = _comandosql.Parameters.Add("@ciudad", SqlDbType.VarChar, 255);
+                paramCiudad.Value = ciudad;
+                var paramEstado = _comandosql.Parameters.Add("@estado", SqlDbType.VarChar, 255);
+                paramEstado.Value = estado;
+                var paramPais = _comandosql.Parameters.Add("@pais", SqlDbType.VarChar, 255);
+                paramPais.Value = pais;
+                var paramDomicilio = _comandosql.Parameters.Add("@domicilio", SqlDbType.VarChar, 255);
+                paramDomicilio.Value = domicilio;
+                var paramNumeroPisos = _comandosql.Parameters.Add("@numeroPisos", SqlDbType.Int);
+                paramNumeroPisos.Value = numeroPisos;
+                var paramFechaInicioOperaciones = _comandosql.Parameters.Add("@FechaInicioOperaciones", SqlDbType.Date);
+                paramFechaInicioOperaciones.Value = FechaInicioOperaciones;
+
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+        public bool InsertarServicioAdicional(int hotelID, string nombreServicio, decimal precioServicio)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spRegistrarServicioAdicional";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramHotelID = _comandosql.Parameters.Add("@hotelID", SqlDbType.Int);
+                paramHotelID.Value = hotelID;
+                var paramNombreServicio = _comandosql.Parameters.Add("@nombreServicio", SqlDbType.VarChar, 255);
+                paramNombreServicio.Value = nombreServicio;
+                var paramPrecioServicio = _comandosql.Parameters.Add("@precioServicio", SqlDbType.Decimal);
+                paramPrecioServicio.Value = precioServicio;
+
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+        public bool InsertarTipoHabitacion(string tipoHabitacionID, int hotelID, decimal precioNochePersona, int capacidadMaxima, int numeroCamas, string tiposCama, int nivelHabitacion, int usuarioOperativo,  int cantidadHabitaciones)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionarTipoHabitacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Agregar los parámetros necesarios para el Stored Procedure
+                _comandosql.Parameters.AddWithValue("@tipoHabitacionID", tipoHabitacionID);
+                _comandosql.Parameters.AddWithValue("@hotelID", hotelID);
+                _comandosql.Parameters.AddWithValue("@precioNochePersona", precioNochePersona);
+                _comandosql.Parameters.AddWithValue("@capacidadMaxima", capacidadMaxima);
+                _comandosql.Parameters.AddWithValue("@numeroCamas", numeroCamas);
+                _comandosql.Parameters.AddWithValue("@tiposCama", tiposCama);
+                _comandosql.Parameters.AddWithValue("@nivelHabitacion", nivelHabitacion);
+                _comandosql.Parameters.AddWithValue("@usuarioOperativo", usuarioOperativo);
+                _comandosql.Parameters.AddWithValue("@cantidadHabitaciones", cantidadHabitaciones);
+                _comandosql.Parameters.AddWithValue("@accion", "C");
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+        public bool InsertarReservacion(string reservacionID, int servicioID, int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int usuarioOperativo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionarReservacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Agregar los parámetros necesarios para el Stored Procedure
+                _comandosql.Parameters.AddWithValue("@reservacionID", reservacionID);
+                _comandosql.Parameters.AddWithValue("@servicioID", servicioID);
+                _comandosql.Parameters.AddWithValue("@clienteID", clienteID);
+                _comandosql.Parameters.AddWithValue("@hotelID", hotelID);
+                _comandosql.Parameters.AddWithValue("@habitacionID", habitacionID);
+                _comandosql.Parameters.AddWithValue("@fechaEntrada", fechaEntrada);
+                _comandosql.Parameters.AddWithValue("@fechaSalida", fechaSalida);
+                _comandosql.Parameters.AddWithValue("@anticipo", anticipo);
+                _comandosql.Parameters.AddWithValue("@usuarioOperativo", usuarioOperativo);
+                _comandosql.Parameters.AddWithValue("@cantidadHabitaciones", cantidadHabitaciones);
+                _comandosql.Parameters.AddWithValue("@cantidadPersonasHabitacion", cantidadPersonasHabitacion);
+                _comandosql.Parameters.AddWithValue("@estado", estado);
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
 
     }
 }

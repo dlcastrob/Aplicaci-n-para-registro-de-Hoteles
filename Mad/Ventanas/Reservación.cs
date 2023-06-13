@@ -45,7 +45,8 @@ namespace Mad.Ventanas
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-           /* DateTime fechaSeleccionada = form1.ObtenerFechaSeleccionada;
+            /*
+            DateTime fechaSeleccionada = form1.ObtenerFechaSeleccionada();
             
 
            // DateTime fechaInicio = fecha.Value.Date; // Obtén la fecha seleccionada sin la parte de la hora
