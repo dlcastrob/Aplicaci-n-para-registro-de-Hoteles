@@ -87,8 +87,8 @@ namespace Mad.Ventanas
                 DateTime fechaActual = DateTime.Today;
                 string emailAddress = correoRC.Text;
 
-                string apellidos = patRC.Text + " " + matRC;
-                string nombre= nonRC.Text + " " + patRC.Text + " " + matRC.Text;
+                string apellidos = patRC.Text + " " + matRC.Text;
+                string nombre= nonRC.Text;
                 string domicilioCompleto = calleRC.Text + " " + numExtRC.Text + " " + colRC;
                 string rfc = rfcRC.Text;
                 string correoElectronico = correoRC.Text;
