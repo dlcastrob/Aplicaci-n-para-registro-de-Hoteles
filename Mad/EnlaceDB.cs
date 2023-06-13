@@ -314,7 +314,7 @@ namespace WindowsFormsApplication1
         }
 
         */
-        public bool InsertarCliente(string Nombre, string apellidos, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int usuarioOperativo)
+        public bool InsertarCliente( string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int usuarioOperativo)
         {
             var msg = "";
             var add = true;
@@ -328,26 +328,30 @@ namespace WindowsFormsApplication1
 
                 var paramOpcion = _comandosql.Parameters.Add("@opcion", SqlDbType.Char, 1);
                 paramOpcion.Value = "C";
+                var paramApellidos = _comandosql.Parameters.Add("@apellidos", SqlDbType.VarChar, 100);
+                paramApellidos.Value = apellidos;
                 var paramNombre = _comandosql.Parameters.Add("@nombre", SqlDbType.VarChar, 100);
                 paramNombre.Value = Nombre;
-                var paramApellidos = _comandosql.Parameters.Add("@apellidos", SqlDbType.VarChar, 100);
-                paramNombre.Value = apellidos;
+                
                 var paramDomicilio = _comandosql.Parameters.Add("@domicilioCompleto", SqlDbType.VarChar, 200);
                 paramDomicilio.Value = DomicilioC;
                 var paramRFC = _comandosql.Parameters.Add("@rfc", SqlDbType.VarChar, 13);
                 paramRFC.Value = rfc;
                 var paramCorreo = _comandosql.Parameters.Add("@correoElectronico", SqlDbType.VarChar, 100);
                 paramCorreo.Value = correoElectronico;
-                var paramEstadoCivil = _comandosql.Parameters.Add("@estadoCivil", SqlDbType.VarChar, 20);
-                paramEstadoCivil.Value = estadoCivil;
-                var paramReferencia = _comandosql.Parameters.Add("@referenciaHotel", SqlDbType.VarChar, 200);
-                paramReferencia.Value = referenciaHotel;
-                var paramFechaNacCliente = _comandosql.Parameters.Add("@fechaNacimiento", SqlDbType.Date);
-                paramFechaNacCliente.Value = fechaNacimiento;
                 var paramTelefono = _comandosql.Parameters.Add("@telefonoCasa", SqlDbType.VarChar, 20);
                 paramTelefono.Value = telefonoCasa;
                 var paramCelular = _comandosql.Parameters.Add("@telefonoCelular", SqlDbType.VarChar, 20);
                 paramTelefono.Value = telefonoCelular;
+                var paramReferencia = _comandosql.Parameters.Add("@referenciaHotel", SqlDbType.VarChar, 200);
+                paramReferencia.Value = referenciaHotel;
+                var paramFechaNacCliente = _comandosql.Parameters.Add("@fechaNacimiento", SqlDbType.Date);
+                paramFechaNacCliente.Value = fechaNacimiento;
+
+                var paramEstadoCivil = _comandosql.Parameters.Add("@estadoCivil", SqlDbType.VarChar, 20);
+                paramEstadoCivil.Value = estadoCivil;
+      
+               
                 var paramUsuarioRegistro = _comandosql.Parameters.Add("@ID_UsuarioRegistro", SqlDbType.Int);
                 paramUsuarioRegistro.Value = usuarioOperativo;
 
