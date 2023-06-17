@@ -157,10 +157,10 @@ namespace Mad.Ventanas
             Ventanas.RepVentas f_ventas = new Ventanas.RepVentas();
             f_ventas.Show();
         }
-
+        
         private void button6_Click(object sender, EventArgs e)
         {
-
+            button3.Enabled = false;
 
             DialogResult result = MessageBox.Show("¿Desea Pagar", "Pago", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -376,6 +376,49 @@ namespace Mad.Ventanas
 
             dataGridView4.DataSource = tabla;
 
+
+        }
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    // Obtener la fila seleccionada
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                    // Crear una nueva fila en el DataGridView de destino
+                    DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
+
+                    // Copiar los valores de celda de la fila seleccionada a la nueva fila
+                    for (int i = 0; i < selectedRow.Cells.Count; i++)
+                    {
+                        newRow.Cells[i].Value = selectedRow.Cells[i].Value;
+                    }
+
+                    // Agregar la nueva fila al DataGridView de destino
+                    dataGridView2.Rows.Add(newRow);
+                }
+            
+
+        }
+
+        private void dataGridView4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtener la fila seleccionada del DataGridView1
+            DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
+
+            // Crear una nueva fila en el DataGridView2
+            DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
+
+            // Copiar los valores de las celdas de la fila seleccionada a la nueva fila
+            for (int i = 0; i < selectedRow.Cells.Count; i++)
+            {
+                newRow.Cells[i].Value = selectedRow.Cells[i].Value;
+            }
+
+            // Agregar la nueva fila al DataGridView2
+            dataGridView2.Rows.Add(newRow);
 
         }
 
