@@ -100,6 +100,7 @@ namespace Mad.Ventanas
                 string referenciaHotel = comoRC.Text;
                 //  string fechaNacimiento = fechaNacRc.Text;
                 string estadoCivil = estadoCivRC.Text;
+                
                 DateTime fecha = DateTime.Now.Date; // Fecha actual
                                                     // DateTime hora = DateTime.Now.TimeOfDay; // Hora actual
               //  string usuarioOperativo = Environment.UserName; // Usuario operativo del sistema
@@ -133,6 +134,20 @@ namespace Mad.Ventanas
                     {
 
                         MessageBox.Show("Se registro Correctamente");
+                        nonRC.Text = string.Empty;
+                        patRC.Text = string.Empty;
+                        matRC.Text = string.Empty;
+                        calleRC.Text = string.Empty;
+                        numExtRC.Text = string.Empty;
+                        colRC.Text = string.Empty;
+                        rfcRC.Text = string.Empty;
+                        correoRC.Text = string.Empty;
+                        telCasaRC.Text = string.Empty;
+                        telCelRC.Text = string.Empty;
+                        comoRC.Text = string.Empty;
+                        estadoCivRC.Text = string.Empty;
+                       DateTime fechaNacRc = DateTime.Now.Date;
+
 
                     }
                     else {

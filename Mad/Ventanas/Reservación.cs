@@ -88,12 +88,6 @@ namespace Mad.Ventanas
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Ventanas.correoRU f_registro = new Ventanas.correoRU();
-            f_registro.Show();
-        }
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -170,6 +164,7 @@ namespace Mad.Ventanas
                 Ventanas.Pago reserv = new Ventanas.Pago();
 
                 reserv.ShowDialog();
+                button3.Enabled = true;
             }
             else if (result == DialogResult.No)
             {
@@ -261,6 +256,7 @@ namespace Mad.Ventanas
 
         private void Reservación_Load(object sender, EventArgs e)
         {
+            button3.Enabled = false;
             miGuid = Guid.NewGuid();
             textBox4.Text = miGuid.ToString();
 
@@ -376,6 +372,27 @@ namespace Mad.Ventanas
 
             dataGridView4.DataSource = tabla;
 
+
+        }
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnlaceDB dB = new EnlaceDB();
+            DataTable tabla = new DataTable();
+            string textoSeleccionado = dataGridView3.Rows[0].Cells[0].Value.ToString();
+
+            string BuscarIDhotel = dB.BuscarIDhotel(textoSeleccionado);
+            int idhotel = int.Parse(BuscarIDhotel);
+            DateTime fechaActual = FechaActual.Fecha;
+            string fecha_ = fechaActual.ToString();
+            tabla = dB.BuscarHabitaciones(idhotel, fecha_);
+
+            dataGridView4.DataSource = tabla;
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 

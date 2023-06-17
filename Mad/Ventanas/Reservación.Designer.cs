@@ -83,7 +83,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -679,6 +678,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(621, 109);
             this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // textBox2
@@ -741,20 +741,6 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(955, 304);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 62);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Agregar habitación";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_MouseClick);
-            // 
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -794,6 +780,7 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(335, 111);
             this.dataGridView4.TabIndex = 32;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // Reservación
@@ -803,7 +790,6 @@
             this.ClientSize = new System.Drawing.Size(1070, 703);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label10);
@@ -908,7 +894,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Ciudad;
         private System.Windows.Forms.ComboBox comboBox1;

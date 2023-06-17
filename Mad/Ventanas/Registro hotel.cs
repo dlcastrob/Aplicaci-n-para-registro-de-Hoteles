@@ -211,8 +211,19 @@ namespace Mad.Ventanas
                         if (insertarHotel)
                         {
                             MessageBox.Show("Hotel registrado correctamente.");
-                        }
-                        else
+
+                        textBox1.Text = string.Empty;
+                        textBox2.Text = string.Empty;
+                        textBox3.Text = string.Empty;
+                        textBox4.Text = string.Empty;
+                        textBox7.Text = string.Empty;
+                        textBox8.Text = string.Empty;
+                        textBox9.Text = string.Empty;
+
+                        
+
+                    }
+                    else
                         {
                             MessageBox.Show("Ha ocurrido un error al registrar el hotel.");
                         }
@@ -333,7 +344,12 @@ namespace Mad.Ventanas
                           if (insertarServicioAdicional)
                           {
                               MessageBox.Show("Servicio adicional registrado correctamente.");
-                          }
+
+                                comboBox4.SelectedItem = default;
+                                 textBox14.Text = string.Empty;
+                                 textBox13.Text = string.Empty;
+
+            }
                           else
                           {
                               MessageBox.Show("Ha ocurrido un error al registrar el servicio adicional.");
@@ -372,6 +388,16 @@ namespace Mad.Ventanas
             if (insertarTipoHabitacion)
             {
                 MessageBox.Show("Tipo de habitación creado exitosamente.");
+                comboBox2.SelectedItem = default;
+                comboBox1.SelectedItem = default;
+                textBox5.Text = string.Empty; 
+                textBox6.Text = string.Empty;
+                textBox11.Text = string.Empty;
+                textBox12.Text = string.Empty;
+                numericUpDown1.Value = 0;
+                numericUpDown2.Value = 0;
+                numericUpDown3.Value = 0;
+
             }
             else
             {
