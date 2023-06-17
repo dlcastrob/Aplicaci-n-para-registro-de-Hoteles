@@ -322,19 +322,58 @@ namespace Mad.Ventanas
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string textoSeleccionado = comboBox1.SelectedItem.ToString();
+        private void button2_Click(object sender, EventArgs e) {
+            // Declarar la variable 'valido' en un alcance más amplio, fuera del evento
 
-            var obj = new EnlaceDB();
-            var tablita = new DataTable();
-            tablita = obj.BuscarHotelesenCiudad(textoSeleccionado);
+          bool  valido = true; // Inicializar la variable en 'false' al inicio del evento
+            if (
+              dateTimePicker1.Value == DateTimePicker.MinimumDateTime)
+            {
+                MessageBox.Show("Faltan campos por seleccionar.");
+                valido = false;
+            }
 
-            // Mostrar los resultados en un DataGridView u otro control adecuado
-            dataGridView3.DataSource = tablita;
+            if (
+                dateTimePicker2.Value == DateTimePicker.MinimumDateTime )
+            {
+                MessageBox.Show("Faltan campos por seleccionar.");
+                valido = false;
+            }
+
+
+           
+            if (
+               numericUpDown1.Value == numericUpDown1.Minimum)
+            {
+                MessageBox.Show("Faltan campos por seleccionar.");
+                valido = false;
+
+            }
+            if (
+               comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Faltan campos por seleccionar.");
+                valido = false;
+
+            }
+
+
+            if (valido)
+            {
+                string textoSeleccionado = comboBox1.SelectedItem.ToString();
+
+                var obj = new EnlaceDB();
+                var tablita = new DataTable();
+                tablita = obj.BuscarHotelesenCiudad(textoSeleccionado);
+
+                // Mostrar los resultados en un DataGridView u otro control adecuado
+                dataGridView3.DataSource = tablita;
+            }
+
+
         }
 
-        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+    private void dataGridView3_SelectionChanged(object sender, EventArgs e)
         {
             string fechaEntrada = dateTimePicker2.Text;
             string fechaSalida = dateTimePicker1.Text;
@@ -396,46 +435,52 @@ namespace Mad.Ventanas
 
         }
 
-        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-                    // Obtener la fila seleccionada
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                    // Crear una nueva fila en el DataGridView de destino
-                    DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
-
-                    // Copiar los valores de celda de la fila seleccionada a la nueva fila
-                    for (int i = 0; i < selectedRow.Cells.Count; i++)
-                    {
-                        newRow.Cells[i].Value = selectedRow.Cells[i].Value;
-                    }
-
-                    // Agregar la nueva fila al DataGridView de destino
-                    dataGridView2.Rows.Add(newRow);
-                }
-            
-
-        }
+     
 
         private void dataGridView4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Obtener la fila seleccionada del DataGridView1
-            DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
+        
+                // Obtener la fila seleccionada del DataGridView1
+                DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
 
-            // Crear una nueva fila en el DataGridView2
-            DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
+                // Verificar si las columnas ya han sido agregadas a DataGridView2
+                if (dataGridView2.Columns.Count == 0)
+                {
+                    // Clonar las columnas del DataGridView1 en DataGridView2
+                    foreach (DataGridViewColumn column in dataGridView4.Columns)
+                    {
+                        dataGridView2.Columns.Add(column.Clone() as DataGridViewColumn);
+                    }
+                }
 
-            // Copiar los valores de las celdas de la fila seleccionada a la nueva fila
-            for (int i = 0; i < selectedRow.Cells.Count; i++)
-            {
-                newRow.Cells[i].Value = selectedRow.Cells[i].Value;
-            }
+                // Crear una nueva fila en el DataGridView2
+                DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
 
-            // Agregar la nueva fila al DataGridView2
-            dataGridView2.Rows.Add(newRow);
+                // Copiar los valores de las celdas de la fila seleccionada a la nueva fila
+                for (int i = 0; i < selectedRow.Cells.Count; i++)
+                {
+                    newRow.Cells[i].Value = selectedRow.Cells[i].Value;
+                }
+
+                // Agregar la nueva fila al DataGridView2
+                dataGridView2.Rows.Add(newRow);
+
+            DataGridViewCell cell = dataGridView4.Rows[0].Cells[2];
+            string preciohab = cell.Value.ToString();
+            // Obtener el valor de la columna 3 (índice 2) de la fila seleccionada
+            //  string preciohab = selectedRow.Cells[2].Value.ToString();
+            decimal numPersonas = numericUpDown1.Value;
+            float numper_ = Convert.ToSingle(numPersonas);  // Convertir decimal a float
+
+          
+            float preciohab_ = float.Parse(preciohab);
+
+            float total = preciohab_ * numper_;
+
+            float anticipo = (float)(total * 0.15);
+
+            textBox2.Text = total.ToString();
+            textBox5.Text = anticipo.ToString();
 
         }
 
