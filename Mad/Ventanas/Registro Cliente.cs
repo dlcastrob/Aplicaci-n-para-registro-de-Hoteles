@@ -128,7 +128,7 @@ namespace Mad.Ventanas
                     MessageBox.Show("Todos los datos son correctos.");
 
                     var dB = new EnlaceDB();
-                    bool insertarCliente = dB.InsertarCliente(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_,  telefonoCasa, telefonoCelular,1);
+                    bool insertarCliente = dB.InsertarCliente(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_,  telefonoCasa, telefonoCelular);
                     if (insertarCliente == true)
                     {
 

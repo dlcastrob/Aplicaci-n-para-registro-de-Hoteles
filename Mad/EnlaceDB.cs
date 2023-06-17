@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1
             try
             {
                 conectar();
-                string qry = "spMostrarHoteles";
+                string qry = "spMostrarCiudades";
 
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
@@ -381,7 +381,7 @@ namespace WindowsFormsApplication1
         }
 
         */
-        public bool InsertarCliente(string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular, int UsuarioID)
+        public bool InsertarCliente(string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular)
         {
             var msg = "";
             var add = true;
@@ -418,8 +418,7 @@ namespace WindowsFormsApplication1
                 var paramEstadoCivil = _comandosql.Parameters.Add("@estadoCivil", SqlDbType.VarChar, 20);
                 paramEstadoCivil.Value = estadoCivil;
 
-                var paramUsuarioRegistro = _comandosql.Parameters.Add("@UsuarioID", SqlDbType.Int);
-                paramUsuarioRegistro.Value = UsuarioID;
+           
 
                 _adaptador.InsertCommand = _comandosql;
 
@@ -526,7 +525,7 @@ namespace WindowsFormsApplication1
             return add;
         }
 
-        public bool InsertarTipoHabitacion(string tipoHabitacionID, int hotelID, decimal precioNochePersona, int capacidadMaxima, int numeroCamas, string tiposCama, int nivelHabitacion, int usuarioOperativo,  int cantidadHabitaciones)
+        public bool InsertarTipoHabitacion(string tipoHabitacionID, int hotelID, decimal precioNochePersona, int capacidadMaxima, int numeroCamas, string tiposCama, int nivelHabitacion,  int cantidadHabitaciones)
         {
             var msg = "";
             var add = true;
@@ -546,7 +545,6 @@ namespace WindowsFormsApplication1
                 _comandosql.Parameters.AddWithValue("@numeroCamas", numeroCamas);
                 _comandosql.Parameters.AddWithValue("@tiposCama", tiposCama);
                 _comandosql.Parameters.AddWithValue("@nivelHabitacion", nivelHabitacion);
-                _comandosql.Parameters.AddWithValue("@usuarioOperativo", usuarioOperativo);
                 _comandosql.Parameters.AddWithValue("@cantidadHabitaciones", cantidadHabitaciones);
                 _comandosql.Parameters.AddWithValue("@accion", "C");
 
@@ -609,6 +607,54 @@ namespace WindowsFormsApplication1
 
             return add;
         }
+
+        public DataTable BuscarHabitaciones(int @HotelID, string FechaSeleccionada)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spObtenerHabitacionesDisponibles";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                SqlParameter parametroFecha = new SqlParameter("@HotelID", SqlDbType.Int);
+                parametroFecha.Value = @HotelID; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add(parametroFecha);
+
+
+                SqlParameter parametroFecha2 = new SqlParameter("@FechaSeleccionada", SqlDbType.Date);
+                parametroFecha2.Value = FechaSeleccionada; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add(parametroFecha2);
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
+
 
     }
 }

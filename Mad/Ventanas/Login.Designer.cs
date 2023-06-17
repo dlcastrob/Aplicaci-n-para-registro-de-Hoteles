@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.contraTB = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.fechaInicioDTP = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -116,19 +115,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(239, 264);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 36);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Nueva cuenta";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // fechaInicioDTP
             // 
+            this.fechaInicioDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fechaInicioDTP.Location = new System.Drawing.Point(203, 199);
             this.fechaInicioDTP.Name = "fechaInicioDTP";
             this.fechaInicioDTP.Size = new System.Drawing.Size(134, 20);
@@ -151,7 +140,6 @@
             this.ClientSize = new System.Drawing.Size(500, 335);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.fechaInicioDTP);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.contraTB);
@@ -176,7 +164,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox contraTB;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker fechaInicioDTP;
         private System.Windows.Forms.Label label4;
     }

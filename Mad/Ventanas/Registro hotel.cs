@@ -26,7 +26,7 @@ namespace Mad.Ventanas
             var obj = new EnlaceDB();
 
             var tablita = new DataTable();
-            tablita = obj.BuscarCiudadHotel();
+            tablita = obj.ObtenerNombresHoteles();
             foreach (DataRow row in tablita.Rows)
             {
                 string nombre = row["NombreHotel"].ToString();
@@ -34,7 +34,7 @@ namespace Mad.Ventanas
             }
 
             var tablita2 = new DataTable();
-            tablita2 = obj.BuscarCiudadHotel();
+            tablita2 = obj.ObtenerNombresHoteles();
             foreach (DataRow row in tablita2.Rows)
             {
                 string nombre = row["NombreHotel"].ToString();
@@ -358,7 +358,8 @@ namespace Mad.Ventanas
             string BuscarIDhotel = dB.BuscarIDhotel(textoSeleccionado);
             int idhotel = int.Parse(BuscarIDhotel);
             int hotelID = idhotel;
-            decimal precioNochePersona = decimal.Parse(textBox5.Text);
+            string precio = textBox5.Text;
+            decimal precioNochePersona = decimal.Parse(precio);
             int capacidadMaxima = int.Parse(numericUpDown1.Text);
             int numeroCamas = int.Parse(numericUpDown3.Text);
             string tiposCama = comboBox1.SelectedItem.ToString();
@@ -366,7 +367,7 @@ namespace Mad.Ventanas
             int usuarioOperativo = 1;
             int cantidadHabitaciones = int.Parse(numericUpDown1.Text);
 
-            bool insertarTipoHabitacion = dB.InsertarTipoHabitacion(tipoHabitacionID, hotelID, precioNochePersona, capacidadMaxima, numeroCamas, tiposCama, nivelHabitacion, usuarioOperativo,cantidadHabitaciones);
+            bool insertarTipoHabitacion = dB.InsertarTipoHabitacion(tipoHabitacionID, hotelID, precioNochePersona, capacidadMaxima, numeroCamas, tiposCama, nivelHabitacion,cantidadHabitaciones);
 
             if (insertarTipoHabitacion)
             {
@@ -377,6 +378,28 @@ namespace Mad.Ventanas
                 MessageBox.Show("Ha ocurrido un error al crear el tipo de habitación.");
             }
 
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
 

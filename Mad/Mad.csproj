@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FechaActual.cs" />
     <Compile Include="Funciones.cs" />
     <Compile Include="EnlaceDB.cs" />
     <Compile Include="Listas.cs" />

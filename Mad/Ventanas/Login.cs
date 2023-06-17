@@ -18,6 +18,7 @@ namespace Mad
     public partial class Form1 : Form
     {
         private Funciones funciones = new Funciones();
+        public static DateTime Fecha { get; set; }
 
 
         private Dictionary<string, string> userPasswords = new Dictionary<string, string>();
@@ -55,10 +56,15 @@ namespace Mad
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            
-            
-            
+
+            fechaInicioDTP.Format = DateTimePickerFormat.Custom;
+            fechaInicioDTP.Format = DateTimePickerFormat.Custom;
+            fechaInicioDTP.CustomFormat = "yyyy-MM-dd";
+            string FechaCustom = fechaInicioDTP.Text;
+            FechaActual.Fecha = DateTime.Parse(FechaCustom);
+            MessageBox.Show("Has configurado una nueva Fecha Actual. \nHoy es: " + FechaActual.Fecha.ToShortDateString(), "Gestión Hotelera");
+
+
             // Ventanas.Reservación reserv = new Ventanas.Reservación();
 
             //reserv.Show();
