@@ -31,5 +31,10 @@ namespace Mad.Ventanas
         {
 
         }
+
+        private void CHECKOUT_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
