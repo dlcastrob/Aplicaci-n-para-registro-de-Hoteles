@@ -565,7 +565,12 @@ namespace WindowsFormsApplication1
             return add;
         }
 
-        public bool InsertarReservacion(string reservacionID, int servicioID, int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int usuarioOperativo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
+      
+
+        
+
+
+        public bool InsertarReservacion(string reservacionID,  int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
         {
             var msg = "";
             var add = true;
@@ -578,18 +583,17 @@ namespace WindowsFormsApplication1
                 _comandosql.CommandTimeout = 1200;
 
                 // Agregar los parámetros necesarios para el Stored Procedure
-                _comandosql.Parameters.AddWithValue("@reservacionID", reservacionID);
-                _comandosql.Parameters.AddWithValue("@servicioID", servicioID);
-                _comandosql.Parameters.AddWithValue("@clienteID", clienteID);
-                _comandosql.Parameters.AddWithValue("@hotelID", hotelID);
-                _comandosql.Parameters.AddWithValue("@habitacionID", habitacionID);
-                _comandosql.Parameters.AddWithValue("@fechaEntrada", fechaEntrada);
-                _comandosql.Parameters.AddWithValue("@fechaSalida", fechaSalida);
-                _comandosql.Parameters.AddWithValue("@anticipo", anticipo);
-                _comandosql.Parameters.AddWithValue("@usuarioOperativo", usuarioOperativo);
-                _comandosql.Parameters.AddWithValue("@cantidadHabitaciones", cantidadHabitaciones);
-                _comandosql.Parameters.AddWithValue("@cantidadPersonasHabitacion", cantidadPersonasHabitacion);
-                _comandosql.Parameters.AddWithValue("@estado", estado);
+                _comandosql.Parameters.AddWithValue("@ReservacionID", reservacionID);
+                _comandosql.Parameters.AddWithValue("@ClienteID", clienteID);
+                _comandosql.Parameters.AddWithValue("@HotelID", hotelID);
+                _comandosql.Parameters.AddWithValue("@HabitacionID", habitacionID);
+                _comandosql.Parameters.AddWithValue("@FechaEntrada", fechaEntrada);
+                _comandosql.Parameters.AddWithValue("@FechaSalida", fechaSalida);
+                _comandosql.Parameters.AddWithValue("@Anticipo", anticipo);
+                _comandosql.Parameters.AddWithValue("@CantidadHabitaciones", cantidadHabitaciones);
+                _comandosql.Parameters.AddWithValue("@CantidadPersonasHabitacion", cantidadPersonasHabitacion);
+                _comandosql.Parameters.AddWithValue("@Estado", estado);
+                _comandosql.Parameters.AddWithValue("@Accion", "C"); // Acción para crear una nueva reservación
 
                 _comandosql.ExecuteNonQuery();
             }
@@ -606,53 +610,6 @@ namespace WindowsFormsApplication1
             }
 
             return add;
-        }
-
-        public DataTable BuscarHabitaciones(int @HotelID, string FechaSeleccionada)
-        {
-
-            DataTable dataTable = new DataTable();
-            try
-            {
-                conectar();
-                string qry = "spObtenerHabitacionesDisponibles";
-
-                _comandosql = new SqlCommand(qry, _conexion);
-                _comandosql.CommandType = CommandType.StoredProcedure;
-                _comandosql.CommandTimeout = 1200;
-
-                SqlParameter parametroFecha = new SqlParameter("@HotelID", SqlDbType.Int);
-                parametroFecha.Value = @HotelID; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.Add(parametroFecha);
-
-
-                SqlParameter parametroFecha2 = new SqlParameter("@FechaSeleccionada", SqlDbType.Date);
-                parametroFecha2.Value = FechaSeleccionada; // Obtener la fecha sin la parte de la hora
-                _comandosql.Parameters.Add(parametroFecha2);
-
-
-                // Crear un adaptador de datos y un DataTable para almacenar los resultados
-                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
-
-                adapter.Fill(dataTable);
-
-
-            }
-
-
-            catch (SqlException e)
-            {
-                string msg = "Excepción de base de datos: \n";
-                msg += e.Message;
-                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            finally
-            {
-                desconectar();
-            }
-
-            return dataTable;
-
         }
 
 

@@ -175,48 +175,30 @@ namespace Mad.Ventanas
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-/*
+
+            //public bool InsertarReservacion(string reservacionID, int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
 
             string reservacionID = textBox4.Text;
-            int servicioID = 1;
-            int clienteID = 1;
-            int hotelID = 1;
-            int habitacionID = 1;
-            DateTime fechaEntrada = DateTime.Now;
-            DateTime fechaSalida = DateTime.Now.AddDays(3);
-            decimal anticipo = 100.50m;
-            int usuarioOperativo = 123;
-            int cantidadHabitaciones = 1;
-            int cantidadPersonasHabitacion = 2;
-            string estado = "Activa";
-
+            //int clienteID =
+            //int hotelID =
+            /*
             var dB = new EnlaceDB();
-            bool insertarReservacion = dB.InsertarReservacion()
-
-            if (insertarReservacion)
+            bool InsertarReservacion = dB.InsertarReservacion(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_, telefonoCasa, telefonoCelular);
+            if (InsertarReservacion == true)
             {
-                MessageBox.Show("Reservación creada exitosamente.");
+
+                MessageBox.Show("Se registro Correctamente");
+          
+
+
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error al crear la reservación.");
-            }
+                MessageBox.Show("El registro salio mal");
 
-            DialogResult result = MessageBox.Show("¿Desea agregar servicios adicionales?", "Servicios adicionales", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
-            {
-                //reserv.Show();
-                Ventanas.Servicios_adicionales reserv = new Ventanas.Servicios_adicionales();
+            }*/
 
-                reserv.ShowDialog();
-            }
-            else if (result == DialogResult.No)
-            {
-                // El usuario seleccionó "No"
-                // Realiza las acciones correspondientes
-            }
-*/
         }
 
         private void button7_Click(object sender, EventArgs e)
