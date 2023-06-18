@@ -175,15 +175,70 @@ namespace Mad.Ventanas
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
-            //public bool InsertarReservacion(string reservacionID, int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
-
-            string reservacionID = textBox4.Text;
-            //int clienteID =
-            //int hotelID =
-            /*
             var dB = new EnlaceDB();
-            bool InsertarReservacion = dB.InsertarReservacion(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_, telefonoCasa, telefonoCelular);
+
+            //obtener id rerse
+            string reservacionID = textBox4.Text;
+
+            //int clienteID =
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+        //    DataGridViewRow selectedRow3 = dataGridView1.SelectedRows[0];
+
+            DataGridViewCell cell = selectedRow.Cells["nombre"]; 
+            string nombre = cell.Value.ToString();
+
+            DataGridViewCell cell4 = selectedRow.Cells["apellidos"]; 
+            string apellidos = cell4.Value.ToString();
+
+            DataTable resultado1 = dB.ObtenerIDCliente(apellidos,nombre);
+
+            string idcliente = resultado1.Rows[0]["IDCLIENTE"].ToString();
+
+
+            //int hotelID =
+            DataGridViewRow selectedRow2 = dataGridView3.SelectedRows[0];
+
+            DataGridViewCell cell3 = selectedRow2.Cells["NombreHotel"]; 
+            string nombrehotel = cell3.Value.ToString();
+
+            DataTable resultado = dB.ObtenerIDHotel(nombrehotel);
+
+            string idHotel = resultado.Rows[0]["HotelID"].ToString();
+
+
+            //habitacion id
+
+            DataGridViewCell cell2 = dataGridView2.Rows[0].Cells[0];
+            string idhab = cell2.Value.ToString();
+
+            //fecha de entrada
+
+            string fechaentrada = dateTimePicker2.Text;
+
+
+            //fecha de salida
+             string fechasalida = dateTimePicker2.Text;
+
+
+            //anticipo decimal 
+
+            decimal anticipo = decimal.Parse(textBox5.Text);
+            //cantidad de habitaciones
+
+            //cantidad de personas 
+            decimal numPersonas = numericUpDown1.Value;
+            int numPersonas_ =(int)numPersonas;
+
+
+
+            //var dB = new EnlaceDB();
+             bool InsertarReservacion = dB.InsertarReservacion(reservacionID,  idcliente,  idHotel, idhab, fechaentrada, fechasalida,  anticipo, 1, numPersonas_, "Nueva");
+            //public bool dB.InsertarReservacion(reservacionID, int clienteID, idHotel, int habitacionID,  fechaEntrada,  fechaSalida, decimal anticipo, 1, numPersonas, "Nueva")
+
+
+            
+            //var dB = new EnlaceDB();
+           // bool InsertarReservacion = dB.InsertarReservacion(apellidos, nombre, domicilioCompleto, rfc, emailAddress, estadoCivil, referenciaHotel, fechaNacimiento_, telefonoCasa, telefonoCelular);
             if (InsertarReservacion == true)
             {
 
@@ -197,7 +252,7 @@ namespace Mad.Ventanas
                 MessageBox.Show("El registro salio mal");
 
 
-            }*/
+            }
 
         }
 

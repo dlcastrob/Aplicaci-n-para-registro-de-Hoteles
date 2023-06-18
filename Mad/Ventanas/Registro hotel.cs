@@ -428,6 +428,11 @@ namespace Mad.Ventanas
             }
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

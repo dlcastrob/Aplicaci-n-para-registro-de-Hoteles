@@ -208,6 +208,43 @@ namespace WindowsFormsApplication1
             return hotelID;
         }
 
+        public DataTable BuscarHotelesenCiudad(string Ciudad)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "sp_BuscarHotelesPorCiudad";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@Ciudad", SqlDbType.VarChar, 255);
+                parametro1.Value = Ciudad;
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
         public DataTable ObtenerNombresHoteles()
         {
             DataTable dataTable = new DataTable();
@@ -242,21 +279,63 @@ namespace WindowsFormsApplication1
 
             return dataTable;
         }
-        public DataTable BuscarHotelesenCiudad(string Ciudad)
+
+
+        public DataTable ObtenerIDCliente(string apellidos,string nombre )
         {
 
             DataTable dataTable = new DataTable();
             try
             {
                 conectar();
-                string qry = "sp_BuscarHotelesPorCiudad";
+                string qry = "spObtenerIDCLIENTE";
 
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var parametro1 = _comandosql.Parameters.Add("@Ciudad", SqlDbType.VarChar, 255);
-                parametro1.Value = Ciudad;
+                var parametro1 = _comandosql.Parameters.Add("@apellidos", SqlDbType.VarChar, 100);
+                parametro1.Value = apellidos;
+                var parametro2 = _comandosql.Parameters.Add("@nombre", SqlDbType.VarChar, 100);
+                parametro2.Value = nombre;
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
+
+        public DataTable ObtenerIDHotel(string NombreHotel)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spObtenerIDHotel";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@NombreHotel", SqlDbType.VarChar, 255);
+                parametro1.Value = NombreHotel;
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados
                 SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
 
@@ -381,6 +460,52 @@ namespace WindowsFormsApplication1
         }
 
         */
+        public DataTable BuscarHabitaciones(int @HotelID, string FechaSeleccionada)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spObtenerHabitacionesDisponibles";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                SqlParameter parametroFecha = new SqlParameter("@HotelID", SqlDbType.Int);
+                parametroFecha.Value = @HotelID; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add(parametroFecha);
+
+
+                SqlParameter parametroFecha2 = new SqlParameter("@FechaSeleccionada", SqlDbType.Date);
+                parametroFecha2.Value = FechaSeleccionada; // Obtener la fecha sin la parte de la hora
+                _comandosql.Parameters.Add(parametroFecha2);
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
         public bool InsertarCliente(string apellidos, string Nombre, string DomicilioC, string rfc, string correoElectronico, string estadoCivil, string referenciaHotel, string fechaNacimiento, string telefonoCasa, string telefonoCelular)
         {
             var msg = "";
@@ -539,6 +664,7 @@ namespace WindowsFormsApplication1
 
                 // Agregar los parámetros necesarios para el Stored Procedure
                 _comandosql.Parameters.AddWithValue("@tipoHabitacionID", tipoHabitacionID);
+
                 _comandosql.Parameters.AddWithValue("@hotelID", hotelID);
                 _comandosql.Parameters.AddWithValue("@precioNochePersona", precioNochePersona);
                 _comandosql.Parameters.AddWithValue("@capacidadMaxima", capacidadMaxima);
@@ -570,7 +696,7 @@ namespace WindowsFormsApplication1
         
 
 
-        public bool InsertarReservacion(string reservacionID,  int clienteID, int hotelID, int habitacionID, DateTime fechaEntrada, DateTime fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
+        public bool InsertarReservacion(string reservacionID,  string clienteID, string hotelID, string habitacionID, string fechaEntrada, string fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
         {
             var msg = "";
             var add = true;
@@ -584,11 +710,25 @@ namespace WindowsFormsApplication1
 
                 // Agregar los parámetros necesarios para el Stored Procedure
                 _comandosql.Parameters.AddWithValue("@ReservacionID", reservacionID);
-                _comandosql.Parameters.AddWithValue("@ClienteID", clienteID);
-                _comandosql.Parameters.AddWithValue("@HotelID", hotelID);
-                _comandosql.Parameters.AddWithValue("@HabitacionID", habitacionID);
-                _comandosql.Parameters.AddWithValue("@FechaEntrada", fechaEntrada);
-                _comandosql.Parameters.AddWithValue("@FechaSalida", fechaSalida);
+               
+                var paramClienteID = _comandosql.Parameters.Add("@ClienteID", SqlDbType.Int);
+                paramClienteID.Value = clienteID;
+
+              //  _comandosql.Parameters.AddWithValue("@ClienteID", clienteID);
+                var paramHotelID = _comandosql.Parameters.Add("@HotelID", SqlDbType.Int);
+                paramHotelID.Value = hotelID;
+                //_comandosql.Parameters.AddWithValue("@HotelID", hotelID);
+
+                var paramHabitacionID = _comandosql.Parameters.Add("@HabitacionID", SqlDbType.Int);
+                paramHabitacionID.Value = habitacionID;
+              //  _comandosql.Parameters.AddWithValue("@HabitacionID", habitacionID);
+
+                var paramFechaEntrada = _comandosql.Parameters.Add("@FechaEntrada", SqlDbType.Date);
+                paramFechaEntrada.Value = fechaEntrada;
+                var paramFechaSalida = _comandosql.Parameters.Add("@FechaSalida", SqlDbType.Date);
+                paramFechaSalida.Value = fechaSalida;
+
+               // _comandosql.Parameters.AddWithValue("@FechaSalida", fechaSalida);
                 _comandosql.Parameters.AddWithValue("@Anticipo", anticipo);
                 _comandosql.Parameters.AddWithValue("@CantidadHabitaciones", cantidadHabitaciones);
                 _comandosql.Parameters.AddWithValue("@CantidadPersonasHabitacion", cantidadPersonasHabitacion);
