@@ -51,20 +51,18 @@ namespace Mad.Ventanas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 13);
+            this.label1.Size = new System.Drawing.Size(188, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "CODIGO DE RESERVACION";
             // 
             // PAGAR
             // 
             this.PAGAR.AutoSize = true;
-            this.PAGAR.Location = new System.Drawing.Point(46, 294);
-            this.PAGAR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PAGAR.Location = new System.Drawing.Point(61, 362);
             this.PAGAR.Name = "PAGAR";
-            this.PAGAR.Size = new System.Drawing.Size(45, 13);
+            this.PAGAR.Size = new System.Drawing.Size(58, 17);
             this.PAGAR.TabIndex = 0;
             this.PAGAR.Text = "TOTAL:";
             // 
@@ -72,10 +70,10 @@ namespace Mad.Ventanas
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 36);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(283, 44);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 21);
+            this.comboBox1.Size = new System.Drawing.Size(361, 24);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -86,12 +84,12 @@ namespace Mad.Ventanas
             this.TIPO,
             this.DESCRIPCION,
             this.MONTO});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 108);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(55, 133);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(661, 197);
             this.dataGridView1.TabIndex = 2;
             // 
             // TIPO
@@ -117,18 +115,18 @@ namespace Mad.Ventanas
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 292);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(140, 359);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 424);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(71, 522);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "PAGAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,43 +135,58 @@ namespace Mad.Ventanas
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 11);
+            this.dateTimePicker1.Location = new System.Drawing.Point(53, 14);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 80);
+            this.label5.Location = new System.Drawing.Point(69, 98);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 21;
             this.label5.Text = "ID Cliente";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(212, 73);
+            this.textBox3.Location = new System.Drawing.Point(283, 90);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(272, 20);
+            this.textBox3.Size = new System.Drawing.Size(361, 22);
             this.textBox3.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(348, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "ID Reservacion";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(52, 378);
+            this.label9.Location = new System.Drawing.Point(69, 465);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 13);
+            this.label9.Size = new System.Drawing.Size(152, 17);
             this.label9.TabIndex = 27;
             this.label9.Text = "Ingrese Num de tarjeta";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(181, 371);
+            this.textBox6.Location = new System.Drawing.Point(241, 457);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
+            this.textBox6.Size = new System.Drawing.Size(160, 22);
             this.textBox6.TabIndex = 26;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
@@ -181,9 +194,10 @@ namespace Mad.Ventanas
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(52, 352);
+            this.label10.Location = new System.Drawing.Point(69, 433);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.Size = new System.Drawing.Size(104, 17);
             this.label10.TabIndex = 25;
             this.label10.Text = "Forma de pago";
             // 
@@ -194,16 +208,17 @@ namespace Mad.Ventanas
             "Tarjeta Credito",
             "Tarjeta Debito",
             "Efectivo"});
-            this.comboBox4.Location = new System.Drawing.Point(181, 344);
+            this.comboBox4.Location = new System.Drawing.Point(241, 423);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.Size = new System.Drawing.Size(160, 24);
             this.comboBox4.TabIndex = 24;
             // 
             // CHECKOUT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 456);
+            this.ClientSize = new System.Drawing.Size(1208, 561);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label10);
@@ -217,7 +232,7 @@ namespace Mad.Ventanas
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.PAGAR);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CHECKOUT";
             this.Text = "CHECKOUT";
             this.Load += new System.EventHandler(this.CHECKOUT_Load);

@@ -128,6 +128,20 @@ namespace Mad.Ventanas
             f_ventas.Show();
         }
 
+        private void IN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventanas.CHECKIN f_checkin = new Ventanas.CHECKIN();
+            f_checkin.Show();
+        }
+
+        private void OUT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
+            f_checkout.Show();
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU
