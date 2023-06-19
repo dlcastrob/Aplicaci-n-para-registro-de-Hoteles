@@ -163,13 +163,14 @@ namespace Mad.Ventanas
             // 
             // label4
             // 
+            /*
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(348, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 19;
-            this.label4.Text = "ID Reservacion";
+            this.label4.Text = "ID Reservacion";*/
             // 
             // label9
             // 
