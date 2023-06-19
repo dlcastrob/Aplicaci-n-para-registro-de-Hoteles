@@ -131,6 +131,11 @@ namespace Mad.Ventanas
             f_checkout.Show();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
 
         //AQUI TERMINA  EL SIDE MENU

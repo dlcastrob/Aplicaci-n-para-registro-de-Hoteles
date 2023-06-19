@@ -939,6 +939,191 @@ namespace WindowsFormsApplication1
 
         }
 
+        public DataTable HistorialCliente(string nombrecliente, string fecha)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spObtenerInformacionReservaciones";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@NombreCliente", SqlDbType.VarChar, 255);
+                parametro1.Value = nombrecliente;
+
+                var parametro2 = _comandosql.Parameters.Add("@fecha", SqlDbType.Date);
+                parametro2.Value = fecha;
+
+
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
+
+        public DataTable spReporteOcupacion(string NombreHotel, string ciudad, string pais)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spReporteOcupacion";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+
+                var parametro1 = _comandosql.Parameters.Add("@NombreHotel", SqlDbType.VarChar, 255);
+                parametro1.Value = NombreHotel;
+
+                var parametro2 = _comandosql.Parameters.Add("@Ciudad ", SqlDbType.VarChar,255);
+                parametro2.Value = ciudad;
+
+                var parametro3 = _comandosql.Parameters.Add("@Pais ", SqlDbType.VarChar, 255);
+                parametro3.Value = pais;
+
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
+
+        public DataTable spReporteOcupacionSimple(string NombreHotel, string ciudad, string pais)
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spReporteOcupacionSimple";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+
+                var parametro1 = _comandosql.Parameters.Add("@NombreHotel ", SqlDbType.VarChar, 255);
+                parametro1.Value = NombreHotel;
+
+                var parametro2 = _comandosql.Parameters.Add("@Ciudad ", SqlDbType.VarChar, 255);
+                parametro2.Value = ciudad;
+
+                var parametro3 = _comandosql.Parameters.Add("@Pais ", SqlDbType.VarChar, 255);
+                parametro3.Value = pais;
+
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
+
+
+        public DataTable VistaHoteles()
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SpVistaHoteles";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
+
+
     }
 }
 

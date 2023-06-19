@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 
 namespace Mad.Ventanas
 {
     public partial class HistorialCliente : Form
     {
         bool sidebarExpand;
+
+        string cliente;
+        
         public HistorialCliente()
         {
             InitializeComponent();
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -140,6 +146,75 @@ namespace Mad.Ventanas
             this.Hide();
             Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
             f_checkout.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string busqueda = textBox1.Text;
+            int opcionBusqueda = 0;
+
+            // Verificar el RadioButton seleccionado y asignar la opción correspondiente
+            if (radioButton1.Checked)
+            {
+                opcionBusqueda = 1;
+            }
+            else if (radioButton2.Checked)
+            {
+                opcionBusqueda = 2;
+            }
+            else if (radioButton3.Checked)
+            {
+                opcionBusqueda = 3;
+            }
+
+
+            // Llamar al procedimiento almacenado para buscar clientes
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            tablita = obj.BuscarClientes(busqueda, opcionBusqueda);
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView2.DataSource = tablita;
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                cliente = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+                var obj = new EnlaceDB();
+                var tablita = new DataTable();
+                tablita = obj.HistorialCliente(cliente, null);
+
+
+                // Mostrar los resultados en un DataGridView u otro control adecuado
+                dataGridView1.DataSource = tablita;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var obj = new EnlaceDB();
+                var tablita = new DataTable();
+                tablita = obj.HistorialCliente(null, dateTimePicker1.Text);
+
+
+                // Mostrar los resultados en un DataGridView u otro control adecuado
+                dataGridView1.DataSource = tablita;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
 

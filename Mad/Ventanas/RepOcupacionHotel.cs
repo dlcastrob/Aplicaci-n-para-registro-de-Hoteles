@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using WindowsFormsApplication1;
+
+
 
 namespace Mad.Ventanas
 {
@@ -18,6 +21,16 @@ namespace Mad.Ventanas
         public RepOcupacionHoteñ()
         {
             InitializeComponent();
+            var obj = new EnlaceDB();
+
+            var tablita = new DataTable();
+            tablita = obj.VistaHoteles();
+            foreach (DataRow row in tablita.Rows)
+            {
+                string nombre = row["NombreHotel"].ToString();
+                comboBox2.Items.Add(nombre);
+            }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -80,33 +93,7 @@ namespace Mad.Ventanas
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            SideBarTimer.Start();
-        }
-
-        private void SideBarTimer_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand)
-            {       //MINIMIZA
-                sidebarContainer.Width -= 10;
-                if (sidebarContainer.Width == sidebarContainer.MinimumSize.Width)
-                {
-                    sidebarExpand = false;
-                    SideBarTimer.Stop();
-                }
-
-            }
-            else
-            {
-                sidebarContainer.Width += 10;
-                if (sidebarContainer.Width == sidebarContainer.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    SideBarTimer.Stop();
-                }
-            }
-        }
+      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -206,6 +193,54 @@ namespace Mad.Ventanas
             Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
             f_checkout.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            var tablita2 = new DataTable();
+
+            tablita = obj.spReporteOcupacion(null, comboBox1.Text, null);
+            tablita2 = obj.spReporteOcupacionSimple(null,comboBox1.Text, null);
+
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView1.DataSource = tablita;
+            dataGridView2.DataSource = tablita2;
+
+
+        }
+
+        private void comboBox4_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            var tablita2 = new DataTable();
+
+            tablita = obj.spReporteOcupacion(null, null, comboBox4.Text);
+            tablita2 = obj.spReporteOcupacionSimple(null,null, comboBox4.Text);
+
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView1.DataSource = tablita;
+            dataGridView2.DataSource = tablita2;
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            var tablita2 = new DataTable();
+
+            tablita = obj.spReporteOcupacion(comboBox2.Text.ToString(), null, null);
+            tablita2 = obj.spReporteOcupacionSimple(comboBox2.Text.ToString(), null, null);
+
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView1.DataSource = tablita;
+            dataGridView2.DataSource = tablita2;
+        
+    }
 
 
 
