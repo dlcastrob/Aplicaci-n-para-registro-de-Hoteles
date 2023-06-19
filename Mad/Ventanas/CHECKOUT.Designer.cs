@@ -186,6 +186,7 @@ namespace Mad.Ventanas
             this.textBox6.Size = new System.Drawing.Size(121, 20);
             this.textBox6.TabIndex = 26;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label10
             // 
