@@ -553,6 +553,20 @@ namespace Mad.Ventanas
 
         }
 
+        private void IN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventanas.CHECKIN f_checkin = new Ventanas.CHECKIN();
+            f_checkin.Show();
+        }
+
+        private void OUT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
+            f_checkout.Show();
+        }
+
 
 
 

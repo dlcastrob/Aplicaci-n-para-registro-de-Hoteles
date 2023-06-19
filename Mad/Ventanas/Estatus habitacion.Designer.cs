@@ -63,6 +63,8 @@
             this.button18 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
+            this.IN = new System.Windows.Forms.Button();
+            this.OUT = new System.Windows.Forms.Button();
             this.sidebarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -176,12 +178,14 @@
             this.sidebarContainer.Controls.Add(this.panel18);
             this.sidebarContainer.Controls.Add(this.panel19);
             this.sidebarContainer.Controls.Add(this.panel20);
+            this.sidebarContainer.Controls.Add(this.IN);
+            this.sidebarContainer.Controls.Add(this.OUT);
             this.sidebarContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebarContainer.Location = new System.Drawing.Point(0, 0);
-            this.sidebarContainer.MaximumSize = new System.Drawing.Size(200, 450);
+            this.sidebarContainer.MaximumSize = new System.Drawing.Size(200, 550);
             this.sidebarContainer.MinimumSize = new System.Drawing.Size(70, 450);
             this.sidebarContainer.Name = "sidebarContainer";
-            this.sidebarContainer.Size = new System.Drawing.Size(200, 450);
+            this.sidebarContainer.Size = new System.Drawing.Size(200, 538);
             this.sidebarContainer.TabIndex = 11;
             // 
             // panel1
@@ -445,11 +449,41 @@
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
+            // IN
+            // 
+            this.IN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IN.ForeColor = System.Drawing.Color.Transparent;
+            this.IN.Image = global::Mad.Properties.Resources.ventas;
+            this.IN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IN.Location = new System.Drawing.Point(3, 445);
+            this.IN.Name = "IN";
+            this.IN.Size = new System.Drawing.Size(207, 42);
+            this.IN.TabIndex = 24;
+            this.IN.Text = "CHECK IN";
+            this.IN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IN.UseVisualStyleBackColor = true;
+            this.IN.Click += new System.EventHandler(this.IN_Click);
+            // 
+            // OUT
+            // 
+            this.OUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OUT.ForeColor = System.Drawing.Color.White;
+            this.OUT.Image = global::Mad.Properties.Resources.ventas;
+            this.OUT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OUT.Location = new System.Drawing.Point(3, 493);
+            this.OUT.Name = "OUT";
+            this.OUT.Size = new System.Drawing.Size(207, 42);
+            this.OUT.TabIndex = 25;
+            this.OUT.Text = "CHECK OUT";
+            this.OUT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OUT.UseVisualStyleBackColor = true;
+            this.OUT.Click += new System.EventHandler(this.OUT_Click);
+            // 
             // Estatus_habitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 538);
             this.Controls.Add(this.sidebarContainer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -517,5 +551,7 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button IN;
+        private System.Windows.Forms.Button OUT;
     }
 }
