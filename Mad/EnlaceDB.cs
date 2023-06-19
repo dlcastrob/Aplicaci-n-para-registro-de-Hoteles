@@ -313,7 +313,7 @@ namespace WindowsFormsApplication1
             return dataTable;
         }
 
-        public DataTable ObtenerIdReservacion()
+        public DataTable ObtenerIdReservacion(char O)
         {
             DataTable dataTable = new DataTable();
             try
@@ -324,6 +324,8 @@ namespace WindowsFormsApplication1
                 _comandosql = new SqlCommand(qry, _conexion);
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
+                _comandosql.Parameters.AddWithValue("@accion", O);
+
 
                 // Crear un adaptador de datos y un DataTable para almacenar los resultados
                 SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
@@ -718,7 +720,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public bool CambiarEstadoReservacion( string idreservacion)
+        public bool CambiarEstadoReservacion( string idreservacion, char O)
         {
             var msg = "";
             var add = true;
@@ -732,7 +734,8 @@ namespace WindowsFormsApplication1
 
                 var paramNombreServicio = _comandosql.Parameters.Add("@ReservacionID", SqlDbType.VarChar, 255);
                 paramNombreServicio.Value = idreservacion;
-          
+                _comandosql.Parameters.AddWithValue("@accion",O );
+
                 _adaptador.InsertCommand = _comandosql;
 
                 _comandosql.ExecuteNonQuery();
@@ -836,7 +839,7 @@ namespace WindowsFormsApplication1
 
 
 
-        public bool InsertarReservacion(string reservacionID,  string clienteID, string hotelID, string habitacionID, string fechaEntrada, string fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)
+        public bool InsertarReservacion(string reservacionID,  string clienteID, string hotelID, string habitacionID, string fechaEntrada, string fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion)
         {
             var msg = "";
             var add = true;
@@ -872,7 +875,6 @@ namespace WindowsFormsApplication1
                 _comandosql.Parameters.AddWithValue("@Anticipo", anticipo);
                 _comandosql.Parameters.AddWithValue("@CantidadHabitaciones", cantidadHabitaciones);
                 _comandosql.Parameters.AddWithValue("@CantidadPersonasHabitacion", cantidadPersonasHabitacion);
-                _comandosql.Parameters.AddWithValue("@Estado", estado);
                 _comandosql.Parameters.AddWithValue("@Accion", "C"); // Acción para crear una nueva reservación
 
                 _comandosql.ExecuteNonQuery();
@@ -892,6 +894,50 @@ namespace WindowsFormsApplication1
             return add;
         }
 
+        public DataTable ObtenerInformacionPago(string idreserv, char O )
+        {
+
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "ObtenerInformacionPago";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var parametro1 = _comandosql.Parameters.Add("@ReservacionID", SqlDbType.VarChar, 255);
+                parametro1.Value = idreserv;
+            
+
+                _comandosql.Parameters.AddWithValue("@accion", O);
+
+
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+
+        }
 
     }
 }

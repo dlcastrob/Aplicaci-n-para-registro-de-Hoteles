@@ -33,9 +33,6 @@ namespace Mad.Ventanas
             this.PAGAR = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MONTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -122,10 +119,6 @@ namespace Mad.Ventanas
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TIPO,
-            this.DESCRIPCION,
-            this.MONTO});
             this.dataGridView1.Location = new System.Drawing.Point(220, 110);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -133,27 +126,6 @@ namespace Mad.Ventanas
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(496, 160);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // TIPO
-            // 
-            this.TIPO.HeaderText = "TIPO";
-            this.TIPO.MinimumWidth = 6;
-            this.TIPO.Name = "TIPO";
-            this.TIPO.Width = 125;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.MinimumWidth = 6;
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.Width = 125;
-            // 
-            // MONTO
-            // 
-            this.MONTO.HeaderText = "MONTO";
-            this.MONTO.MinimumWidth = 6;
-            this.MONTO.Name = "MONTO";
-            this.MONTO.Width = 125;
             // 
             // textBox1
             // 
@@ -199,6 +171,7 @@ namespace Mad.Ventanas
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(272, 20);
             this.textBox3.TabIndex = 20;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label9
             // 
@@ -628,9 +601,6 @@ namespace Mad.Ventanas
         private System.Windows.Forms.Label PAGAR;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

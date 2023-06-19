@@ -19,7 +19,7 @@ namespace Mad.Ventanas
             var obj = new EnlaceDB();
 
             var tablita = new DataTable();
-            tablita = obj.ObtenerIdReservacion();
+            tablita = obj.ObtenerIdReservacion('R');
             foreach (DataRow row in tablita.Rows)
             {
                 string nombre = row["ReservacionID"].ToString();
@@ -39,6 +39,16 @@ namespace Mad.Ventanas
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string valorSeleccionado = comboBox1.SelectedItem.ToString();
+
+
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            tablita = obj.ObtenerInformacionPago(valorSeleccionado, 'I');
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView1.DataSource = tablita;
+            // public DataTable ObtenerInformacionPago(int idreserv, char O)
 
         }
 
@@ -164,6 +174,11 @@ namespace Mad.Ventanas
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

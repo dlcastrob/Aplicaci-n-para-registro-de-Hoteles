@@ -18,7 +18,7 @@ namespace Mad.Ventanas
             var obj = new EnlaceDB();
 
             var tablita = new DataTable();
-            tablita = obj.ObtenerIdReservacion();
+            tablita = obj.ObtenerIdReservacion('N');
             foreach (DataRow row in tablita.Rows)
             {
                 string nombre = row["ReservacionID"].ToString();
@@ -126,7 +126,7 @@ namespace Mad.Ventanas
         {
             string valorSeleccionado = comboBox1.SelectedItem.ToString();
             var obj = new EnlaceDB();
-            bool CambiarEstadoReservacion = obj.CambiarEstadoReservacion(valorSeleccionado);
+            bool CambiarEstadoReservacion = obj.CambiarEstadoReservacion(valorSeleccionado,'R');
 
             if (CambiarEstadoReservacion)
             {

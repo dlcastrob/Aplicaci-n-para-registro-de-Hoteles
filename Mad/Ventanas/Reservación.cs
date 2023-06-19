@@ -251,7 +251,7 @@ namespace Mad.Ventanas
 
 
             //var dB = new EnlaceDB();
-             bool InsertarReservacion = dB.InsertarReservacion(reservacionID,  idcliente,  idHotel, idhab, fechaentrada, fechasalida,  anticipo, 1, numPersonas_, "Nueva");
+             bool InsertarReservacion = dB.InsertarReservacion(reservacionID,  idcliente,  idHotel, idhab, fechaentrada, fechasalida,  anticipo, 1, numPersonas_);
             //public bool dB.InsertarReservacion(reservacionID, int clienteID, idHotel, int habitacionID,  fechaEntrada,  fechaSalida, decimal anticipo, 1, numPersonas, "Nueva")
 
 
