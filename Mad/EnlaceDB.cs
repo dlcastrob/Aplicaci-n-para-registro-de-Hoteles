@@ -691,9 +691,46 @@ namespace WindowsFormsApplication1
             return add;
         }
 
-      
 
-        
+        public bool InsertarPago(string reservacionID, int idCliente, string tipoPago, string concepto, decimal monto, string numTarjeta)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "spGestionarPago";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Agregar los parámetros necesarios para el Stored Procedure
+                _comandosql.Parameters.AddWithValue("@ReservacionID", reservacionID);
+                _comandosql.Parameters.AddWithValue("@idCliente", idCliente);
+                _comandosql.Parameters.AddWithValue("@tipoPago", tipoPago);
+                _comandosql.Parameters.AddWithValue("@Concepto", concepto);
+                _comandosql.Parameters.AddWithValue("@monto", monto);
+                _comandosql.Parameters.AddWithValue("@numTarjeta", numTarjeta);
+                _comandosql.Parameters.AddWithValue("@Accion", "C"); // Acción para crear un nuevo pago
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
+
 
 
         public bool InsertarReservacion(string reservacionID,  string clienteID, string hotelID, string habitacionID, string fechaEntrada, string fechaSalida, decimal anticipo, int cantidadHabitaciones, int cantidadPersonasHabitacion, string estado)

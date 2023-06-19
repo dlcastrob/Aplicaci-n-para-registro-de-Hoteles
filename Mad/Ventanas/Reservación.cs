@@ -17,10 +17,12 @@ namespace Mad.Ventanas
         bool sidebarExpand;
         private Guid miGuid;
 
-
+        string idcliente;
+        public decimal Anticipo { get; set; }
 
         public Reservación()
         {
+
             InitializeComponent();
             form1 = new Form1();
             var obj = new EnlaceDB();
@@ -154,14 +156,31 @@ namespace Mad.Ventanas
         
         private void button6_Click(object sender, EventArgs e)
         {
+            var dB = new EnlaceDB();
+
             button3.Enabled = false;
 
             DialogResult result = MessageBox.Show("¿Desea Pagar", "Pago", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                //    DataGridViewRow selectedRow3 = dataGridView1.SelectedRows[0];
+
+                DataGridViewCell cell = selectedRow.Cells["nombre"];
+                string nombre = cell.Value.ToString();
+
+                DataGridViewCell cell4 = selectedRow.Cells["apellidos"];
+                string apellidos = cell4.Value.ToString();
+
+                DataTable resultado1 = dB.ObtenerIDCliente(apellidos, nombre);
+
+                idcliente = resultado1.Rows[0]["IDCLIENTE"].ToString();
+
                 //reserv.Show();
-                Ventanas.Pago reserv = new Ventanas.Pago();
+
+                Ventanas.Pago reserv = new Ventanas.Pago(this, idcliente);
+             //   reserv.IdCliente = idcliente;
 
                 reserv.ShowDialog();
                 button3.Enabled = true;
@@ -192,7 +211,7 @@ namespace Mad.Ventanas
 
             DataTable resultado1 = dB.ObtenerIDCliente(apellidos,nombre);
 
-            string idcliente = resultado1.Rows[0]["IDCLIENTE"].ToString();
+             idcliente = resultado1.Rows[0]["IDCLIENTE"].ToString();
 
 
             //int hotelID =
@@ -528,7 +547,7 @@ namespace Mad.Ventanas
             float total = preciohab_ * numper_;
 
             float anticipo = (float)(total * 0.15);
-
+            Anticipo = (decimal)anticipo;
             textBox2.Text = total.ToString();
             textBox5.Text = anticipo.ToString();
 
