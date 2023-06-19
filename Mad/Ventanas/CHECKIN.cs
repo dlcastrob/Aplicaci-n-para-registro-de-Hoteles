@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1;
 namespace Mad.Ventanas
 {
     public partial class CHECKIN : Form
@@ -15,6 +15,15 @@ namespace Mad.Ventanas
         public CHECKIN()
         {
             InitializeComponent();
+            var obj = new EnlaceDB();
+
+            var tablita = new DataTable();
+            tablita = obj.ObtenerIdReservacion();
+            foreach (DataRow row in tablita.Rows)
+            {
+                string nombre = row["ReservacionID"].ToString();
+                comboBox1.Items.Add(nombre);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -98,6 +107,38 @@ namespace Mad.Ventanas
             this.Hide();
             Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
             f_checkout.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valorSeleccionado = comboBox1.SelectedItem.ToString();
+
+
+            var obj = new EnlaceDB();
+            var tablita = new DataTable();
+            tablita = obj.Mostrarhabitacion(valorSeleccionado);
+
+            // Mostrar los resultados en un DataGridView u otro control adecuado
+            dataGridView2.DataSource = tablita;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string valorSeleccionado = comboBox1.SelectedItem.ToString();
+            var obj = new EnlaceDB();
+            bool CambiarEstadoReservacion = obj.CambiarEstadoReservacion(valorSeleccionado);
+
+            if (CambiarEstadoReservacion)
+            {
+                MessageBox.Show("Se ha realizado el check in correctamente");
+           
+
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al realizar el check in.");
+            }
+
         }
 
 

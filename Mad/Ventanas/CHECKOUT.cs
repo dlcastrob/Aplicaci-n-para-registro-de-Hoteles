@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 
 namespace Mad.Ventanas
 {
@@ -15,6 +16,15 @@ namespace Mad.Ventanas
         public CHECKOUT()
         {
             InitializeComponent();
+            var obj = new EnlaceDB();
+
+            var tablita = new DataTable();
+            tablita = obj.ObtenerIdReservacion();
+            foreach (DataRow row in tablita.Rows)
+            {
+                string nombre = row["ReservacionID"].ToString();
+                comboBox1.Items.Add(nombre);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,6 +161,11 @@ namespace Mad.Ventanas
             this.Hide();
             Ventanas.CHECKOUT f_checkout = new Ventanas.CHECKOUT();
             f_checkout.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -208,6 +208,39 @@ namespace WindowsFormsApplication1
             return hotelID;
         }
 
+        public DataTable Mostrarhabitacion(string idreservacion)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "ObtenerHabitacionTipo";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+                var parametro1 = _comandosql.Parameters.Add("@ReservacionID", SqlDbType.VarChar, 255);
+                parametro1.Value = idreservacion;
+                
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+            }
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
+
         public DataTable BuscarHotelesenCiudad(string Ciudad)
         {
 
@@ -280,6 +313,40 @@ namespace WindowsFormsApplication1
             return dataTable;
         }
 
+        public DataTable ObtenerIdReservacion()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "spMostrarIdReservacion";
+
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                // Crear un adaptador de datos y un DataTable para almacenar los resultados
+                SqlDataAdapter adapter = new SqlDataAdapter(_comandosql);
+
+                adapter.Fill(dataTable);
+
+
+            }
+
+
+            catch (SqlException e)
+            {
+                string msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return dataTable;
+        }
 
         public DataTable ObtenerIDCliente(string apellidos,string nombre )
         {
@@ -649,6 +716,42 @@ namespace WindowsFormsApplication1
 
             return add;
         }
+
+
+        public bool CambiarEstadoReservacion( string idreservacion)
+        {
+            var msg = "";
+            var add = true;
+            try
+            {
+                conectar();
+                string qry = "CambiarEstadoReservacion";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.StoredProcedure;
+                _comandosql.CommandTimeout = 1200;
+
+                var paramNombreServicio = _comandosql.Parameters.Add("@ReservacionID", SqlDbType.VarChar, 255);
+                paramNombreServicio.Value = idreservacion;
+          
+                _adaptador.InsertCommand = _comandosql;
+
+                _comandosql.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                add = false;
+                msg = "Excepción de base de datos: \n";
+                msg += e.Message;
+                MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            finally
+            {
+                desconectar();
+            }
+
+            return add;
+        }
+
 
         public bool InsertarTipoHabitacion(string tipoHabitacionID, int hotelID, decimal precioNochePersona, int capacidadMaxima, int numeroCamas, string tiposCama, int nivelHabitacion,  int cantidadHabitaciones)
         {
