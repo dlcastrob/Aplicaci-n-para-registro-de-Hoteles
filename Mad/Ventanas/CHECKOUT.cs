@@ -36,5 +36,10 @@ namespace Mad.Ventanas
         {
 
         }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

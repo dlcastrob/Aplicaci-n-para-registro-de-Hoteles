@@ -87,6 +87,12 @@
     <Compile Include="Ventanas\Nueva contraseña.Designer.cs">
       <DependentUpon>Nueva contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Pago checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Pago checkout.Designer.cs">
+      <DependentUpon>Pago checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Pago.cs">
       <SubType>Form</SubType>
     </Compile>
