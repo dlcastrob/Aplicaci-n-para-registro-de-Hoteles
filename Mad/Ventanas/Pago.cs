@@ -15,6 +15,10 @@ namespace Mad.Ventanas
         public Pago()
         {
             InitializeComponent();
+            Mad.Ventanas.Reservación ventana1 = new Mad.Ventanas.Reservación();
+            string idreserv = ventana1.textBox4.Text;
+            textBox2.Text = idreserv;
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -25,6 +29,11 @@ namespace Mad.Ventanas
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

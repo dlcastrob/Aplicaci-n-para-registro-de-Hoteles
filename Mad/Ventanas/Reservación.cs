@@ -243,7 +243,20 @@ namespace Mad.Ventanas
             {
 
                 MessageBox.Show("Se registro Correctamente");
-          
+                DialogResult result = MessageBox.Show("¿Desea Agregar servicios adicionales", "Agregar Servicios adicionales", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    //reserv.Show();
+                    Ventanas.Servicios_adicionales reserv = new Ventanas.Servicios_adicionales();
+
+                    reserv.ShowDialog();
+                }
+                else if (result == DialogResult.No)
+                {
+                    // El usuario seleccionó "No"
+                    // Realiza las acciones correspondientes
+                }
 
 
             }
